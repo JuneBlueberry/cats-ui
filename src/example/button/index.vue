@@ -8,7 +8,7 @@
         <cat-button class="demo1" type='warning'>按钮</cat-button>
         <cat-button class="demo1" type='error'>按钮</cat-button>
     </div>
-    <div class="demo">
+    <!-- <div class="demo">
         <cat-button class="demo1" plain>按钮</cat-button>
         <cat-button class="demo1" type='primary' plain>按钮</cat-button>
         <cat-button class="demo1" type='success' plain>按钮</cat-button>
@@ -31,7 +31,7 @@
         <cat-button class="demo1" type='info' disabled>按钮</cat-button>
         <cat-button class="demo1" type='warning' disabled>按钮</cat-button>
         <cat-button class="demo1" type='error' disabled>按钮</cat-button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -47,6 +47,6 @@ export default {
 }
 
 .demo1 {
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 </style>

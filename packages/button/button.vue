@@ -1,10 +1,12 @@
 <template>
-  <button :class="['cat-btn', 'cat-btn-type-'+type, 'cat-btn-size-'+size,
+  <a :class="['cat-btn', 'cat-btn-type-'+type, 'cat-btn-size-'+size,
   {'is-disabled': disabled,'is-plain': plain, 'is-round': round}]" 
   :disabled="disabled"
   @click="handleClick">
-    <slot></slot>
-  </button>
+    <span>
+      <slot></slot>
+    </span>
+  </a>
 </template>
 
 <script>

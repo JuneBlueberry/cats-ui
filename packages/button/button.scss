@@ -1,68 +1,74 @@
-.cat-btn{
-  font-size: 12px;
-  border-radius: 0px;
-  padding: 8px 16px;
-  height: 32px;
-  line-height: 14px;
+.cat-btn {
+  display: block;
+  height: $button-height;
+  font-size: $button-font-size;
+  border-radius: $radius-md;
+  color: $color-text-base;
+  border-width: $border-width-md;
+  border-style: solid;
+  border-color: $border-color-base;
+  background-color: $brand-default;
+  line-height: $button-height;
 
-  border: 1px solid #dddddd;
-  background-color: #f7f7f7;
-  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;
 
-  &:hover{
-    background-color: #ffffff;
+  &:active{
+    background-color: $brand-default-tap;
   }
 }
 
 //按钮类型--Type
 .cat-btn-type-primary{
-  border: 1px solid #0099cc;
-  background-color: #0099cc;
-  color: #ffffff;
+  border-color: $brand-primary;
+  background-color: $brand-primary;
+  color: $color-text-base-inverse;
 
   &:hover{
-    border: 1px solid #28B5D6;
-    background-color: #28B5D6;
+    border-color: $brand-primary-tap;
+    background-color: $brand-primary-tap;
   }
 }
 .cat-btn-type-success{
-  border: 1px solid #4db118;
-  background-color: #4db118;
-  color: #ffffff;
+  border-color: $brand-success;
+  background-color: $brand-success;
+  color: $color-text-base-inverse;
 
   &:hover{
-    border: 1px solid #57bc20;
-    background-color: #57bc20
+    border-color: $brand-success-tap;
+    background-color: $brand-success-tap;
   }
 }
 .cat-btn-type-info{
-  border: 1px solid #909399;
-  background-color: #909399;
-  color: #ffffff;
+  border-color: $brand-info;
+  background-color: $brand-info;
+  color: $color-text-base-inverse;
 
   &:hover{
-    border: 1px solid #a5a9af;
-    background-color: #a5a9af;
+    border-color: $brand-info-tap;
+    background-color: $brand-info-tap;
   }
 }
 .cat-btn-type-warning{
-  border: 1px solid #e79302;
-  background-color: #e79302;
-  color: #ffffff;
+  border-color: $brand-warning;
+  background-color: $brand-warning;
+  color: $color-text-base-inverse;
 
   &:hover{
-    border: 1px solid #ffa200;
-    background-color: #ffa200;
+    border-color: $brand-warning-tap;
+    background-color: $brand-warning-tap;
   }
 }
 .cat-btn-type-error{
-  border: 1px solid #f25721;
-  background-color: #f25721;
-  color: #ffffff;
+  border-color: $brand-error;
+  background-color: $brand-error;
+  color: $color-text-base-inverse;
 
   &:hover{
-    border: 1px solid #fc6824;
-    background-color: #fc6824;
+    border-color: $brand-error-tap;
+    background-color: $brand-error-tap;
   }
 }
 
