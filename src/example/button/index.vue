@@ -1,12 +1,19 @@
 <template>
   <div>
-    <div class="demo">
+    <!-- <div class="demo">
         <cat-button class="demo1">按钮</cat-button>
         <cat-button class="demo1" type='primary'>按钮</cat-button>
         <cat-button class="demo1" type='success'>按钮</cat-button>
         <cat-button class="demo1" type='info'>按钮</cat-button>
         <cat-button class="demo1" type='warning'>按钮</cat-button>
         <cat-button class="demo1" type='error'>按钮</cat-button>
+    </div> -->
+    <div>
+        <cat-button class="demo1" type='primary' size="mini" row>确认</cat-button>
+        <cat-button class="demo1" type='success' size="small" row>成功</cat-button>
+        <cat-button class="demo1" type='info' row>查看</cat-button>
+        <cat-button class="demo1" type='warning' size="large" row>卸载</cat-button>
+        <cat-button class="demo1" type='error' size="big" row>删除</cat-button>
     </div>
     <!-- <div class="demo">
         <cat-button class="demo1" plain>按钮</cat-button>
@@ -43,10 +50,10 @@ export default {
 
 <style>
 .demo {
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .demo1 {
-  margin: 10px 10px;
+  margin: 10px 0;
 }
 </style>

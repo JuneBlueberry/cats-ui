@@ -1,5 +1,15 @@
 $hd: 1px; // 基本单位
 
+/**
+尺寸对应名称
+mini: xs
+small: sm
+default/middle: md
+large: lg
+big: xl
+*/
+
+
 // 支付宝钱包默认主题
 // https://github.com/ant-design/ant-design-mobile/wiki/设计变量表及命名规范
 
@@ -56,6 +66,7 @@ $font-size-heading: 17 * $hd;
 
 // 圆角
 // ---
+$radius-none: 0 * $hd;
 $radius-xs: 2 * $hd;
 $radius-sm: 3 * $hd;
 $radius-md: 5 * $hd;
@@ -106,11 +117,17 @@ $actionsheet-item-height: 50 * $hd;
 $actionsheet-item-font-size: 18 * $hd;
 
 // button
-$button-height-sm: 30 * $hd;
-$button-height: 47 * $hd;
+$button-height-xs: 32 * $hd;
+$button-height-sm: 38 * $hd;
+$button-height-md: 42 * $hd;
+$button-height-lg: 46 * $hd;
+$button-height-xl: 50 * $hd;
 
-$button-font-size-sm: 13 * $hd;
-$button-font-size: 18 * $hd;
+$button-font-size-xs: 12 * $hd;
+$button-font-size-sm: 14 * $hd;
+$button-font-size-md: 16 * $hd;
+$button-font-size-lg: 18 * $hd;
+$button-font-size-xl: 20 * $hd;
 
 
 // modal

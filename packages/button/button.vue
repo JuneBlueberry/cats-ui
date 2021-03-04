@@ -1,6 +1,6 @@
 <template>
   <a :class="['cat-btn', 'cat-btn-type-'+type, 'cat-btn-size-'+size,
-  {'is-disabled': disabled,'is-plain': plain, 'is-round': round}]" 
+  {'is-disabled': disabled, 'is-row': row,'is-plain': plain, 'is-round': round}]" 
   :disabled="disabled"
   @click="handleClick">
     <span>
@@ -22,6 +22,10 @@ export default {
       default: 'default'
     },
     disabled: {
+      type: Boolean,
+      default: false
+    },
+    row: {
       type: Boolean,
       default: false
     },

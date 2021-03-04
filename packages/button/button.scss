@@ -1,15 +1,16 @@
 .cat-btn {
   display: block;
-  height: $button-height;
-  font-size: $button-font-size;
+  height: $button-height-md;
+  font-size: $button-font-size-md;
   border-radius: $radius-md;
   color: $color-text-base;
   border-width: $border-width-md;
   border-style: solid;
   border-color: $border-color-base;
   background-color: $brand-default;
-  line-height: $button-height;
+  line-height: $button-height-md;
 
+  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
@@ -26,7 +27,7 @@
   background-color: $brand-primary;
   color: $color-text-base-inverse;
 
-  &:hover{
+  &:active{
     border-color: $brand-primary-tap;
     background-color: $brand-primary-tap;
   }
@@ -36,7 +37,7 @@
   background-color: $brand-success;
   color: $color-text-base-inverse;
 
-  &:hover{
+  &:active{
     border-color: $brand-success-tap;
     background-color: $brand-success-tap;
   }
@@ -46,7 +47,7 @@
   background-color: $brand-info;
   color: $color-text-base-inverse;
 
-  &:hover{
+  &:active{
     border-color: $brand-info-tap;
     background-color: $brand-info-tap;
   }
@@ -56,7 +57,7 @@
   background-color: $brand-warning;
   color: $color-text-base-inverse;
 
-  &:hover{
+  &:active{
     border-color: $brand-warning-tap;
     background-color: $brand-warning-tap;
   }
@@ -66,15 +67,39 @@
   background-color: $brand-error;
   color: $color-text-base-inverse;
 
-  &:hover{
+  &:active{
     border-color: $brand-error-tap;
     background-color: $brand-error-tap;
   }
 }
 
-//按钮是否圆角--round
-.cat-btn.is-round{
-  border-radius: 5px;
+//是否是行按钮
+.is-row {
+  border-radius: $radius-none;
+  border-left: none;
+  border-right: none;
+  border-color: $border-color-base;
+  background-color: $brand-default;
+
+  &:active{
+    border-color: $border-color-base;
+    background-color: $brand-default-tap;
+  }
+}
+.cat-btn-type-primary.is-row{
+  color: $brand-primary;
+}
+.cat-btn-type-success.is-row{
+  color: $brand-success;
+}
+.cat-btn-type-info.is-row{
+  color: $brand-info;
+}
+.cat-btn-type-warning.is-row{
+  color: $brand-warning;
+}
+.cat-btn-type-error.is-row{
+  color: $brand-error;
 }
 
 //按钮是否可点击--disabled
@@ -164,26 +189,22 @@
 
 //按钮的尺寸--size
 .cat-btn-size-big{
-  font-size: 16px;
-  padding: 8px 16px;
-  height: 42px;
-  line-height: 26px;
+  font-size: $button-font-size-xl;
+  height: $button-height-xl;
+  line-height: $button-height-xl;
 }
-.cat-btn-size-catdium{
-  font-size: 15px;
-  padding: 8px 16px;
-  height: 38px;
-  line-height: 22px;
+.cat-btn-size-large{
+  font-size: $button-font-size-lg;
+  height: $button-height-lg;
+  line-height: $button-height-lg;
 }
 .cat-btn-size-small{
-  font-size: 13px;
-  padding: 8px 16px;
-  height: 28px;
-  line-height: 12px;
+  font-size: $button-font-size-sm;
+  height: $button-height-sm;
+  line-height: $button-height-sm;
 }
 .cat-btn-size-mini{
-  font-size: 12px;
-  padding: 8px 16px;
-  height: 24px;
-  line-height: 8px;
+  font-size: $button-font-size-xs;
+  height: $button-height-xs;
+  line-height: $button-height-xs;
 }
