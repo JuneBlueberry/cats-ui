@@ -1,9 +1,12 @@
 import './styles/index.scss'
 
 import { Button } from './button/index'
+import { Row,Col } from './flex/index';
 
 const components = {
-  Button
+  Button,
+  Row,
+  Col
 }
 
 const install = function (Vue) {

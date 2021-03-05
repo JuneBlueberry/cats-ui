@@ -13,7 +13,7 @@ export default {
 <style>
 #app {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   background-color: #ddd;
   padding: 30px 0;
 }

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../example/home/index';
 import Button from '../example/button/index';
+import Flex from '../example/flex/index';
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: "/button",
     component: Button,
     name: "button"
+  },
+  {
+    path: "/flex",
+    component: Flex,
+    name: "flex"
   },
 ];
 
