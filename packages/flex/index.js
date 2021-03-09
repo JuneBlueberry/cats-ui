@@ -1,7 +1,7 @@
-import Col from './col.vue'
-import Row from './row.vue';
+import Flex from './flex.vue'
+import FlexGroup from './flex-group.vue';
 
 export {
-  Col,
-  Row
+  Flex,
+  FlexGroup
 }

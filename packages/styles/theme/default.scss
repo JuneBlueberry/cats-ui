@@ -9,10 +9,6 @@ large: lg
 big: xl
 */
 
-
-// 支付宝钱包默认主题
-// https://github.com/ant-design/ant-design-mobile/wiki/设计变量表及命名规范
-
 // 色彩
 // ---
 // 文字色
@@ -60,14 +56,26 @@ $brand-important: #ff5b05;  // 用于小红点
 // 边框色
 $border-color-base: #ddd;
 
+// 比例
+$scale-xs: 0.5;
+$scale-sm: 0.6; 
+$scale-md: 0.8;
+$scale-lg: 0.9;
+$scale-xl: 1;
+
+// 高度
+$height-xs: 32 * $hd;
+$height-sm: 38 * $hd;
+$height-md: 42 * $hd;
+$height-lg: 46 * $hd;
+$height-xl: 50 * $hd;
+
 // 字体尺寸
-// ---
-$font-size-icontext: 10 * $hd;
-$font-size-caption-sm: 12 * $hd;
-$font-size-base: 14 * $hd;
-$font-size-subhead: 15 * $hd;
-$font-size-caption: 16 * $hd;
-$font-size-heading: 17 * $hd;
+$font-size-xs: 12 * $hd;
+$font-size-sm: 14 * $hd;
+$font-size-md: 16 * $hd;
+$font-size-lg: 18 * $hd;
+$font-size-xl: 20 * $hd;
 
 // 圆角
 // ---
@@ -80,23 +88,23 @@ $radius-circle: 50%;
 
 // 边框尺寸
 // ---
-$border-width-sm: 1PX;
-$border-width-md: 1PX;
+$border-width-sm: 1 * $hd;
+$border-width-md: 1 * $hd;
 $border-width-lg: 2 * $hd;
 
 // 间距
 // ---
 // 水平间距
-$h-spacing-sm: 5 * $hd;
-$h-spacing-md: 8 * $hd;
-$h-spacing-lg: 15 * $hd;
+$h-spacing-sm: 8 * $hd;
+$h-spacing-md: 12 * $hd;
+$h-spacing-lg: 16 * $hd;
 
 // 垂直间距
 $v-spacing-xs: 3 * $hd;
 $v-spacing-sm: 6 * $hd;
 $v-spacing-md: 9 * $hd;
-$v-spacing-lg: 15 * $hd;
-$v-spacing-xl: 21 * $hd;
+$v-spacing-lg: 12 * $hd;
+$v-spacing-xl: 15 * $hd;
 
 // 高度
 // ---
@@ -120,6 +128,8 @@ $ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
 
 $actionsheet-item-height: 50 * $hd;
 $actionsheet-item-font-size: 18 * $hd;
+
+/******** 以下请移到相应的组件样式中，后期会移除 *********/
 
 // button
 $button-height-xs: 32 * $hd;

@@ -1,12 +1,13 @@
 import './styles/index.scss'
 
 import { Button } from './button/index'
-import { Row,Col } from './flex/index';
+import { Cell, CellGroup } from './cell/index'
+import { Flex,FlexGroup } from './flex/index';
 
 const components = {
   Button,
-  Row,
-  Col
+  Cell,CellGroup,
+  Flex,FlexGroup
 }
 
 const install = function (Vue) {

@@ -14,7 +14,8 @@ export default {
 #app {
   width: 100vw;
   height: fit-content;
-  background-color: #ddd;
+  min-height: 100vh;
+  background-color: #eee;
   padding: 30px 0;
 }
 </style>

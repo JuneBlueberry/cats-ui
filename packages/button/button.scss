@@ -1,14 +1,14 @@
 .cat-btn {
   display: block;
-  height: $button-height-md;
-  font-size: $button-font-size-md;
+  height: $height-md;
+  font-size: $font-size-md;
   border-radius: $radius-md;
   color: $color-text-base;
   border-width: $border-width-md;
   border-style: solid;
   border-color: $border-color-base;
   background-color: $brand-default;
-  line-height: $button-height-md;
+  line-height: $height-md;
 
   text-align: center;
   overflow: hidden;
@@ -190,22 +190,22 @@
 
 //按钮的尺寸--size
 .cat-btn-size-big{
-  font-size: $button-font-size-xl;
-  height: $button-height-xl;
-  line-height: $button-height-xl;
+  font-size: $font-size-xl;
+  height: $height-xl;
+  line-height: $height-xl;
 }
 .cat-btn-size-large{
-  font-size: $button-font-size-lg;
-  height: $button-height-lg;
-  line-height: $button-height-lg;
+  font-size: $font-size-lg;
+  height: $height-lg;
+  line-height: $height-lg;
 }
 .cat-btn-size-small{
-  font-size: $button-font-size-sm;
-  height: $button-height-sm;
-  line-height: $button-height-sm;
+  font-size: $font-size-sm;
+  height: $height-sm;
+  line-height: $height-sm;
 }
 .cat-btn-size-mini{
-  font-size: $button-font-size-xs;
-  height: $button-height-xs;
-  line-height: $button-height-xs;
+  font-size: $font-size-xs;
+  height: $height-xs;
+  line-height: $height-xs;
 }

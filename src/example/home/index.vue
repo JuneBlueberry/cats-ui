@@ -6,7 +6,9 @@
     <router-link to='/flex'>
       <cat-button type='info' plain>flex</cat-button>
     </router-link>
-    <cat-button type='info' plain>按钮</cat-button>
+    <router-link to='/cell'>
+      <cat-button type='info' plain>cell</cat-button>
+    </router-link>
   </div>
 </template>
 

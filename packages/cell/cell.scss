@@ -1,0 +1,47 @@
+.cats-cell {
+  display: flex;
+  width: 100%;
+  min-height: $height-md;
+  font-size: $font-size-md;
+  color: $color-text-base;
+  align-items: center;
+  -webkit-box-align: center;
+  background-color: $fill-base;
+  padding: $v-spacing-md $h-spacing-md;
+  border-top: $border-width-md solid $border-color-base;
+  border-bottom: $border-width-md solid $border-color-base;
+
+  .cell-left {
+    flex: 1;
+  }
+
+  .cell-right {
+
+    .cell-desc {
+      color: $color-text-caption;
+      font-size: $font-size-md * $scale-md;
+    }
+
+  }
+
+}
+
+// Cell组
+.cats-cell-group {
+  width: 100%;
+  background-color: $fill-base;
+  padding: 0 0 0 $h-spacing-md;
+  margin: $v-spacing-md 0;
+  border-top: $border-width-md solid $border-color-base;
+  border-bottom: $border-width-md solid $border-color-base;
+
+  .cats-cell {
+    padding-left: 0;
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+}
