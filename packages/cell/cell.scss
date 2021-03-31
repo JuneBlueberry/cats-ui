@@ -1,3 +1,7 @@
+$cell-icon-width: 30 * $hd;
+$cell-icon-margin: 14 * $hd;
+$cell-icon-radius: 3 * $hd;
+
 .cats-cell {
   display: block;
   font-size: $font-size-md;
@@ -15,8 +19,32 @@
     border-top: $border-width-md solid $border-color-base;
     border-bottom: $border-width-md solid $border-color-base;
   
+    // 后期修改成icon组件
+    .cell-icon {
+      width: $cell-icon-width;
+      height: $cell-icon-width;
+      background-color: $color-icon-base;
+      margin-right: $h-spacing-md;
+      border-radius: $cell-icon-radius;
+    }
+
+    .cell-icon-promote {
+      width: $cell-icon-width * 1.4;
+      height: $cell-icon-width * 1.4;
+    }
+
     .cell-left {
       flex: 1;
+
+      .cell-title-promote {
+        display: block;
+        font-size: $font-size-md * 1.4;
+      }
+
+      .cell-subtitle {
+        display: block;
+        color: $color-text-secondary;
+      }
     }
   
     .cell-right {

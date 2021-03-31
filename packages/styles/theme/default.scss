@@ -23,7 +23,7 @@ $color-text-paragraph: #333;             // 段落
 
 // 背景色
 $fill-base: #fff;                           // 组件默认背景
-$fill-body: #f5f5f9;                        // 页面背景
+$fill-body: #f2f2f7;                        // 页面背景
 $fill-tap: #ddd;                            // 组件默认背景 - 按下
 $fill-disabled: #ddd;                       // 通用失效背景
 $fill-mask: rgba(0, 0, 0, 0.4);              // 遮罩背景
@@ -54,7 +54,7 @@ $brand-error-disabled: #cf7575;
 $brand-important: #ff5b05;  // 用于小红点
 
 // 边框色
-$border-color-base: #ddd;
+$border-color-base: #c6c6c8;
 
 // 比例
 $scale-xs: 0.5;
@@ -64,18 +64,18 @@ $scale-lg: 0.9;
 $scale-xl: 1;
 
 // 高度
-$height-xs: 32 * $hd;
-$height-sm: 38 * $hd;
-$height-md: 42 * $hd;
-$height-lg: 46 * $hd;
-$height-xl: 50 * $hd;
+$height-xs: 36 * $hd;
+$height-sm: 42 * $hd;
+$height-md: 48 * $hd;
+$height-lg: 52 * $hd;
+$height-xl: 56 * $hd;
 
 // 字体尺寸
-$font-size-xs: 10 * $hd;
-$font-size-sm: 12 * $hd;
-$font-size-md: 13 * $hd;
-$font-size-lg: 15 * $hd;
-$font-size-xl: 18 * $hd;
+$font-size-xs: 12 * $hd;
+$font-size-sm: 14 * $hd;
+$font-size-md: 16 * $hd;
+$font-size-lg: 18 * $hd;
+$font-size-xl: 20 * $hd;
 
 // 圆角
 // ---
