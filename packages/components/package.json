@@ -1,9 +1,17 @@
 {
   "name": "cats-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuneBlueberry/cats-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/JuneBlueberry/cats-ui/issues",
+    "email": "812391718@qq.com"
+  },
   "scripts": {
     "build": "vite build"
   },
@@ -15,7 +23,8 @@
     "cats-ui",
     "vue3组件库"
   ],
-  "author": "juneblueberry",
+  "author": "JuneBlueberry <812391718@qq.com>",
+  "private": false,
   "license": "MIT",
   "typings": "lib/index.d.ts"
 }
