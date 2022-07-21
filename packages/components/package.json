@@ -1,0 +1,21 @@
+{
+  "name": "cats-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "cats-ui",
+    "vue3组件库"
+  ],
+  "author": "juneblueberry",
+  "license": "MIT",
+  "typings": "lib/index.d.ts"
+}

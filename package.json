@@ -1,0 +1,19 @@
+{
+  "name": "cats-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "JuneBlueberry",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.2",
+    "vite-plugin-dts": "^1.4.0",
+    "vue": "^3.2.36"
+  }
+}
