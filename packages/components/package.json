@@ -13,8 +13,7 @@
     "email": "812391718@qq.com"
   },
   "scripts": {
-    "build": "vite build",
-    "build:sass": "esno build/buildSass"
+    "build": "vite build && esno build/buildSass"
   },
   "files": [
     "es",

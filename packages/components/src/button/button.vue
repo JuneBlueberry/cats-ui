@@ -1,6 +1,27 @@
 <template>
-  <button>测试按钮</button>
+  <a class="cats-button" :class="styleClass">
+    <slot />
+  </a>
 </template>
+
 <script lang="ts">
-import "./index.scss"
+import "./style/index.scss";
+import { defineComponent, computed } from "vue";
+import { buttonProps } from "./types";
+export default defineComponent({
+  name: "cats-button",
+  props: buttonProps,
+  setup(props) {
+    const styleClass = computed(() => {
+      return {
+        [`cats-button__shape--${props.shape}`]: props.shape || 'primary',
+        [`cats-button__type--${props.type}`]: props.type || 'primary',
+      };
+    });
+
+    return {
+      styleClass,
+    };
+  },
+});
 </script>

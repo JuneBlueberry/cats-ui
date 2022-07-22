@@ -1,0 +1,45 @@
+@import "../../styles/themes/default.scss";
+
+.cats-button {
+  position: relative;
+  display: block;
+  width: 184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.88235294;
+  border-radius: 8px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.cats-button__type--primary {
+  color: $cats-color--primary;
+  background-color: $cats-color--primary;
+}
+.cats-button__type--info {
+  color: $cats-color--info;
+  background-color: $cats-color--info;
+}
+.cats-button__type--warning {
+  color: $cats-color--warning;
+  background-color: $cats-color--warning;
+}
+.cats-button__type--danger {
+  color: $cats-color--danger;
+  background-color: $cats-color--danger;
+}
+
+.cats-button__shape--primary {
+  color: #fff;
+}
+.cats-button__shape--secondary {
+  background-color: #f2f2f2;
+}

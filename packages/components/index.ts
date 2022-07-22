@@ -1,5 +1,5 @@
-import Button from './src/button'
+import CatsButton from './src/button'
 
 export {
-  Button
+  CatsButton
 }
