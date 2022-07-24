@@ -3,26 +3,40 @@
 .cats-button {
   position: relative;
   display: block;
-  width: 184px;
+  width: $cats-btn-width--default;
   margin-left: auto;
   margin-right: auto;
-  padding: 8px 24px;
+  padding: $cats-btn-padding--default;
   box-sizing: border-box;
-  font-weight: 700;
-  font-size: 17px;
+  font-weight: $cats-btn-fontWeight--default;
+  font-size: $cats-btn-fontSize--default;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  line-height: 1.88235294;
-  border-radius: 8px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  color: $cats-bgcolor--base-white;
+  line-height: $cats-btn-lineHeight--default;
+  border-radius: $cats-btn-borderRadius--default;
+  -webkit-tap-highlight-color: $cats-bgcolor--base-black;
   -webkit-user-select: none;
   user-select: none;
+
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $cats-btn-bgColor--active;
+    border-radius: $cats-btn-borderRadius--default;
+  }
 }
 
 .cats-button__type--primary {
   color: $cats-color--primary;
   background-color: $cats-color--primary;
+}
+.cats-button__type--emphasize {
+  color: $cats-color--emphasize;
+  background-color: $cats-color--emphasize;
 }
 .cats-button__type--info {
   color: $cats-color--info;
@@ -38,8 +52,48 @@
 }
 
 .cats-button__shape--primary {
-  color: #fff;
+  color: $cats-bgcolor--base-white;
 }
 .cats-button__shape--secondary {
-  background-color: #f2f2f2;
+  background-color: $cats-bgcolor--default;
+}
+
+.cats-button__shape--block {
+  padding: $cats-btn-padding--shape-block;
+  overflow: hidden;
+  background-color: $cats-bgcolor--base-white;
+  width: auto;
+  border-radius: 0;
+  line-height: $cats-btn-lineHeight--shape--block;
+  font-weight: $cats-btn-fontWeight--shape--block;
+}
+
+.cats-button--mini {
+  display: inline-block;
+  width: auto;
+  padding: $cats-btn-padding--mini;
+  font-size: $cats-btn-fontSize--mini;
+  border-radius: $cats-btn-borderRadius--mini;
+}
+
+.cats-button__shape--primary,
+.cats-button__shape--secondary,
+.cats-button__shape--block {
+  &:active{
+    &::before{
+      content: '';
+    }
+  }
+}
+
+
+.cats-button--disable {
+  color: $cats-btn-color--disable;
+  background-color: $cats-btn-bgColor--disable;
+
+  &:active{
+    &::before{
+      content: none;
+    }
+  }
 }

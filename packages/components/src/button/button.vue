@@ -14,8 +14,10 @@ export default defineComponent({
   setup(props) {
     const styleClass = computed(() => {
       return {
-        [`cats-button__shape--${props.shape}`]: props.shape || 'primary',
-        [`cats-button__type--${props.type}`]: props.type || 'primary',
+        [`cats-button__shape--${props.shape}`]: props.shape,
+        [`cats-button__type--${props.type}`]: props.type,
+        [`cats-button--disable`]: props.disable,
+        [`cats-button--mini`]: props.mini,
       };
     });
 
