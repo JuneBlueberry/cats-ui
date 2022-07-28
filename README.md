@@ -39,3 +39,48 @@
     ```cmd
     pnpm run dev
     ```
+
+# 组件列表
+
+> 基础
+- [X] Button 按钮
+- [ ] Icon 图标
+- [ ] Cell 列表
+- [ ] Flex 弹性布局
+- [ ] Grid 九宫格布局
+
+> 表单
+- [ ] Input 输入
+- [ ] Textarea 文本域
+- [ ] Checkout 复选框
+- [ ] Radio 单选框
+- [ ] Switch 开关
+- [ ] Select 原生选择框
+- [ ] Slider 滑块
+- [ ] Uploader 上传
+
+> 数据展示
+
+- [ ] Badge 徽章
+- [ ] Footer 页脚
+- [ ] Gallery 画廊
+- [ ] Loading 加载
+- [ ] Loadmore 加载更多
+- [ ] Panel 面板
+- [ ] Preview 表单预览
+- [ ] Progress 进度条
+- [ ] Steps 步骤条
+
+> 导航搜索
+- [ ] Search 搜索
+- [ ] Navbar 头部导航
+- [ ] Tabbar 底部导航
+
+> 操作反馈
+
+- [ ] ActionSheet 弹出式菜单
+- [ ] Dialog 对话框
+- [ ] Popup 弹出层
+- [ ] Picker 选择器
+- [ ] Toast 提示框
+- [ ] Toptips 顶部提示条
