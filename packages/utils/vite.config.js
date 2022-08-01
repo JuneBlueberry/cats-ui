@@ -14,8 +14,8 @@ export default defineConfig(
 			//cssCodeSplit: true,
 			rollupOptions: {
 				//忽略打包vue文件
-				external: ['vue', /\.scss/],
-				input: ['src/index.ts'],
+				external: ['vue'],
+				input: ['./index.ts'],
 				output: [
 					{
 						format: 'es',
@@ -24,8 +24,8 @@ export default defineConfig(
 						//让打包目录和我们目录对应
 						preserveModules: true,
 						//配置打包根目录
-						dir: resolve(__dirname, './dist/es'),
-						preserveModulesRoot: 'dist'
+						dir: 'es',
+						// preserveModulesRoot: 'src'
 					},
 					{
 						format: 'cjs',
@@ -34,8 +34,8 @@ export default defineConfig(
 						//让打包目录和我们目录对应
 						preserveModules: true,
 						//配置打包根目录
-						dir: resolve(__dirname, './dist/lib'),
-						preserveModulesRoot: 'src'
+						dir: 'lib',
+						// preserveModulesRoot: 'src'
 					}
 				]
 			},
@@ -47,35 +47,14 @@ export default defineConfig(
 		plugins: [
 			vue(),
 			dts({
-				outputDir: resolve(__dirname, './dist/es'),
 				//指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
 				tsConfigFilePath: '../../tsconfig.json'
 			}),
 			//因为这个插件默认打包到es下，我们想让lib目录下也生成声明文件需要再配置一个
 			dts({
-				outputDir: resolve(__dirname, './dist/lib'),
+				outputDir: 'lib',
 				tsConfigFilePath: '../../tsconfig.json'
-			}),
-
-			{
-				name: 'style',
-				generateBundle(config, bundle) {
-					//这里可以获取打包后的文件目录以及代码code
-					const keys = Object.keys(bundle)
-
-					for (const key of keys) {
-						const bundler: any = bundle[key as any]
-						//rollup内置方法,将所有输出文件code中的.less换成.css,因为我们当时没有打包less文件
-						// ../components/src/button/style/index.css
-						this.emitFile({
-							type: 'asset',
-							fileName: key,//文件名名不变
-							source: bundler.code.replace(/\.\.\/components\/src\/[a-zA-Z0-9]+\/style\/index\.scss/g, './style/index.css')
-						})
-					}
-				}
-			}
-
+			})
 		],
 		resolve: {
 			alias: {

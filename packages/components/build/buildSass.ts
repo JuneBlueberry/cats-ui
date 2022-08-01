@@ -5,9 +5,9 @@ import sass from "sass"
 import glob from "fast-glob"
 const sourceDir = resolve(__dirname, '../src')
 //lib文件目录
-const targetLib = resolve(__dirname, '../lib')
+const targetLib = resolve(__dirname, '../dist/lib')
 //es文件目录
-const targetEs = resolve(__dirname, '../es')
+const targetEs = resolve(__dirname, '../dist/es')
 
 //src目录
 

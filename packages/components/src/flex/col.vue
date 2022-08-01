@@ -1,5 +1,5 @@
 <template>
-  <div class="cats-row">
+  <div class="cats-col">
 
   </div>
 </template>
