@@ -28,72 +28,72 @@
     background-color: $cats-btn-bgColor--active;
     border-radius: $cats-btn-borderRadius--default;
   }
-}
 
-.cats-button__type--primary {
-  color: $cats-color--primary;
-  background-color: $cats-color--primary;
-}
-.cats-button__type--emphasize {
-  color: $cats-color--emphasize;
-  background-color: $cats-color--emphasize;
-}
-.cats-button__type--info {
-  color: $cats-color--info;
-  background-color: $cats-color--info;
-}
-.cats-button__type--warning {
-  color: $cats-color--warning;
-  background-color: $cats-color--warning;
-}
-.cats-button__type--danger {
-  color: $cats-color--danger;
-  background-color: $cats-color--danger;
-}
+  &__type--primary {
+    color: $cats-color--primary;
+    background-color: $cats-color--primary;
+  }
+  &__type--emphasize {
+    color: $cats-color--emphasize;
+    background-color: $cats-color--emphasize;
+  }
+  &__type--info {
+    color: $cats-color--info;
+    background-color: $cats-color--info;
+  }
+  &__type--warning {
+    color: $cats-color--warning;
+    background-color: $cats-color--warning;
+  }
+  &__type--danger {
+    color: $cats-color--danger;
+    background-color: $cats-color--danger;
+  }
 
-.cats-button__shape--primary {
-  color: $cats-bgcolor--base-white;
-}
-.cats-button__shape--secondary {
-  background-color: $cats-bgcolor--default;
-}
-
-.cats-button__shape--block {
-  padding: $cats-btn-padding--shape-block;
-  overflow: hidden;
-  background-color: $cats-bgcolor--base-white;
-  width: auto;
-  border-radius: 0;
-  line-height: $cats-btn-lineHeight--shape--block;
-  font-weight: $cats-btn-fontWeight--shape--block;
-}
-
-.cats-button--mini {
-  display: inline-block;
-  width: auto;
-  padding: $cats-btn-padding--mini;
-  font-size: $cats-btn-fontSize--mini;
-  border-radius: $cats-btn-borderRadius--mini;
-}
-
-.cats-button__shape--primary,
-.cats-button__shape--secondary,
-.cats-button__shape--block {
-  &:active{
-    &::before{
-      content: '';
+  &__shape--primary {
+    color: $cats-bgcolor--base-white;
+  }
+  &__shape--secondary {
+    background-color: $cats-bgcolor--default;
+  }
+  
+  &__shape--block {
+    padding: $cats-btn-padding--shape-block;
+    overflow: hidden;
+    background-color: $cats-bgcolor--base-white;
+    width: auto;
+    border-radius: 0;
+    line-height: $cats-btn-lineHeight--shape--block;
+    font-weight: $cats-btn-fontWeight--shape--block;
+  }
+  
+  &--mini {
+    display: inline-block;
+    width: auto;
+    padding: $cats-btn-padding--mini;
+    font-size: $cats-btn-fontSize--mini;
+    border-radius: $cats-btn-borderRadius--mini;
+  }
+  
+  &__shape--primary,
+  &__shape--secondary,
+  &__shape--block {
+    &:active{
+      &::before{
+        content: '';
+      }
     }
   }
-}
-
-
-.cats-button--disable {
-  color: $cats-btn-color--disable;
-  background-color: $cats-btn-bgColor--disable;
-
-  &:active{
-    &::before{
-      content: none;
+  
+  
+  &--disable {
+    color: $cats-btn-color--disable;
+    background-color: $cats-btn-bgColor--disable;
+  
+    &:active{
+      &::before{
+        content: none;
+      }
     }
   }
 }

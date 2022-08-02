@@ -1,33 +1,37 @@
 <template>
-  <div class="cats-row">
-    哈哈
+  <div class="cats-row" :class="styleClass">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
 import "./style/index.scss";
-import { defineComponent, computed, InjectionKey } from "vue";
+import { defineComponent, computed, InjectionKey, ComputedRef } from "vue";
 import { useChildren } from '@cats-ui/utils'
 import { createNamespace } from '../utils'
 import { rowProps } from "./types";
 
 const [name] = createNamespace('row');
 
-export type RowProvide = {
-  spaces: {
+export type RowSpaces = { left?: number; right?: number }[];
 
-  };
+export type RowProvide = {
+  spaces: ComputedRef<RowSpaces>;
 };
 
 export const ROW_KEY: InjectionKey<RowProvide> = Symbol(name);
 
 export default defineComponent({
-  name: "cats-row",
+  name,
   props: rowProps,
   setup(props, { slots }) {
-    debugger
     const { children, linkChildren } = useChildren(ROW_KEY);
+
+    const styleClass = computed(() => {
+      return {
+        [`cats-row__justify--${props.justify}`]: props.justify
+      }
+    })
 
     const groups = computed(() => {
       const groups: number[][] = [[]];
@@ -47,35 +51,35 @@ export default defineComponent({
       return groups;
     });
 
-    // const spaces = computed(() => {
-    //   const gutter = Number(props.gutter);
-    //   const spaces: RowSpaces = [];
+    const spaces = computed(() => {      
+      const gutter = Number(props.gutter);
+      const spaces: RowSpaces = [];
 
-    //   if (!gutter) {
-    //     return spaces;
-    //   }
+      if (!gutter) {
+        return spaces;
+      }
 
-    //   groups.value.forEach((group) => {
-    //     const averagePadding = (gutter * (group.length - 1)) / group.length;
+      groups.value.forEach((group) => {
+        const averagePadding = gutter / 2;
 
-    //     group.forEach((item, index) => {
-    //       if (index === 0) {
-    //         spaces.push({ right: averagePadding });
-    //       } else {
-    //         const left = gutter - spaces[item - 1].right;
-    //         const right = averagePadding - left;
-    //         spaces.push({ left, right });
-    //       }
-    //     });
-    //   });
+        group.forEach((item, index) => {
+          if (index === 0) {
+            spaces.push({ right: averagePadding });
+          } else if (index === group.length - 1) {
+            spaces.push({ left: averagePadding });
+          } else {
+            spaces.push({ left: averagePadding, right: averagePadding });
+          }
+        });
+      });
 
-    //   return spaces;
-    // });
+      return spaces;
+    });
+    
+    linkChildren({spaces})
 
-    // linkChildren({ spaces });
-
-    return () => {
-
+    return {
+      styleClass
     };
   },
 });

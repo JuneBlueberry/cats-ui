@@ -1,0 +1,36 @@
+@use "sass:math";
+
+$totalSpan: 24; // 栅栏的总份数
+$oneSpan: math.div(100%, $totalSpan);
+
+
+.cats-row {
+  display: flex;
+
+  &__justify--end {
+    justify-content: flex-end;
+  }
+
+  &__justify--center {
+    justify-content: center;
+  }
+
+  &__justify--space-between {
+    justify-content: space-between;
+  }
+
+  &__justify--space-around {
+    justify-content: space-around;
+  }
+}
+
+.cats-col {
+  display: block;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 24 {
+  .cats-col__span--#{$i} { 
+    flex: 0 0 $i * $oneSpan;
+  }
+}

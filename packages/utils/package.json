@@ -2,8 +2,7 @@
   "name": "@cats-ui/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "./index.ts",
   "scripts": {
     "build": "vite build"
   },

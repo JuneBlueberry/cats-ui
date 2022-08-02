@@ -1,11 +1,22 @@
-import { ExtractPropTypes } from 'vue'
+import { ExtractPropTypes, PropType } from 'vue'
+import { createNumericProp } from '../utils'
+
+export type RowJustify = 'start' | 'end' | 'center' | 'space-between' | 'space-around'
+
+export type RowAlign = 'start' | 'end' | 'center' | 'space-between' | 'space-around'
 
 export const rowProps = {
-  
+  // 栅格间距
+  gutter: createNumericProp(0),
+  // 主轴对齐方式
+  justify: String as PropType<RowJustify>,
+  // 交叉轴对齐方式
+  align: String as PropType<RowAlign>,
 }
 
 export const colProps = {
-  
+  // 栅格份数
+  span: createNumericProp(0)
 }
 
 export type RowProps = ExtractPropTypes<typeof rowProps>

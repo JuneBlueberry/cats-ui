@@ -1,32 +1,19 @@
 import { ExtractPropTypes } from 'vue'
+import { createStringProp, createBooleanProp } from '../utils';
 
-export const ButtonShape = ['primary', 'secondary', 'block']
-export const ButtonType = ['primary', 'emphasize', 'info', 'warning', 'danger']
-export const ButtonSize = ['large', 'normal', 'small', 'mini'];  // TODO: 暂不实现
+export type ButtonShape = 'primary' | 'secondary' | 'block'
+export type ButtonType = 'primary' | 'emphasize' | 'info' | 'warning' | 'danger'
+export type ButtonSize = 'large' | 'normal' | 'small' | 'mini'  // TODO: 暂不实现
 
 export const buttonProps = {
   // 按钮形状
-  shape: {
-    type: String,
-    default: 'primary',
-    values: ButtonShape
-  },
+  shape: createStringProp<ButtonShape>('primary'),
   // 按钮类型
-  type: {
-    type: String,
-    default: 'primary',
-    values: ButtonType
-  },
+  type: createStringProp<ButtonType>('primary'),
   // 禁止按钮
-  disable: {
-    type: Boolean,
-    default: false
-  },
+  disable: createBooleanProp(false),
   // mini按钮
-  mini: {
-    type: Boolean,
-    default: false
-  }
+  mini: createBooleanProp(false)
 }
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
