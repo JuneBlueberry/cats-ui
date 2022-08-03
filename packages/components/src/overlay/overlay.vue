@@ -22,7 +22,6 @@ export default defineComponent({
 
     const style = computed(() => {
       const animationDuration = Number(props.duration)
-      debugger
       const customStyle = props.customStyle
       return Object.assign(customStyle, {
         animationDuration: `${animationDuration}ms`
