@@ -29,7 +29,9 @@ export default defineComponent({
 
     const styleClass = computed(() => {
       return {
-        [`cats-row__justify--${props.justify}`]: props.justify
+        [`cats-row__justify--${props.justify}`]: props.justify,
+        [`cats-row__align--${props.align}`]: props.align,
+        [`cats-row__wrap`]: props.wrap
       }
     })
 

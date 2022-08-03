@@ -1,5 +1,6 @@
 import {createApp} from 'vue'
-import App from './button.vue'
+import Button from './button.vue'
+import Flex from './flex.vue';
 
-const app = createApp(App)
+const app = createApp(Flex)
 app.mount('#app')

@@ -22,6 +22,26 @@ $oneSpan: math.div(100%, $totalSpan);
   &__justify--space-around {
     justify-content: space-around;
   }
+
+  &__align--start {
+    align-items: flex-start;
+  }
+
+  &__align--end {
+    align-items: flex-end;
+  }
+
+  &__align--center {
+    align-items: center;
+  }
+
+  &__align--space-between {
+    align-items: baseline;
+  }
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .cats-col {

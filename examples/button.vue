@@ -49,14 +49,5 @@ export default {
 }
 </script>
 <style scoped>
-.group {
-  margin-bottom: 20px;
-}
-.margin-t {
-  margin-top: 10px;
-}
-.margin-lr {
-  margin-left: 20px;
-  margin-right: 20px;
-}
+
 </style>
