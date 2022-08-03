@@ -1,0 +1,29 @@
+@keyframes cats-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cats-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.cats-fade {
+  &-enter-active {
+    animation: cats-fade-in;
+  }
+
+  &-leave-active {
+    animation: cats-fade-out;
+  }
+}

@@ -11,7 +11,7 @@ export const buttonProps = {
   // 按钮类型
   type: createStringProp<ButtonType>('primary'),
   // 禁止按钮
-  disable: createBooleanProp(false),
+  disabled: createBooleanProp(false),
   // mini按钮
   mini: createBooleanProp(false)
 }

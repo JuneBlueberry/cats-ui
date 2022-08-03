@@ -40,13 +40,21 @@
     pnpm run dev
     ```
 
+# 设计规范
+
+> 层次规范
+
+- content: 内容（zindex < 10）
+- nav: 导航（zindex = 99）
+- mask: 遮罩层（zindex = 999）
+- popup: 弹出层（zindex = 9999）
+
 # 组件列表
 
 > 基础
 - [X] Button 按钮
 - [ ] Icon 图标
-- [ ] Cell 列表
-- [ ] Flex 弹性布局
+- [X] Flex 弹性布局
 - [ ] Grid 九宫格布局
 
 > 表单
@@ -61,6 +69,7 @@
 
 > 数据展示
 
+- [ ] Cell 列表
 - [ ] Badge 徽章
 - [ ] Footer 页脚
 - [ ] Gallery 画廊
@@ -72,6 +81,7 @@
 - [ ] Steps 步骤条
 
 > 导航搜索
+
 - [ ] Search 搜索
 - [ ] Navbar 头部导航
 - [ ] Tabbar 底部导航
@@ -80,6 +90,7 @@
 
 - [ ] ActionSheet 弹出式菜单
 - [ ] Dialog 对话框
+- [ ] Overlay 遮罩层
 - [ ] Popup 弹出层
 - [ ] Picker 选择器
 - [ ] Toast 提示框

@@ -86,9 +86,9 @@
   }
   
   
-  &--disable {
-    color: $cats-btn-color--disable;
-    background-color: $cats-btn-bgColor--disable;
+  &--disabled {
+    color: $cats-btn-color--disabled;
+    background-color: $cats-btn-bgColor--disabled;
   
     &:active{
       &::before{
