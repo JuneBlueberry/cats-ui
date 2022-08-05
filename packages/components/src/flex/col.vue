@@ -7,12 +7,12 @@
 <script lang="ts">
 import "./style/index.scss";
 import { defineComponent, computed } from "vue";
-import { useParent } from '@cats-ui/utils'
+import { useParent } from "@cats-ui/utils";
 import { colProps } from "./types";
 import { createNamespace } from "../utils";
 
-import { ROW_KEY } from './row.vue';
-const [name] = createNamespace('col');
+import { ROW_KEY } from "./row.vue";
+const [name] = createNamespace("col");
 
 export default defineComponent({
   name,
@@ -21,10 +21,8 @@ export default defineComponent({
     const { parent, index } = useParent(ROW_KEY);
 
     const styleClass = computed(() => {
-      return [
-        `cats-col__span--${props.span}`
-      ]
-    })
+      return [`cats-col__span--${props.span}`];
+    });
 
     const style = computed(() => {
       if (!parent) {
@@ -44,7 +42,7 @@ export default defineComponent({
 
     return {
       style,
-      styleClass
+      styleClass,
     };
   },
 });

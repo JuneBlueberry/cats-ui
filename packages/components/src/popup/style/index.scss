@@ -1,0 +1,35 @@
+@import "../../styles/animation/index.scss";
+
+.cats-popup {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  border-radius: 12px 12px 0 0;
+
+  &__position--top {
+    top: 0;
+    bottom: unset;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__position--left {
+    top: 0;
+    right: unset;
+    border-radius: 0 12px 12px 0;
+  }
+
+  &__position--right {
+    top: 0;
+    left: unset;
+    border-radius: 12px 0 0 12px;
+  }
+
+  &__position--round {
+    border-radius: 0;
+  }
+}

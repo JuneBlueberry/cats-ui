@@ -7,11 +7,11 @@
 <script lang="ts">
 import "./style/index.scss";
 import { defineComponent, computed, InjectionKey, ComputedRef } from "vue";
-import { useChildren } from '@cats-ui/utils'
-import { createNamespace } from '../utils'
+import { useChildren } from "@cats-ui/utils";
+import { createNamespace } from "../utils";
 import { rowProps } from "./types";
 
-const [name] = createNamespace('row');
+const [name] = createNamespace("row");
 
 export type RowSpaces = { left?: number; right?: number }[];
 
@@ -31,9 +31,9 @@ export default defineComponent({
       return {
         [`cats-row__justify--${props.justify}`]: props.justify,
         [`cats-row__align--${props.align}`]: props.align,
-        [`cats-row__wrap`]: props.wrap
-      }
-    })
+        [`cats-row__wrap`]: props.wrap,
+      };
+    });
 
     const groups = computed(() => {
       const groups: number[][] = [[]];
@@ -53,7 +53,7 @@ export default defineComponent({
       return groups;
     });
 
-    const spaces = computed(() => {      
+    const spaces = computed(() => {
       const gutter = Number(props.gutter);
       const spaces: RowSpaces = [];
 
@@ -77,11 +77,11 @@ export default defineComponent({
 
       return spaces;
     });
-    
-    linkChildren({spaces})
+
+    linkChildren({ spaces });
 
     return {
-      styleClass
+      styleClass,
     };
   },
 });

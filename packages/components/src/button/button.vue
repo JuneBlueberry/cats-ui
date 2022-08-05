@@ -7,15 +7,15 @@
 <script lang="ts">
 import "./style/index.scss";
 import { defineComponent, computed } from "vue";
-import { createNamespace } from '../utils/create';
+import { createNamespace } from "../utils/create";
 import { buttonProps } from "./types";
 
-const [name] = createNamespace('button')
+const [name] = createNamespace("button");
 
 export default defineComponent({
   name,
   props: buttonProps,
-  emits: ['click'],
+  emits: ["click"],
   setup(props, { emit, slots }) {
     const styleClass = computed(() => {
       return {
@@ -29,13 +29,13 @@ export default defineComponent({
     // 点击事件(按钮不为disabled时触发)
     const onClick = (event: MouseEvent) => {
       if (!props.disabled) {
-        emit('click', event)
+        emit("click", event);
       }
     };
 
     return {
       styleClass,
-      onClick
+      onClick,
     };
   },
 });

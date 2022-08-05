@@ -1,10 +1,12 @@
-import { default as CatsButton } from './button'
+import CatsButton from './button'
 import { Row as CatsRow, Col as CatsCol } from './flex'
-import { default as CatsOverlay } from './overlay'
+import CatsOverlay from './overlay'
+import CatsPopup from './popup'
 
 export {
   CatsButton,
   CatsRow,
   CatsCol,
-  CatsOverlay
+  CatsOverlay,
+  CatsPopup
 }
