@@ -1,0 +1,28 @@
+.sidebar {
+  width: 250px;
+  padding-left: 10px;
+  left: auto;
+}
+.page {
+  padding-left: 250px;
+
+  .theme-default-content {
+    margin: 0;
+    padding: 0px 20px;
+  }
+}
+.page .theme-default-content {
+  margin: 0;
+  padding: 0px 20px;
+}
+
+@media (min-width: 1200px) {
+  .page {
+    padding-left: 250px;
+  
+    .theme-default-content {
+      margin: 0;
+      padding: 10px 30px;
+    }
+  }
+}
