@@ -1,8 +1,7 @@
-import {createApp} from 'vue'
-import Button from './components/button.vue'
-import Flex from './components/flex.vue';
-import Overlay from './components/overlay.vue'
-import Popup from './components/popup.vue'
+import { createApp } from 'vue'
+import router from "./router";
+import App from "./components/index.vue";
 
-const app = createApp(Popup)
+const app = createApp(App)
+app.use(router)
 app.mount('#app')

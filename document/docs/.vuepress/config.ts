@@ -48,7 +48,7 @@ export default defineUserConfig({
             },
             {
               text: '更新日志',
-              link: '/components/33',
+              link: '/components/updatelog',
             }
           ]
         },
@@ -64,19 +64,19 @@ export default defineUserConfig({
               children: [
                 {
                   text: 'Button 按钮',
-                  link: '/components/00',
+                  link: '/components/button',
                 },
                 {
                   text: 'Icon 图标',
-                  link: '/components/11',
+                  link: '/components/icon',
                 },
                 {
                   text: 'Flex 弹性布局',
-                  link: '/components/22',
+                  link: '/components/flex',
                 },
                 {
                   text: 'Grid 九宫格布局',
-                  link: '/components/33',
+                  link: '/components/grid',
                 }
               ]
             },
