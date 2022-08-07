@@ -2,14 +2,19 @@
 
 - 自行安装 node(版本 >= 12.0.0)、npm
 - 全局安装pnpm(版本7.0)
+
   ``` cmd
   npm i -g pnpm@7.0.0
   ```
+
 - 安装esno
+
   ``` cmd
   npm i esno -g
   ```
+
 - 进入项目根目录，安装依赖
+
   ``` cmd
   pnpm install
   ```
@@ -29,6 +34,7 @@
   
   - 在components目录下进行开发
   - 开发完成后运行命令进行打包
+
     ```cmd
     pnpm run build
     ```
@@ -36,6 +42,7 @@
 - 测试组件库
   - 在examples目录下引用相应的组件
   - 运行命令即可运行页面
+
     ```cmd
     pnpm run dev
     ```
@@ -52,12 +59,14 @@
 # 组件列表
 
 > 基础
+
 - [X] Button 按钮
 - [ ] Icon 图标
 - [X] Flex 弹性布局
 - [ ] Grid 九宫格布局
 
 > 表单
+
 - [ ] Input 输入
 - [ ] Textarea 文本域
 - [ ] Checkout 复选框
@@ -66,6 +75,7 @@
 - [ ] Select 原生选择框
 - [ ] Slider 滑块
 - [ ] Uploader 上传
+- [ ] Picker 选择器
 
 > 数据展示
 
@@ -92,6 +102,5 @@
 - [ ] Dialog 对话框
 - [ ] Overlay 遮罩层
 - [ ] Popup 弹出层
-- [ ] Picker 选择器
 - [ ] Toast 提示框
 - [ ] Toptips 顶部提示条

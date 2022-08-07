@@ -6,9 +6,15 @@
     </div>
     <div class="demo-group">
       <cats-button @click="show1 = true">显示遮罩层</cats-button>
-      <cats-button class="margin-t" @click="show2 = true">嵌入插槽</cats-button>
-      <cats-overlay :show="show1" :duration="600" @click="show1 = false"></cats-overlay>
-      <cats-overlay :show="show2" @click="show2 = false">
+      <cats-button class="margin-t" @click="show2 = true">动画时间</cats-button>
+      <cats-button class="margin-t" @click="show3 = true">嵌入插槽</cats-button>
+      <cats-overlay :show="show1" @click="show1 = false"></cats-overlay>
+      <cats-overlay
+        :show="show2"
+        :duration="1500"
+        @click="show2 = false"
+      ></cats-overlay>
+      <cats-overlay :show="show3" @click="show3 = false">
         <div class="demo-warpper">
           <div class="demo-warpper-content"></div>
         </div>
@@ -17,23 +23,25 @@
   </div>
 </template>
 <script lang="ts">
-import { CatsButton, CatsOverlay } from 'cats-ui'
-import { ref } from 'vue'
+import { CatsButton, CatsOverlay } from "cats-ui";
+import { ref } from "vue";
 export default {
   components: {
     CatsButton,
-    CatsOverlay
+    CatsOverlay,
   },
-  setup(){
-    const show1 = ref(false)
-    const show2 = ref(false)
+  setup() {
+    const show1 = ref(false);
+    const show2 = ref(false);
+    const show3 = ref(false);
 
     return {
       show1,
-      show2
-    }
-  }
-}
+      show2,
+      show3,
+    };
+  },
+};
 </script>
 <style scoped>
 .demo-warpper {

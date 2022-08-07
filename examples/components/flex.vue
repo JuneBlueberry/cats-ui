@@ -7,29 +7,29 @@
     <div class="demo-content demo-content-padding">
       <div class="demo-content-title">基础</div>
       <div class="demo-group">
-          <cats-row class="demo-row">
-            <cats-col :span="24"><div class="demo-col">cats-ui</div></cats-col>
-          </cats-row>
-          <cats-row class="demo-row" :gutter="10">
-            <cats-col :span="12"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="12"><div class="demo-col">cats-ui</div></cats-col>
-          </cats-row>
-          <cats-row class="demo-row" :gutter="10">
-            <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
-          </cats-row>
-          <cats-row class="demo-row" :gutter="10">
-            <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
-          </cats-row>
-          <cats-row class="demo-row" :gutter="10">
-            <cats-col :span="4"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="16"><div class="demo-col">cats-ui</div></cats-col>
-            <cats-col :span="4"><div class="demo-col">cats-ui</div></cats-col>
-          </cats-row>
+        <cats-row class="demo-row">
+          <cats-col :span="24"><div class="demo-col">cats-ui</div></cats-col>
+        </cats-row>
+        <cats-row class="demo-row" :gutter="10">
+          <cats-col :span="12"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="12"><div class="demo-col">cats-ui</div></cats-col>
+        </cats-row>
+        <cats-row class="demo-row" :gutter="10">
+          <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="8"><div class="demo-col">cats-ui</div></cats-col>
+        </cats-row>
+        <cats-row class="demo-row" :gutter="10">
+          <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
+        </cats-row>
+        <cats-row class="demo-row" :gutter="10">
+          <cats-col :span="4"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="16"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="4"><div class="demo-col">cats-ui</div></cats-col>
+        </cats-row>
       </div>
       <div class="demo-content-title">主轴对齐方式</div>
       <div class="demo-group">
@@ -82,7 +82,7 @@
           <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
           <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
           <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
-          <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
+          <cats-col :span="6"> <div class="demo-col">cats-ui</div></cats-col>
           <cats-col :span="6"><div class="demo-col">cats-ui</div></cats-col>
         </cats-row>
       </div>
@@ -90,14 +90,14 @@
   </div>
 </template>
 <script lang="ts">
-import { CatsRow, CatsCol, CatsButton } from 'cats-ui'
+import { CatsRow, CatsCol, CatsButton } from "cats-ui";
 export default {
   components: {
     CatsRow,
     CatsCol,
-    CatsButton
-  }
-}
+    CatsButton,
+  },
+};
 </script>
 <style scoped>
 .demo-row {

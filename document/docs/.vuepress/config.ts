@@ -58,7 +58,7 @@ export default defineUserConfig({
           sidebarDepth: 0,
           children: [
             {
-              text: '基础',
+              text: '基础组件',
               collapsable: false,
               sidebarDepth: 0,
               children: [
@@ -81,25 +81,86 @@ export default defineUserConfig({
               ]
             },
             {
-              text: '表单',
+              text: '表单组件',
               collapsable: false,
               sidebarDepth: 0,
               children: [
                 {
                   text: 'Input 输入',
-                  link: '/components/00',
                 },
                 {
                   text: 'Textarea 文本域',
-                  link: '/components/11',
                 },
                 {
                   text: 'Checkout 复选框',
-                  link: '/components/22',
                 },
                 {
                   text: 'Radio 单选框',
-                  link: '/components/33',
+                }
+              ]
+            },
+            {
+              text: '导航搜索',
+              collapsable: false,
+              sidebarDepth: 0,
+              children: [
+                {
+                  text: 'Input 输入',
+                },
+                {
+                  text: 'Textarea 文本域',
+                },
+                {
+                  text: 'Checkout 复选框',
+                },
+                {
+                  text: 'Radio 单选框',
+                }
+              ]
+            },
+            {
+              text: '操作反馈',
+              collapsable: false,
+              sidebarDepth: 0,
+              children: [
+                {
+                  text: 'ActionSheet 弹出式菜单',
+                },
+                {
+                  text: 'Dialog 对话框',
+                },
+                {
+                  text: 'Overlay 遮罩层',
+                  link: '/components/overlay'
+                },
+                {
+                  text: 'Popup 弹出层',
+                  link: '/components/popup'
+                },
+                {
+                  text: 'Toast 提示框',
+                },
+                {
+                  text: 'Toptips 顶部提示条',
+                }
+              ]
+            },
+            {
+              text: '数据展示',
+              collapsable: false,
+              sidebarDepth: 0,
+              children: [
+                {
+                  text: 'Input 输入',
+                },
+                {
+                  text: 'Textarea 文本域',
+                },
+                {
+                  text: 'Checkout 复选框',
+                },
+                {
+                  text: 'Radio 单选框',
                 }
               ]
             }
