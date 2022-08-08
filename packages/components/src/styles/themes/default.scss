@@ -26,6 +26,12 @@ $cats-color--danger: #fa5151;
 /***************通用尺寸***************/
 
 
+/***************通用层级***************/
+$cats-zindex--content: 1;
+$cats-zindex--nav: 100;
+$cats-zindex--overlay: 1000;
+$cats-zindex--popup: 5000;
+
 /*************** button 按钮***************/
 $cats-btn-width--default: 184px;
 $cats-btn-padding--default: 8px 24px;
@@ -42,7 +48,14 @@ $cats-btn-padding--mini: 0 12px;
 $cats-btn-fontSize--mini: 16px;
 $cats-btn-borderRadius--mini: 6px;
 
-$cats-btn-color--disabled: rgba(0,0,0,0.2);
+$cats-btn-color--disabled: rgba(0, 0, 0, 0.2);
 $cats-btn-bgColor--disabled: #f2f2f2;
 
 $cats-btn-bgColor--active: rgba(0, 0, 0, 0.1);
+
+
+/*************** overlay 遮罩层 ***************/
+$cats-overlay-bgcolor--default: rgba(0, 0, 0, 0.6);
+
+/*************** popup 弹出层 ***************/
+$cats-popup-borderRadius: 12px;

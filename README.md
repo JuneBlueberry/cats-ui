@@ -30,7 +30,7 @@
 
 ### 开发过程
 
-- 开发组件库
+- 开发组件库(pakeage/components)
   
   - 在components目录下进行开发
   - 开发完成后运行命令进行打包
@@ -39,22 +39,36 @@
     pnpm run build
     ```
 
-- 测试组件库
-  - 在examples目录下引用相应的组件
-  - 运行命令即可运行页面
+- 测试组件库(examples)
+  - 在examples目录下运行命令即可运行页面
 
     ```cmd
     pnpm run dev
     ```
+  - 在components下面编写相应组件的测试页面
+
+
+- 组件文档(document)
+  - 在document目录下运行命令即可运行页面
+
+    ```cmd
+    pnpm run docs:dev
+    ```
+  - 在docs/components下面编写相应组件的文档，在.vuepress/config.ts文件中配置相应路由
 
 # 设计规范
 
 > 层次规范
 
 - content: 内容（zindex < 10）
-- nav: 导航（zindex = 99）
-- mask: 遮罩层（zindex = 999）
-- popup: 弹出层（zindex = 9999）
+- nav: 导航（zindex = 100）
+- mask: 遮罩层（zindex = 1000）
+- popup: 弹出层（zindex = 5000）
+
+> 样式规范
+
+- 所有的变量样式需要放在主题样式中： styles/theme/default.scss
+- 所有的动画样式需要放在动画样式中：styles/animation/index/scss
 
 # 组件列表
 
