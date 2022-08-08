@@ -26,6 +26,21 @@ const routes = [
     name: 'popup',
     component: () => import('../components/popup.vue')
   },
+  {
+    path: '/tabs',
+    name: 'tabs',
+    component: () => import('../components/tabs.vue')
+  },
+  {
+    path: '/navbar',
+    name: 'navbar',
+    component: () => import('../components/navbar.vue')
+  },
+  {
+    path: '/icon',
+    name: 'icon',
+    component: () => import('../components/icon.vue')
+  },
 ]
 
 export default createRouter({

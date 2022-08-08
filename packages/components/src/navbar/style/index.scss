@@ -1,0 +1,38 @@
+.cats-navbar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 46px;
+  background-color: #ffffff;
+  color: #323233;
+  align-items: center;
+
+  &__left,
+  &__right {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__left {
+    left: 0;
+  }
+
+  &__right {
+    right: 0;
+  }
+
+  &__middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+
+  }
+}

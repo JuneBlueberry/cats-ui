@@ -19,6 +19,15 @@
       <cats-button class="margin-t" type="info" @click="clickLink('popup')"
         >Popup 弹出层</cats-button
       >
+      <cats-button class="margin-t" type="info" @click="clickLink('tabs')"
+        >Tabs 标签页</cats-button
+      >
+      <cats-button class="margin-t" type="info" @click="clickLink('navbar')"
+        >Navbar 头部导航</cats-button
+      >
+      <cats-button class="margin-t" type="info" @click="clickLink('icon')"
+        >Icon 图标</cats-button
+      >
     </div>
   </div>
 </template>

@@ -5,7 +5,7 @@ const { path } = require('@vuepress/utils')
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: 'Cast-UI',
+  title: 'Cats-UI',
   description: '基于vue3的移动端UI组件库',
   base: '/',
   theme: defaultTheme({
