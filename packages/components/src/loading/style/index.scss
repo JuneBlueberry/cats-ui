@@ -10,7 +10,7 @@
   height: 1em;
   vertical-align: middle;
   color: #606060;
-  animation: cats-loading-rotate 1s steps(60, end) infinite;
+  animation: cats-rotate 1s steps(60, end) infinite;
 
   &:before,
   &:after {

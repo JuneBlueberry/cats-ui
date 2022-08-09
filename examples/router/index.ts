@@ -46,6 +46,11 @@ const routes = [
     name: 'loading',
     component: () => import('../components/loading.vue')
   },
+  {
+    path: '/dialog',
+    name: 'dialog',
+    component: () => import('../components/dialog.vue')
+  },
 ]
 
 export default createRouter({
