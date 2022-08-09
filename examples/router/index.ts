@@ -26,6 +26,11 @@ const routes = [
     name: 'popup',
     component: () => import('../components/popup.vue')
   },
+  {
+    path: '/grid',
+    name: 'grid',
+    component: () => import('../components/grid.vue')
+  },
 ]
 
 export default createRouter({

@@ -1,0 +1,99 @@
+@import "../../styles/themes/default.scss";
+
+.cats-grid {
+  position: relative;
+  display: block;
+  width: $cats-btn-width--default;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $cats-btn-padding--default;
+  box-sizing: border-box;
+  font-weight: $cats-btn-fontWeight--default;
+  font-size: $cats-btn-fontSize--default;
+  text-align: center;
+  text-decoration: none;
+  color: $cats-bgcolor--base-white;
+  line-height: $cats-btn-lineHeight--default;
+  border-radius: $cats-btn-borderRadius--default;
+  -webkit-tap-highlight-color: $cats-bgcolor--base-black;
+  -webkit-user-select: none;
+  user-select: none;
+
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $cats-btn-bgColor--active;
+    border-radius: $cats-btn-borderRadius--default;
+  }
+
+  &__type--primary {
+    color: $cats-color--primary;
+    background-color: $cats-color--primary;
+  }
+  &__type--emphasize {
+    color: $cats-color--emphasize;
+    background-color: $cats-color--emphasize;
+  }
+  &__type--info {
+    color: $cats-color--info;
+    background-color: $cats-color--info;
+  }
+  &__type--warning {
+    color: $cats-color--warning;
+    background-color: $cats-color--warning;
+  }
+  &__type--danger {
+    color: $cats-color--danger;
+    background-color: $cats-color--danger;
+  }
+
+  &__shape--primary {
+    color: $cats-bgcolor--base-white;
+  }
+  &__shape--secondary {
+    background-color: $cats-bgcolor--default;
+  }
+  
+  &__shape--block {
+    padding: $cats-btn-padding--shape-block;
+    overflow: hidden;
+    background-color: $cats-bgcolor--base-white;
+    width: auto;
+    border-radius: 0;
+    line-height: $cats-btn-lineHeight--shape--block;
+    font-weight: $cats-btn-fontWeight--shape--block;
+  }
+  
+  &--mini {
+    display: inline-block;
+    width: auto;
+    padding: $cats-btn-padding--mini;
+    font-size: $cats-btn-fontSize--mini;
+    border-radius: $cats-btn-borderRadius--mini;
+  }
+  
+  &__shape--primary,
+  &__shape--secondary,
+  &__shape--block {
+    &:active{
+      &::before{
+        content: '';
+      }
+    }
+  }
+  
+  
+  &--disabled {
+    color: $cats-btn-color--disabled;
+    background-color: $cats-btn-bgColor--disabled;
+  
+    &:active{
+      &::before{
+        content: none;
+      }
+    }
+  }
+}

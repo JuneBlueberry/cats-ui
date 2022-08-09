@@ -19,6 +19,9 @@
       <cats-button class="margin-t" type="info" @click="clickLink('popup')"
         >Popup 弹出层</cats-button
       >
+      <cats-button class="margin-t" type="info" @click="clickLink('grid')"
+        >grid 九宫格</cats-button
+      >
     </div>
   </div>
 </template>
