@@ -1,0 +1,39 @@
+@import "../../styles/animation/index.scss";
+
+.cats-loading {
+  font-size: 16px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  color: #606060;
+  animation: cats-loading-rotate 1s steps(60, end) infinite;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 0.5em;
+    height: 1em;
+    box-sizing: border-box;
+    border: 0.125em solid;
+    border-color: currentColor;
+  }
+
+  &:before {
+    border-right-width: 0;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    -webkit-mask-image: -webkit-linear-gradient(top, #000000 8%, rgba(0, 0, 0, 0.3) 95%);
+  }
+
+  &:after {
+    border-left-width: 0;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 8%, rgba(0, 0, 0, 0.3) 95%);
+  }
+}

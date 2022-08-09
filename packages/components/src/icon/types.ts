@@ -7,7 +7,7 @@ export const iconProps = {
   // 字体颜色
   color: createStringProp(''),
   // 字体大小
-  fontSize: {
+  size: {
     type: [Number, String]
   },
   // 是否显示小红点

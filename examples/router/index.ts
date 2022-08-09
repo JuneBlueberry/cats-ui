@@ -41,6 +41,11 @@ const routes = [
     name: 'icon',
     component: () => import('../components/icon.vue')
   },
+  {
+    path: '/loading',
+    name: 'loading',
+    component: () => import('../components/loading.vue')
+  },
 ]
 
 export default createRouter({
