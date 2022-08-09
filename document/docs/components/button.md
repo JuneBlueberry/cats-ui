@@ -3,16 +3,29 @@
 <demo-model url="#/button"></demo-model>
 
 ::: tip 介绍
+
 按钮用于触发一个操作，如提交表单
+
 :::
 
-::: tip 引入
+## 引入
+
+:::: code-group
+::: code-group-item JS
 
 ```js
-const foo = "foo";
+import { CatsButton } from 'cats-ui'
 ```
 
 :::
+::: code-group-item TS
+
+```ts
+import { CatsButton } from 'cats-ui'
+```
+
+:::
+::::
 
 ## 代码演示
 
@@ -68,12 +81,12 @@ const foo = "foo";
 
 ## Props
 
-::: warning 属性
+::: warning Button Props
 
 | 参数     | 说明                                                                  | 类型    | 默认值  |
 | -------- | --------------------------------------------------------------------- | ------- | ------- |
-| type     | 形状，可选：**primary** **emphasize** **info** **warning** **danger** | String  | primary |
-| shape    | 类型，可选：**primary** **secondary** **block**                       | String  | primary |
+| type     | 形状，可选：**primary** **emphasize** **info** **warning** **danger** | string  | primary |
+| shape    | 类型，可选：**primary** **secondary** **block**                       | string  | primary |
 | disabled | 是否禁用按钮点击                                                      | boolean | false   |
 | mini     | 是否为 mini 按钮                                                      | boolean | false   |
 
@@ -81,7 +94,7 @@ const foo = "foo";
 
 ## Events
 
-::: warning 事件
+::: warning Button Event
 
 | 名称  | 说明                                | 回调              |
 | ----- | ----------------------------------- | ----------------- |

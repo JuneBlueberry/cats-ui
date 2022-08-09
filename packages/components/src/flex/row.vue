@@ -6,7 +6,13 @@
 
 <script lang="ts">
 import "./style/index.scss";
-import { defineComponent, computed, InjectionKey, ComputedRef } from "vue";
+import {
+  defineComponent,
+  computed,
+  InjectionKey,
+  ComputedRef,
+  nextTick,
+} from "vue";
 import { useChildren } from "@cats-ui/utils";
 import { createNamespace } from "../utils";
 import { rowProps } from "./types";
@@ -37,7 +43,6 @@ export default defineComponent({
 
     const groups = computed(() => {
       const groups: number[][] = [[]];
-
       let totalSpan = 0;
       children.forEach((child, index) => {
         totalSpan += Number(child.span);
