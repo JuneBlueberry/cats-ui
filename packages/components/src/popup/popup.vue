@@ -63,7 +63,7 @@ export default defineComponent({
     });
     // transition 的动画名称
     const transitionName = computed(() => {
-      return `cats-popup-slide-${props.position}`;
+      return `cats-slide-${props.position}`;
     });
 
     const show = computed(() => {

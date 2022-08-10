@@ -14,8 +14,8 @@
 // 缩放-放大
 @keyframes cats-scale-expand {
   from {
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.7);
     opacity: 0;
   }
 }
@@ -23,8 +23,8 @@
 // 缩放-缩小
 @keyframes cats-scale-narrow {
   to {
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
+    -webkit-transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, -50%) scale(0.3);
     opacity: 0;
   }
 }
@@ -119,42 +119,44 @@
   }
 }
 
-.cats-popup-slide-bottom {
-  &-enter-active {
-    animation: cats-slide-bottom-enter;
+.cats-slide {
+  &-bottom {
+    &-enter-active {
+      animation: cats-slide-bottom-enter;
+    }
+
+    &-leave-active {
+      animation: cats-slide-bottom-leave;
+    }
   }
 
-  &-leave-active {
-    animation: cats-slide-bottom-leave;
-  }
-}
+  &-top {
+    &-enter-active {
+      animation: cats-slide-top-enter;
+    }
 
-.cats-popup-slide-top {
-  &-enter-active {
-    animation: cats-slide-top-enter;
-  }
-
-  &-leave-active {
-    animation: cats-slide-top-leave;
-  }
-}
-
-.cats-popup-slide-left {
-  &-enter-active {
-    animation: cats-slide-left-enter;
+    &-leave-active {
+      animation: cats-slide-top-leave;
+    }
   }
 
-  &-leave-active {
-    animation: cats-slide-left-leave;
-  }
-}
+  &-left {
+    &-enter-active {
+      animation: cats-slide-left-enter;
+    }
 
-.cats-popup-slide-right {
-  &-enter-active {
-    animation: cats-slide-right-enter;
+    &-leave-active {
+      animation: cats-slide-left-leave;
+    }
   }
 
-  &-leave-active {
-    animation: cats-slide-right-leave;
+  &-right {
+    &-enter-active {
+      animation: cats-slide-right-enter;
+    }
+
+    &-leave-active {
+      animation: cats-slide-right-leave;
+    }
   }
 }

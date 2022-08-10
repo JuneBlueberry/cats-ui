@@ -5,13 +5,29 @@
       <p class="demo-desc">弹出层</p>
     </div>
     <div class="demo-group">
-      <cats-button @click="show1 = true">基础用法</cats-button>
+      <cats-button @click="showDialog">插件调用</cats-button>
+      <cats-button class="margin-t" @click="show1 = true">基础样式</cats-button>
+      <cats-button class="margin-t" @click="show2 = true">设置样式</cats-button>
+      <cats-button class="margin-t" @click="show3 = true">确认弹窗</cats-button>
     </div>
   </div>
   <cats-dialog :show="show1" @close="show1 = false"></cats-dialog>
+  <cats-dialog
+    :show="show2"
+    confrimText="主要按钮"
+    confrimColor="green"
+    @close="show2 = false"
+  ></cats-dialog>
+  <cats-dialog
+    :show="show3"
+    :showTitle="false"
+    :showCancel="false"
+    confrimText="知道了"
+    @close="show3 = false"
+  ></cats-dialog>
 </template>
 <script lang="ts">
-import { CatsButton, CatsDialog } from "cats-ui";
+import { CatsButton, CatsDialog, Dialog } from "cats-ui";
 import { ref } from "vue";
 export default {
   components: {
@@ -34,6 +50,11 @@ export default {
       show5,
       show6,
     };
+  },
+  methods: {
+    showDialog() {
+      Dialog({});
+    },
   },
 };
 </script>

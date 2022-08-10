@@ -8,6 +8,8 @@ import CatsIcon from './src/icon'
 import CatsLoading from './src/loading'
 import CatsDialog from './src/dialog'
 
+import { Dialog } from './src/dialog/plugin-call'
+
 export {
   CatsButton,
   CatsRow,
@@ -18,5 +20,6 @@ export {
   CatsNavbar,
   CatsIcon,
   CatsLoading,
-  CatsDialog
+  CatsDialog,
+  Dialog
 }
