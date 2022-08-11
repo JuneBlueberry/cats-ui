@@ -3,6 +3,7 @@ import { Row as CatsRow, Col as CatsCol } from './flex'
 import CatsOverlay from './overlay'
 import CatsPopup from './popup'
 import { Tabs as CatsTabs } from './tabs'
+import CatsFooter from './footer'
 
 export {
   CatsButton,
@@ -10,5 +11,6 @@ export {
   CatsCol,
   CatsOverlay,
   CatsPopup,
-  CatsTabs
+  CatsTabs,
+  CatsFooter
 }

@@ -41,6 +41,11 @@ const routes = [
     name: 'icon',
     component: () => import('../components/icon.vue')
   },
+  {
+    path: '/footer',
+    name: 'footer',
+    component: () => import('../components/footer.vue')
+  },
 ]
 
 export default createRouter({

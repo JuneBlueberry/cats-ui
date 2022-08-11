@@ -5,6 +5,7 @@ import CatsPopup from './src/popup'
 import { Tabs as CatsTabs } from './src/tabs'
 import CatsNavbar from './src/navbar'
 import CatsIcon from './src/icon'
+import CatsFooter from './src/footer'
 
 export {
   CatsButton,
@@ -14,5 +15,6 @@ export {
   CatsPopup,
   CatsTabs,
   CatsNavbar,
-  CatsIcon
+  CatsIcon,
+  CatsFooter
 }
