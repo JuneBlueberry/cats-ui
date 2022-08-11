@@ -53,7 +53,11 @@ export default {
   },
   methods: {
     showDialog() {
-      Dialog({});
+      Dialog({
+        close() {
+          console.log(111);
+        },
+      });
     },
   },
 };

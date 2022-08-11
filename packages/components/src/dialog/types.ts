@@ -34,5 +34,6 @@ export type DialogPopup = {
   closeClickOverlay?: Boolean,
   duration?: String | Number,
   overlayClass?: String,
-  overlayStyle?: Object
+  overlayStyle?: Object,
+  close?: Function
 }
