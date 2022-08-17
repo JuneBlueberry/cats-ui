@@ -28,6 +28,7 @@
                 cats-dialog__footer-btns--item cats-dialog__footer-btns--cancel
               "
               v-if="showCancel"
+              @click="clickCancel"
             >
               {{ cancelText }}
             </div>
@@ -37,6 +38,7 @@
               "
               :style="confirmStyle"
               v-if="showConfirm"
+              @click="clickConfirm"
             >
               {{ confrimText }}
             </div>
@@ -59,7 +61,15 @@ const [name] = createNamespace("popup");
 export default defineComponent({
   name,
   props: dialogPopup,
-  emits: ["click", "click-overlay", "open", "close"],
+  emits: [
+    "click",
+    "click-overlay",
+    "cancel",
+    "confirm",
+    "open",
+    "close",
+    "updateShow",
+  ],
   components: {
     CatsOverlay,
   },
@@ -84,10 +94,22 @@ export default defineComponent({
       return props.show;
     });
 
+    const updateShow = (value: boolean) => emit("updateShow", value);
+
     // 点击蒙层事件
     const clickOverlay = (event: MouseEvent) => {
       emit("click-overlay", event);
       props.closeClickOverlay && close();
+    };
+    // 点击取消按钮
+    const clickCancel = (event: MouseEvent) => {
+      emit("cancel", event);
+      close();
+    };
+    // 点击确定按钮
+    const clickConfirm = (event: MouseEvent) => {
+      emit("confirm", event);
+      close();
     };
     // 打开弹出层
     const open = () => {
@@ -96,6 +118,7 @@ export default defineComponent({
     // 关闭弹出层
     const close = () => {
       emit("close");
+      updateShow(false);
     };
 
     return {
@@ -105,6 +128,8 @@ export default defineComponent({
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
       clickOverlay,
+      clickCancel,
+      clickConfirm,
     };
   },
 });

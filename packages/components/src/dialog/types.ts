@@ -17,7 +17,7 @@ export const dialogPopup = {
   closeClickOverlay: createBooleanProp(true),
   duration: createNumericProp(300),
   overlayClass: createStringProp(''),
-  overlayStyle: createObjectProp()
+  overlayStyle: createObjectProp(),
 }
 
 export type DialogPopup = {
@@ -35,5 +35,6 @@ export type DialogPopup = {
   duration?: String | Number,
   overlayClass?: String,
   overlayStyle?: Object,
-  close?: Function
+  onCancel?: Function,
+  clickConfirm?: Function
 }

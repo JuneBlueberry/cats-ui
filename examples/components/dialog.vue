@@ -54,10 +54,15 @@ export default {
   methods: {
     showDialog() {
       Dialog({
-        close() {
-          console.log(111);
+        title: "标题",
+        content: "哈哈哈哈哈",
+        onCancel: function () {
+          console.log("cancel");
         },
       });
+      setTimeout(() => {
+        Dialog.close();
+      }, 1500);
     },
   },
 };
