@@ -1,0 +1,61 @@
+/*
+ * @Author: blueberry 
+ * @Date: 2022-07-22 17:32:54 
+ * @Last Modified by: blueberry
+ * @Last Modified time: 2022-08-02 18:55:42
+ */
+
+// 默认主题
+
+/***************通用颜色***************/
+
+// 背景色调
+$cats-bgcolor--base-white: #ffffff;
+$cats-bgcolor--base-black: #000000;
+$cats-bgcolor--default: #f2f2f2;
+// 主色调
+$cats-color--primary: #07c160;
+$cats-color--emphasize: #576b95;
+$cats-color--info: #909399;
+$cats-color--warning: #fa9d3b;
+$cats-color--danger: #fa5151;
+// 辅助色
+// 边框色
+
+
+/***************通用尺寸***************/
+
+
+/***************通用层级***************/
+$cats-zindex--content: 1;
+$cats-zindex--nav: 100;
+$cats-zindex--overlay: 1000;
+$cats-zindex--popup: 5000;
+
+/*************** button 按钮***************/
+$cats-btn-width--default: 184px;
+$cats-btn-padding--default: 8px 24px;
+$cats-btn-fontWeight--default: 700;
+$cats-btn-fontSize--default: 17px;
+$cats-btn-lineHeight--default: 32px;
+$cats-btn-borderRadius--default: 8px;
+
+$cats-btn-padding--shape-block: 16px;
+$cats-btn-lineHeight--shape--block: 24px;
+$cats-btn-fontWeight--shape--block: 400;
+
+$cats-btn-padding--mini: 0 12px;
+$cats-btn-fontSize--mini: 16px;
+$cats-btn-borderRadius--mini: 6px;
+
+$cats-btn-color--disabled: rgba(0, 0, 0, 0.2);
+$cats-btn-bgColor--disabled: #f2f2f2;
+
+$cats-btn-bgColor--active: rgba(0, 0, 0, 0.1);
+
+
+/*************** overlay 遮罩层 ***************/
+$cats-overlay-bgcolor--default: rgba(0, 0, 0, 0.6);
+
+/*************** popup 弹出层 ***************/
+$cats-popup-borderRadius: 12px;

@@ -1,0 +1,47 @@
+.sidebar {
+  width: 250px;
+  padding-left: 10px;
+  left: auto;
+}
+
+a.header-anchor {
+  margin-left: 0;
+}
+
+@media (min-width: 720px) {
+  .page {
+    padding-left: 250px;
+  
+    .theme-default-content {
+      margin: 0;
+      padding: 0px 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .page {
+    .theme-default-content {
+      width: 90%;
+      max-width: unset;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    .theme-default-content {
+      width: 66%;
+      max-width: unset;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    .theme-default-content {
+      width: 70%;
+      max-width: unset;
+    }
+  }
+}

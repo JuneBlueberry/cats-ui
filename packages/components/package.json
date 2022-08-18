@@ -1,9 +1,7 @@
 {
   "name": "cats-ui",
   "version": "1.0.1",
-  "description": "",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/JuneBlueberry/cats-ui"
@@ -13,7 +11,8 @@
     "email": "812391718@qq.com"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "build:sass": "vite build && esno build/buildSass"
   },
   "files": [
     "es",
@@ -26,5 +25,8 @@
   "author": "JuneBlueberry <812391718@qq.com>",
   "private": false,
   "license": "MIT",
-  "typings": "lib/index.d.ts"
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@cats-ui/utils": "workspace:^1.0.0"
+  }
 }

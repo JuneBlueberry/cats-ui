@@ -10,10 +10,18 @@
   "author": "JuneBlueberry",
   "license": "MIT",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.1",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/compiler-sfc": "^3.2.37",
+    "@vuepress/client": "2.0.0-beta.49",
+    "@vuepress/plugin-register-components": "2.0.0-beta.49",
+    "cpy": "^9.0.1",
+    "fast-glob": "^3.2.11",
+    "sass": "^1.53.0",
     "typescript": "^4.7.4",
-    "vite": "^3.0.2",
-    "vite-plugin-dts": "^1.4.0",
-    "vue": "^3.2.36"
+    "vite": "^2.9.12",
+    "vite-plugin-dts": "^1.2.1",
+    "vue": "^3.2.36",
+    "vue-router": "4",
+    "vuepress": "2.0.0-beta.49"
   }
 }

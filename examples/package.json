@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cats-ui": "workspace:^1.0.0"
+    "cats-ui": "workspace:^1.0.1"
   }
 }
