@@ -105,7 +105,8 @@ export default defineUserConfig({
               sidebarDepth: 0,
               children: [
                 {
-                  text: 'Input 输入',
+                  text: 'Navbar 头部导航',
+                  link: '/components/navbar'
                 },
                 {
                   text: 'Textarea 文本域',
