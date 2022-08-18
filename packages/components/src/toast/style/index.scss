@@ -1,0 +1,54 @@
+.cats-toast__overlay {
+  background-color: transparent;
+}
+
+.cats-toast {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  width: 136px;
+  height: 136px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background-color: #4c4c4c;
+  border-radius: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  line-height: 1.4;
+
+  &--none {
+    width: auto;
+    height: auto;
+    min-width: 152px;
+    max-width: 80%;
+    padding: 12px 0;
+    border-radius: 8px;
+  }
+
+  &__icon {
+    margin-bottom: 16px;
+
+    &--none {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 17px;
+    padding: 0 12px;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    &--none {
+      font-size: 14px;
+      padding: 0 20px;
+    }
+  }
+}

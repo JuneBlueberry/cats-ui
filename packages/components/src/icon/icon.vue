@@ -1,6 +1,6 @@
 <template>
   <div class="cats-icon">
-    <svg class="cats-icon__svg" aria-hidden="true">
+    <svg class="cats-icon__svg" :style="style" aria-hidden="true">
       <use :xlink:href="iconName"></use>
     </svg>
     <div v-if="dot" class="cats-icon__badge" :class="dotClass">{{ badge }}</div>

@@ -51,6 +51,11 @@ const routes = [
     name: 'dialog',
     component: () => import('../components/dialog.vue')
   },
+  {
+    path: '/toast',
+    name: 'toast',
+    component: () => import('../components/toast.vue')
+  },
 ]
 
 export default createRouter({

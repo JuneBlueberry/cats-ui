@@ -1,7 +1,4 @@
-import { ExtractPropTypes, PropType } from 'vue'
 import { createObjectProp, createBooleanProp, createNumericProp, createStringProp } from '../utils'
-
-export type PositionProps = 'bottom' | 'top' | 'left' | 'right'
 
 export const dialogPopup = {
   show: createBooleanProp(false),

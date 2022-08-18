@@ -9,6 +9,7 @@ import CatsLoading from './src/loading'
 import CatsDialog from './src/dialog'
 
 import { Dialog } from './src/dialog/plugin-call'
+import { Toast } from './src/toast/plugin-call'
 
 export {
   CatsButton,
@@ -21,5 +22,6 @@ export {
   CatsIcon,
   CatsLoading,
   CatsDialog,
-  Dialog
+  Dialog,
+  Toast
 }
