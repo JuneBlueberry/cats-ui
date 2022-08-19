@@ -1,4 +1,4 @@
-import { DialogPopup } from "./types"
+import { DialogProps } from "./types"
 import CatsDialog from './dialog.vue'
 import { usePopupState, mountComponent } from '../utils/mount-components'
 import { ComponentPublicInstance, h, getCurrentInstance, reactive } from 'vue'
@@ -9,18 +9,18 @@ function initInstance(options) {
   const Wrapper = {
     setup() {
       const { state, toggle } = usePopupState()
-      return () => h(CatsDialog, { ...options, show: state.show, onUpdateShow: toggle })
+      return () => h(CatsDialog, { ...state, onUpdateShow: toggle })
     },
   };
 
   ({ instance } = mountComponent(Wrapper));
 }
 
-function Dialog(options: DialogPopup) {
+function Dialog(options: DialogProps) {
   if (!instance) {
     initInstance(options);
   }
-  instance.open()
+  instance.open(options)
 }
 
 // 关闭dialog

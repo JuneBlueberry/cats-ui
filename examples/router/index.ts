@@ -56,6 +56,11 @@ const routes = [
     name: 'toast',
     component: () => import('../components/toast.vue')
   },
+  {
+    path: '/action-sheet',
+    name: 'action-sheet',
+    component: () => import('../components/action-sheet.vue')
+  },
 ]
 
 export default createRouter({

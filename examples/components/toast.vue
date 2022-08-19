@@ -1,15 +1,23 @@
 <template>
-  <div class="page">
+  <div class="demo-page">
     <div class="demo-header">
       <h1 class="demo-title">Toast</h1>
       <p class="demo-desc">提示框</p>
     </div>
     <div class="demo-group">
-      <cats-button class="margin-t" @click="showToast1">成功</cats-button>
-      <cats-button class="margin-t" @click="showToast2">警告</cats-button>
-      <cats-button class="margin-t" @click="showToast3">失败</cats-button>
-      <cats-button class="margin-t" @click="showToast4">加载</cats-button>
-      <cats-button class="margin-t" @click="showToast5">文字</cats-button>
+      <cats-button shape="secondary" @click="showToast1">成功</cats-button>
+      <cats-button class="margin-t" shape="secondary" @click="showToast2"
+        >警告</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="showToast3"
+        >失败</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="showToast4"
+        >加载</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="showToast5"
+        >文字</cats-button
+      >
     </div>
   </div>
 </template>
@@ -61,6 +69,9 @@ export default {
         icon: "loading",
         title: "加载中",
       });
+      setTimeout(() => {
+        Toast.close();
+      }, 3000);
     },
     showToast5() {
       Toast({
@@ -72,4 +83,7 @@ export default {
 };
 </script>
 <style scoped>
+.demo-page {
+  background-color: #ffffff;
+}
 </style>

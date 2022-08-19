@@ -2,7 +2,7 @@ import { createBooleanProp, createNumericProp, createStringProp } from '../utils
 
 export type IconProps = 'success' | 'warning' | 'error' | 'loading' | 'none'
 
-export const toastPopup = {
+export const toastProps = {
   show: createBooleanProp(false),
   title: createStringProp(''),
   icon: createStringProp<IconProps>('success'),
@@ -10,7 +10,7 @@ export const toastPopup = {
   duration: createNumericProp(1500),
 }
 
-export type ToastPopup = {
+export type ToastProps = {
   show?: Boolean
   title?: String,
   icon?: String,

@@ -24,6 +24,10 @@ $cats-color--danger: #fa5151;
 
 
 /***************通用尺寸***************/
+$cats-fontSize--base: 16px;
+$cats-fontWeight--base: 500;
+
+$cats-fontSize--icon-default: 24px;
 
 
 /***************通用层级***************/
@@ -59,3 +63,34 @@ $cats-overlay-bgcolor--default: rgba(0, 0, 0, 0.6);
 
 /*************** popup 弹出层 ***************/
 $cats-popup-borderRadius: 12px;
+
+/*************** icon 图标 ***************/
+$cats-icon-color--dot: #ee0a24;
+
+/*************** loading 加载 ***************/
+$cats-loading-fontSize: 16px;
+$cats-loading-color: #606060;
+
+/*************** navbar 头部导航 ***************/
+$cats-navbar-color: #323233;
+$cats-navbar-height: 46px;
+$cats-navbar-padding--icon: 0 10px;
+
+/*************** toast 提示框 ***************/
+$cats-toast-width: 136px;
+$cats-toast-top: 40%;
+$cats-toast-bgColor: #4c4c4c;
+$cats-toast-color: rgba(255, 255, 255, 0.9);
+$cats-toast-borderRadius: 12px;
+$cats-toast-animationDuration: 300ms;
+
+$cats-toast-marginBottom--icon: 16px;
+
+$cats-toast-padding--none: 12px 0;
+$cats-toast-borderRadius--none: 8px;
+
+$cats-toast-fontSize--title: 17px;
+$cats-toast-padding--title: 0 12px;
+
+$cats-toast-fontSize--title-none: 14px;
+$cats-toast-padding--title-none: 0 20px;

@@ -79,8 +79,8 @@ export default {
 | -------- | --------------------------------------------------------------------- | ------- | ------- |
 | show     | 是否显示遮罩层 | boolean  | false |
 | duration    | 动画时间，单位 **ms**                      | string/number  | 300 |
-| customClass | 自定义类                                                      | string | - |
-| customStyle     | 自定义样式                                                     | string | - |
+| overlayClass | 自定义类                                                      | string | - |
+| overlayStyle     | 自定义样式                                                     | string | - |
 
 :::
 

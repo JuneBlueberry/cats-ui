@@ -6,15 +6,17 @@
     :overlay-style="overlayStyle"
     @click="clickOverlay"
   ></cats-overlay>
-  <transition :name="transitionName" appear>
-    <div
-      class="cats-popup"
-      :class="styleClass"
-      :style="style"
-      v-show="show"
-      @click="onClick"
-    >
-      <slot></slot>
+  <transition name="cats-slide-bottom" appear>
+    <div class="cats-actionsheet" :style="style" v-show="show">
+      <div class="cats-actionsheet__title">标题</div>
+      <div class="cats-actionsheet__menus">
+        <div class="cats-actionsheet__menus--item">菜单一</div>
+        <div class="cats-actionsheet__menus--item">菜单二</div>
+        <div class="cats-actionsheet__menus--item">菜单三</div>
+      </div>
+      <div class="cats-actionsheet__cancel">
+        <div class="cats-actionsheet__cancel--btn">取消</div>
+      </div>
     </div>
   </transition>
 </template>
@@ -24,13 +26,13 @@ import "./style/index.scss";
 import { defineComponent, computed, ref } from "vue";
 import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
-import { popupProps } from "./types";
+import { actionSheetProps } from "./types";
 
-const [name] = createNamespace("popup");
+const [name] = createNamespace("action-sheet");
 
 export default defineComponent({
   name,
-  props: popupProps,
+  props: actionSheetProps,
   emits: ["click", "click-overlay", "close", "open"],
   components: {
     CatsOverlay,
@@ -38,32 +40,11 @@ export default defineComponent({
   setup(props, { emit }) {
     let opened: Boolean;
 
-    const styleClass = computed(() => {
-      return [
-        `cats-popup__position--${props.position}`,
-        {
-          "cats-popup__position--round": !props.round,
-        },
-      ];
-    });
-
     const style = computed(() => {
-      let _style: any = {};
       const animationDuration = Number(props.duration);
-      const size = Number(props.size) === 0 ? "auto" : `${Number(props.size)}%`;
-      const isvertical =
-        props.position === "top" || props.position === "bottom";
-      _style.animationDuration = `${animationDuration}ms`;
-      if (isvertical) {
-        _style.height = size;
-      } else {
-        _style.width = size;
-      }
-      return _style;
-    });
-    // transition 的动画名称
-    const transitionName = computed(() => {
-      return `cats-slide-${props.position}`;
+      return {
+        animationDuration: `${animationDuration}ms`,
+      };
     });
 
     const show = computed(() => {
@@ -91,10 +72,8 @@ export default defineComponent({
     };
 
     return {
-      styleClass,
       style,
       show,
-      transitionName,
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
       onClick,

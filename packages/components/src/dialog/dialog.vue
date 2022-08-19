@@ -2,8 +2,8 @@
   <cats-overlay
     :show="show"
     :duration="duration"
-    :custom-class="overlayClass"
-    :custom-style="overlayStyle"
+    :overlay-class="overlayClass"
+    :overlay-style="overlayStyle"
     @click="clickOverlay"
   ></cats-overlay>
   <transition name="cats-scale" appear>
@@ -54,13 +54,13 @@ import "./style/index.scss";
 import { defineComponent, computed, ref } from "vue";
 import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
-import { dialogPopup } from "./types";
+import { dialogProps } from "./types";
 
 const [name] = createNamespace("popup");
 
 export default defineComponent({
   name,
-  props: dialogPopup,
+  props: dialogProps,
   emits: [
     "click",
     "click-overlay",

@@ -1,10 +1,10 @@
 <template>
   <cats-overlay
     :show="show"
-    :duration="0"
-    custom-class="cats-toast__overlay"
+    :duration="300"
+    overlay-class="cats-toast__overlay"
   ></cats-overlay>
-  <transition name="cats-scale" appear>
+  <transition name="cats-fade" appear>
     <div
       :class="['cats-toast', icon === 'none' ? 'cats-toast--none' : '']"
       v-show="show"
@@ -41,13 +41,13 @@ import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
 import CatsIcon from "../icon";
 import CatsLoading from "../loading";
-import { toastPopup } from "./types";
+import { toastProps } from "./types";
 
 const [name] = createNamespace("toast");
 
 export default defineComponent({
   name,
-  props: toastPopup,
+  props: toastProps,
   emits: [],
   components: {
     CatsOverlay,

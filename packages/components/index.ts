@@ -1,3 +1,4 @@
+import CatsActionSheet from './src/action-sheet'
 import CatsButton from './src/button'
 import { Row as CatsRow, Col as CatsCol } from './src/flex'
 import CatsOverlay from './src/overlay'
@@ -12,6 +13,7 @@ import { Dialog } from './src/dialog/plugin-call'
 import { Toast } from './src/toast/plugin-call'
 
 export {
+  CatsActionSheet,
   CatsButton,
   CatsRow,
   CatsCol,
