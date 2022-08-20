@@ -1,8 +1,8 @@
 <template>
   <div class="demo-page">
     <div class="demo-header">
-      <h1 class="demo-title">Popup</h1>
-      <p class="demo-desc">弹出层</p>
+      <h1 class="demo-title">Dialog</h1>
+      <p class="demo-desc">对话框</p>
     </div>
     <div class="demo-group">
       <cats-button shape="secondary" @click="showDialog">插件调用</cats-button>

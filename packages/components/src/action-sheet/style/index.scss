@@ -16,6 +16,7 @@
   &__cancel--btn {
     padding: 16px;
     position: relative;
+    cursor: pointer;
   }
 
   &__title {
@@ -25,20 +26,30 @@
     color: rgba(0, 0, 0, 0.5);
   }
 
-  &__menus--item::after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 1px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.1);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
+  &__menus {
+
+    &--disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &--item::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.1);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
   }
+
+
 
   &__cancel {
     padding-top: 8px;

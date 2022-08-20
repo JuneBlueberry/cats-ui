@@ -32,7 +32,6 @@ import { CatsOverlay } from 'cats-ui'
 ::: tip 基础用法
 
 ```vue
-<cats-button @click="show = true">显示遮罩层</cats-button>
 <cats-overlay :show="show" @click="show = false"></cats-overlay>
 <script lang="ts">
 import { ref } from 'vue'
@@ -54,7 +53,6 @@ export default {
 可以通过 **duration** 设置遮罩层动画的时间
 
 ```vue
-<cats-button @click="show = true">显示遮罩层</cats-button>
 <cats-overlay :show="show" :duration="1500" @click="show = false"></cats-overlay>
 <script lang="ts">
 import { ref } from 'vue'

@@ -73,10 +73,6 @@ export default defineUserConfig({
                 {
                   text: 'Flex 弹性布局',
                   link: '/components/flex',
-                },
-                {
-                  text: 'Grid 九宫格布局',
-                  link: '/components/grid',
                 }
               ]
             },
@@ -85,18 +81,7 @@ export default defineUserConfig({
               collapsable: false,
               sidebarDepth: 0,
               children: [
-                {
-                  text: 'Input 输入',
-                },
-                {
-                  text: 'Textarea 文本域',
-                },
-                {
-                  text: 'Checkout 复选框',
-                },
-                {
-                  text: 'Radio 单选框',
-                }
+
               ]
             },
             {
@@ -107,15 +92,6 @@ export default defineUserConfig({
                 {
                   text: 'Navbar 头部导航',
                   link: '/components/navbar'
-                },
-                {
-                  text: 'Textarea 文本域',
-                },
-                {
-                  text: 'Checkout 复选框',
-                },
-                {
-                  text: 'Radio 单选框',
                 }
               ]
             },
@@ -140,9 +116,6 @@ export default defineUserConfig({
                 },
                 {
                   text: 'Toast 提示框',
-                },
-                {
-                  text: 'Toptips 顶部提示条',
                 }
               ]
             },
@@ -151,18 +124,7 @@ export default defineUserConfig({
               collapsable: false,
               sidebarDepth: 0,
               children: [
-                {
-                  text: 'Input 输入',
-                },
-                {
-                  text: 'Textarea 文本域',
-                },
-                {
-                  text: 'Checkout 复选框',
-                },
-                {
-                  text: 'Radio 单选框',
-                }
+
               ]
             }
           ]

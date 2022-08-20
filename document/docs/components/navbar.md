@@ -94,8 +94,8 @@ import { CatsNavbar } from 'cats-ui'
 
 | 名称  | 说明                                |
 | ----- | ----------------------------------- |
-| - | 默认插槽 |
-| left | 左边图标插槽，只在show-left为true时有效 |
-| right | 右边图标插槽，只在show-left为true时有效 |
+| default | 默认插槽，标题内容 |
+| left | 左边图标内容，只在show-left为true时有效 |
+| right | 右边图标内容，只在show-left为true时有效 |
 
 :::

@@ -4,7 +4,7 @@
     :duration="duration"
     :overlay-class="overlayClass"
     :overlay-style="overlayStyle"
-    @click="clickOverlay"
+    @click="onClickOverlay"
   ></cats-overlay>
   <transition :name="transitionName" appear>
     <div
@@ -68,6 +68,7 @@ export default defineComponent({
 
     const show = computed(() => {
       opened = props.show;
+      opened && open();
       return props.show;
     });
 
@@ -85,7 +86,7 @@ export default defineComponent({
       emit("click", event);
     };
     // 点击蒙层事件
-    const clickOverlay = (event: MouseEvent) => {
+    const onClickOverlay = (event: MouseEvent) => {
       emit("click-overlay", event);
       close();
     };
@@ -98,7 +99,7 @@ export default defineComponent({
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
       onClick,
-      clickOverlay,
+      onClickOverlay,
     };
   },
 });

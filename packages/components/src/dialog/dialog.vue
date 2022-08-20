@@ -4,7 +4,7 @@
     :duration="duration"
     :overlay-class="overlayClass"
     :overlay-style="overlayStyle"
-    @click="clickOverlay"
+    @click="onClickOverlay"
   ></cats-overlay>
   <transition name="cats-scale" appear>
     <div class="cats-dialog" v-show="show" :style="style" @click="onClick">
@@ -28,7 +28,7 @@
                 cats-dialog__footer-btns--item cats-dialog__footer-btns--cancel
               "
               v-if="showCancel"
-              @click="clickCancel"
+              @click="onClickCancel"
             >
               {{ cancelText }}
             </div>
@@ -38,7 +38,7 @@
               "
               :style="confirmStyle"
               v-if="showConfirm"
-              @click="clickConfirm"
+              @click="onClickConfirm"
             >
               {{ confrimText }}
             </div>
@@ -97,17 +97,17 @@ export default defineComponent({
     const updateShow = (value: boolean) => emit("updateShow", value);
 
     // 点击蒙层事件
-    const clickOverlay = (event: MouseEvent) => {
+    const onClickOverlay = (event: MouseEvent) => {
       emit("click-overlay", event);
       props.closeClickOverlay && close();
     };
     // 点击取消按钮
-    const clickCancel = (event: MouseEvent) => {
+    const onClickCancel = (event: MouseEvent) => {
       emit("cancel", event);
       close();
     };
     // 点击确定按钮
-    const clickConfirm = (event: MouseEvent) => {
+    const onClickConfirm = (event: MouseEvent) => {
       emit("confirm", event);
       close();
     };
@@ -127,9 +127,9 @@ export default defineComponent({
       show,
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
-      clickOverlay,
-      clickCancel,
-      clickConfirm,
+      onClickOverlay,
+      onClickCancel,
+      onClickConfirm,
     };
   },
 });
