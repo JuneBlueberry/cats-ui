@@ -31,6 +31,9 @@
       <cats-button class="margin-t" type="info" @click="clickLink('loading')"
         >Loading 图标</cats-button
       >
+      <cats-button class="margin-t" type="info" @click="clickLink('top-tips')"
+        >TopTips 顶部提示条</cats-button
+      >
       <cats-button class="margin-t" type="info" @click="clickLink('dialog')"
         >Dialog 对话框</cats-button
       >

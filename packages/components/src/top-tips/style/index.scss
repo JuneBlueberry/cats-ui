@@ -1,0 +1,43 @@
+@import "../../styles/animation/index.scss";
+@import "../../styles/themes/default.scss";
+
+.cats-toptips {
+  position: fixed;
+  top: $cats-toptips-fixed--top;
+  left: $cats-toptips-fixed--left;
+  right: $cats-toptips-fixed--right;
+  padding: $cats-toptips-padding;
+  border-radius: $cats-toptips-borderRadius;
+  font-size: $cats-toptips-fontSize;
+  text-align: center;
+  color: $cats-toptips-color;
+  z-index: $cats-zindex--popup;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: $cats-color--primary;
+  animation-duration: $cats-toptips-animationDuration;
+
+  &__type {
+
+    &--primary {
+      background-color: $cats-color--primary;
+    }
+
+    &--emphasize {
+      background-color: $cats-color--emphasize;
+    }
+
+    &--info {
+      background-color: $cats-color--info;
+    }
+
+    &--warning {
+      background-color: $cats-color--warning;
+    }
+
+    &--danger {
+      background-color: $cats-color--danger;
+    }
+
+  }
+}

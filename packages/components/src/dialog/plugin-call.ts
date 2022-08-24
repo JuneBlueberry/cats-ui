@@ -1,7 +1,7 @@
 import { DialogProps } from "./types"
 import CatsDialog from './dialog.vue'
 import { usePopupState, mountComponent } from '../utils/mount-components'
-import { ComponentPublicInstance, h, getCurrentInstance, reactive } from 'vue'
+import { ComponentPublicInstance, h } from 'vue'
 
 let instance: ComponentPublicInstance<{}, any>;
 

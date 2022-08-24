@@ -47,6 +47,11 @@ const routes = [
     component: () => import('../components/loading.vue')
   },
   {
+    path: '/top-tips',
+    name: 'top-tips',
+    component: () => import('../components/top-tips.vue')
+  },
+  {
     path: '/dialog',
     name: 'dialog',
     component: () => import('../components/dialog.vue')

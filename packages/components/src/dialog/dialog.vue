@@ -17,7 +17,7 @@
       </div>
       <div class="cats-dialog__body">
         <slot>
-          <span class="cats-dialog__body--constent">{{ content }}</span>
+          <span class="cats-dialog__body--content">{{ content }}</span>
         </slot>
       </div>
       <div class="cats-dialog__footer">

@@ -11,6 +11,7 @@ import CatsDialog from './src/dialog'
 
 import { Dialog } from './src/dialog/plugin-call'
 import { Toast } from './src/toast/plugin-call'
+import { TopTips } from './src/top-tips/plugin-call'
 
 export {
   CatsActionSheet,
@@ -25,5 +26,6 @@ export {
   CatsLoading,
   CatsDialog,
   Dialog,
-  Toast
+  Toast,
+  TopTips
 }

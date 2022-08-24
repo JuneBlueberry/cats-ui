@@ -1,37 +1,38 @@
 @import "../../styles/animation/index.scss";
+@import "../../styles/themes/default.scss";
 
 .cats-dialog {
   position: fixed;
-  z-index: 5000;
-  width: 320px;
+  z-index: $cats-zindex--popup;
+  width: $cats-dialog-width;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
-  background-color: #ffffff;
-  border-radius: 12px;
+  background-color: $cats-bgcolor--base-white;
+  border-radius: $cats-dialog-borderRadius;
   text-align: center;
 
   &__header {
-    padding: 32px 24px 16px;
+    padding: $cats-dialog-padding--header;
 
     &--title {
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 1.4;
+      font-weight: $cats-dialog-fontWeight--header-title;
+      font-size: $cats-dialog-fontSize--header-title;
+      line-height: $cats-dialog-lineHeight--header-title;
     }
   }
 
   &__body {
-    padding: 0 24px;
-    margin-bottom: 32px;
+    padding: $cats-dialog-padding--body;
+    margin-bottom: $cats-dialog-marginBottom--body;
 
-    &--constent {
-      font-size: 17px;
-      line-height: 1.4;
+    &--content {
+      font-size: $cats-dialog-fontSize--body-content;
+      line-height: $cats-dialog-lineHeight--body-content;
       word-wrap: break-word;
       hyphens: auto;
-      color: rgba(0, 0, 0, 0.5);
+      color: $cats-dialog-color--body-content;
     }
   }
 
@@ -59,10 +60,10 @@
       &--item {
         flex: 1;
         display: block;
-        line-height: 1.4;
-        padding: 16px 0;
-        font-size: 17px;
-        font-weight: 700;
+        line-height: $cats-dialog-lineHeight--footer-item;
+        padding: $cats-dialog-padding--footer-item;
+        font-size: $cats-dialog-fontSize--footer-item;
+        font-weight: $cats-dialog-fontWeight--footer-item;
         text-decoration: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-user-select: none;
@@ -73,11 +74,11 @@
       }
 
       &--confirm {
-        color: #576b95;
+        color: $cats-dialog-color--footer-confirm;
       }
 
       &--cancel {
-        color: rgba(0, 0, 0, 0.9);
+        color: $cats-dialog-color--footer-cancel;
 
         &::after {
           content: " ";
