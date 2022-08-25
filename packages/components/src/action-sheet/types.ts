@@ -13,8 +13,9 @@ export type Actions = {
 }
 
 export const actionSheetProps = extend({}, {
+  title: createStringProp(''),
   actions: createArrayProp<Actions>(),
-  showCancel: createBooleanProp(true),
+  showCancel: createBooleanProp(false),
   cancelText: createStringProp('取消'),
   cancelColor: createStringProp('')
 }, overlayCommonProps)

@@ -1,6 +1,7 @@
 import CatsActionSheet from './src/action-sheet'
 import CatsButton from './src/button'
 import { Row as CatsRow, Col as CatsCol } from './src/flex'
+import { Cell as CatsCell, CellGroup as CatsCellGroup } from './src/cell'
 import CatsOverlay from './src/overlay'
 import CatsPopup from './src/popup'
 import { Tabs as CatsTabs } from './src/tabs'
@@ -18,6 +19,8 @@ export {
   CatsButton,
   CatsRow,
   CatsCol,
+  CatsCell,
+  CatsCellGroup,
   CatsOverlay,
   CatsPopup,
   CatsTabs,

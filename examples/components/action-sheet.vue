@@ -9,6 +9,9 @@
         >默认</cats-button
       >
       <cats-button class="margin-t" shape="secondary" @click="show2 = true"
+        >带取消按钮</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="show3 = true"
         >自定义样式</cats-button
       >
     </div>
@@ -19,11 +22,20 @@
     @close="show1 = false"
   ></cats-action-sheet>
   <cats-action-sheet
+    title="标题"
     :show="show2"
+    show-cancel
     :actions="actions2"
+    @close="show2 = false"
+  ></cats-action-sheet>
+  <cats-action-sheet
+    title="请选择菜单"
+    :show="show3"
+    show-cancel
+    :actions="actions3"
     cancelText="我知道了"
     cancelColor="red"
-    @close="show2 = false"
+    @close="show3 = false"
     @select="onSelect"
   ></cats-action-sheet>
 </template>
@@ -37,8 +49,9 @@ export default {
   },
   data() {
     return {
-      actions1: [{ name: "菜单一" }, { name: "菜单二" }, { name: "菜单三" }],
-      actions2: [
+      actions1: [{ name: "菜单一" }, { name: "菜单二" }],
+      actions2: [{ name: "菜单一" }, { name: "菜单二" }, { name: "菜单三" }],
+      actions3: [
         { name: "菜单一", color: "blue" },
         {
           name: "菜单二",

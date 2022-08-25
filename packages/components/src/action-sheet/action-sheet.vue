@@ -8,7 +8,7 @@
   ></cats-overlay>
   <transition name="cats-slide-bottom" appear>
     <div class="cats-actionsheet" :style="style" v-show="show">
-      <div class="cats-actionsheet__title">标题</div>
+      <div class="cats-actionsheet__title" v-if="title">{{ title }}</div>
       <div class="cats-actionsheet__menus">
         <div
           :class="[

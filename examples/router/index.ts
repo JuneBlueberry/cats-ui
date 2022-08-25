@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../components/flex.vue')
   },
   {
+    path: '/cell',
+    name: 'cell',
+    component: () => import('../components/cell.vue')
+  },
+  {
     path: '/overlay',
     name: 'overlay',
     component: () => import('../components/overlay.vue')
@@ -47,7 +52,7 @@ const routes = [
     component: () => import('../components/loading.vue')
   },
   {
-    path: '/top-tips',
+    path: '/toptips',
     name: 'top-tips',
     component: () => import('../components/top-tips.vue')
   },
@@ -62,7 +67,7 @@ const routes = [
     component: () => import('../components/toast.vue')
   },
   {
-    path: '/action-sheet',
+    path: '/actionsheet',
     name: 'action-sheet',
     component: () => import('../components/action-sheet.vue')
   },
