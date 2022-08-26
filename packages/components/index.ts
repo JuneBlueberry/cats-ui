@@ -9,6 +9,7 @@ import CatsNavbar from './src/navbar'
 import CatsIcon from './src/icon'
 import CatsLoading from './src/loading'
 import CatsDialog from './src/dialog'
+import CatsPanel from './src/panel'
 
 import { Dialog } from './src/dialog/plugin-call'
 import { Toast } from './src/toast/plugin-call'
@@ -28,6 +29,7 @@ export {
   CatsIcon,
   CatsLoading,
   CatsDialog,
+  CatsPanel,
   Dialog,
   Toast,
   TopTips

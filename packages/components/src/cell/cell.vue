@@ -1,15 +1,30 @@
 <template>
   <div class="cats-cell" :class="styleClass" @click="onClick">
-    <div v-if="icon" class="cats-cell__left">
-      <cats-icon :name="icon" :size="20"></cats-icon>
-    </div>
+    <slot name="icon">
+      <div v-if="icon" class="cats-cell__left">
+        <cats-icon :name="icon" :size="20"></cats-icon>
+      </div>
+    </slot>
     <div class="cats-cell__content">
-      <div class="cats-cell__content--title">{{ title }}</div>
-      <div class="cats-cell__content--label" v-if="label">{{ label }}</div>
+      <slot name="title">
+        <div class="cats-cell__content--title">{{ title }}</div>
+      </slot>
+      <slot name="label">
+        <div class="cats-cell__content--label" v-if="label">{{ label }}</div>
+      </slot>
     </div>
     <div class="cats-cell__right">
-      <div class="cats-cell__right--desc">{{ value }}</div>
-      <cats-icon v-if="showLink" name="right" :size="17"></cats-icon>
+      <slot>
+        <div class="cats-cell__right--desc">{{ value }}</div>
+      </slot>
+      <slot name="right">
+        <cats-icon
+          class="cats-cell__right--icon"
+          v-if="showLink"
+          name="right"
+          :size="17"
+        ></cats-icon>
+      </slot>
     </div>
   </div>
 </template>
@@ -39,7 +54,6 @@ export default defineComponent({
     });
 
     const onClick = (event: MouseEvent) => {
-      console.log("11");
       emit("click", event);
     };
 

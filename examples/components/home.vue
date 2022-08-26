@@ -42,7 +42,10 @@ export default {
       },
       {
         group: "展示组件",
-        children: [{ title: "Loading", value: "加载" }],
+        children: [
+          { title: "Loading", value: "加载" },
+          { title: "Panel", value: "面板" },
+        ],
       },
       {
         group: "导航组件",

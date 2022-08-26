@@ -52,6 +52,8 @@
 
   &__content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     &--label {
       font-size: 12px;
@@ -67,8 +69,8 @@
     justify-content: flex-end;
     color: rgba(0, 0, 0, 0.5);
 
-    &--desc {
-      margin-right: 12px;
+    &--icon {
+      margin-left: 12px;
     }
   }
 

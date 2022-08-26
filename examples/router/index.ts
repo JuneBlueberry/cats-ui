@@ -71,6 +71,11 @@ const routes = [
     name: 'action-sheet',
     component: () => import('../components/action-sheet.vue')
   },
+  {
+    path: '/panel',
+    name: 'panel',
+    component: () => import('../components/panel.vue')
+  },
 ]
 
 export default createRouter({
