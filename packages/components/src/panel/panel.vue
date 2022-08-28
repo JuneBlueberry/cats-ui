@@ -7,7 +7,12 @@
       :key="action.key"
       @click.stop="action.link ? onClick(action, index) : onClickDetail($event)"
     >
-      <img class="cats-panel__main--image" :src="action.image" alt="" />
+      <img
+        class="cats-panel__main--image"
+        v-if="action.image !== undefined"
+        :src="action.image"
+        alt=""
+      />
       <div class="cats-panel__main-content">
         <strong class="cats-panel__main-content--title">{{
           action.title

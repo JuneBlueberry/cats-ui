@@ -67,13 +67,28 @@ export default defineUserConfig({
                   link: '/components/button',
                 },
                 {
+                  text: 'Flex 弹性布局',
+                  link: '/components/flex',
+                },
+                {
+                  text: 'Cell 列表',
+                  link: '/components/cell',
+                },
+                {
                   text: 'Icon 图标',
                   link: '/components/icon',
                 },
+              ]
+            },
+            {
+              text: '数据展示',
+              collapsable: false,
+              sidebarDepth: 0,
+              children: [
                 {
-                  text: 'Flex 弹性布局',
-                  link: '/components/flex',
-                }
+                  text: 'Loading 加载',
+                  link: '/components/loading',
+                },
               ]
             },
             {
@@ -117,14 +132,6 @@ export default defineUserConfig({
                 {
                   text: 'Toast 提示框',
                 }
-              ]
-            },
-            {
-              text: '数据展示',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-
               ]
             }
           ]
