@@ -71,6 +71,45 @@ $cats-icon-color--dot: #ee0a24;
 $cats-loading-fontSize: 16px;
 $cats-loading-color: #606060;
 
+/*************** panel 面板 ***************/
+$cats-panel-padding: 16px;
+$cats-panel-color: rgba(0, 0, 0, 0.9);
+$cats-panel-fontSize: 15px;
+$cats-panel-fontWeight: 500;
+
+$cats-panel-border: 1px solid rgba(0, 0, 0, 0.1);
+$cats-panel-borderColor: rgba(0, 0, 0, 0.1);
+
+$cats-panel-paddingBottom--header: 13px;
+
+$cats-panel-width--main-image: 60px;
+
+$cats-panel-fontSize--main-title: 17px;
+$cats-panel-fontWeight--main-title: 400;
+$cats-panel-lineHeight--main-title: 1.4;
+$cats-panel-color--main-title: rgba(0, 0, 0, 0.9);
+
+$cats-panel-fontSize--main-label: 14px;
+$cats-panel-paddingTop--main-label: 4px;
+$cats-panel-lineHeight--main-label: 1.4;
+$cats-panel-color--main-label: rgba(0, 0, 0, 0.3);
+
+$cats-panel-fontSize--main-desc: 13px;
+$cats-panel-paddingBottom--main-desc: 4px;
+$cats-panel-lineHeight--main-desc: 1;
+$cats-panel-color--main-desc: rgba(0, 0, 0, 0.3);
+
+$cats-panel-padding--main-desc-info: 0 13px;
+$cats-panel-border--main-desc-info: 1px solid rgba(0, 0, 0, 0.3);
+
+/*************** progress 进度条 ***************/
+$cats-progress-backgroundColor: #ededed;
+$cats-progress-height: 3px;
+
+$cats-progress-backgroundColor--bar: #07c160;
+
+$cats-progress-borderRadius--round: 3px;
+
 /*************** navbar 头部导航 ***************/
 $cats-navbar-color: #323233;
 $cats-navbar-height: 46px;

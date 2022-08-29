@@ -45,6 +45,7 @@ export default {
         children: [
           { title: "Loading", value: "加载" },
           { title: "Panel", value: "面板" },
+          { title: "Progress", value: "进度条" },
         ],
       },
       {

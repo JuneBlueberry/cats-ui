@@ -76,6 +76,11 @@ const routes = [
     name: 'panel',
     component: () => import('../components/panel.vue')
   },
+  {
+    path: '/progress',
+    name: 'progress',
+    component: () => import('../components/progress.vue')
+  },
 ]
 
 export default createRouter({
