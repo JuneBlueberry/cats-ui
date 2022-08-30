@@ -81,6 +81,11 @@ const routes = [
     name: 'progress',
     component: () => import('../components/progress.vue')
   },
+  {
+    path: '/swiper',
+    name: 'swiper',
+    component: () => import('../components/swiper.vue')
+  },
 ]
 
 export default createRouter({

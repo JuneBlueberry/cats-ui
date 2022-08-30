@@ -43,6 +43,7 @@ export default {
       {
         group: "展示组件",
         children: [
+          { title: "Swiper", value: "轮播图" },
           { title: "Loading", value: "加载" },
           { title: "Panel", value: "面板" },
           { title: "Progress", value: "进度条" },

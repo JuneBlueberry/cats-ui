@@ -11,6 +11,7 @@ import CatsLoading from './src/loading'
 import CatsDialog from './src/dialog'
 import CatsPanel from './src/panel'
 import CatsProgress from './src/progress'
+import CatsSwiper from './src/swiper'
 
 
 import { Dialog } from './src/dialog/plugin-call'
@@ -33,6 +34,7 @@ export {
   CatsDialog,
   CatsPanel,
   CatsProgress,
+  CatsSwiper,
   Dialog,
   Toast,
   TopTips
