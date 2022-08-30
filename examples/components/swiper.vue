@@ -5,7 +5,10 @@
       <p class="demo-desc">轮播图</p>
     </div>
     <div class="demo-group">
-      <cats-swiper></cats-swiper>
+      <cats-swiper :img-list="imgList"></cats-swiper>
+    </div>
+    <div class="demo-group">
+      <cats-swiper :img-list="imgList" auto loop show-shadow></cats-swiper>
     </div>
   </div>
 </template>
@@ -16,6 +19,12 @@ export default {
   components: {
     CatsSwiper,
   },
-  setup() {},
+  setup() {
+    const imgList = ["", "", "", ""];
+
+    return {
+      imgList,
+    };
+  },
 };
 </script>

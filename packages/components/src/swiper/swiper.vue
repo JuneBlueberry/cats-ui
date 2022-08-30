@@ -8,10 +8,35 @@
       @touchmove="move"
       @touchend="end"
     >
-      <div class="cats-swiper__item">111</div>
-      <div class="cats-swiper__item">222</div>
-      <div class="cats-swiper__item">333</div>
-      <div class="cats-swiper__item">444</div>
+      <template v-if="imgList.length > 0">
+        <img
+          class="cats-swiper__item"
+          v-for="(img, index) in imgList"
+          :key="index"
+          :src="img"
+        />
+      </template>
+      <template>
+        <div class="cats-swiper__item">111</div>
+        <div class="cats-swiper__item">222</div>
+        <div class="cats-swiper__item">333</div>
+        <div class="cats-swiper__item">444</div>
+      </template>
+    </div>
+    <div
+      :class="[
+        'cats-swiper__indicator',
+        showShadow ? 'cats-swiper__indicator--shadow' : '',
+      ]"
+    >
+      <span
+        :class="[
+          'cats-swiper__indicator--dot',
+          index == num ? 'cats-swiper__indicator--active' : '',
+        ]"
+        v-for="(img, index) in imgList"
+        :key="index"
+      ></span>
     </div>
   </div>
 </template>
@@ -23,7 +48,7 @@ import {
   computed,
   ref,
   nextTick,
-  reactive,
+  watchEffect,
   onMounted,
 } from "vue";
 import { createNamespace } from "../utils";
@@ -37,7 +62,7 @@ type Pos = {
   time?: Number | any;
 };
 
-type Positon = "left" | "right" | "top" | "bottom";
+type Position = "left" | "right" | "top" | "bottom";
 
 export default defineComponent({
   name,
@@ -47,22 +72,34 @@ export default defineComponent({
       transitionDuration: "0ms",
       transform: "",
     });
-    let maxNum = 4;
-    let num = 0;
+    const maxNum = computed(() => {
+      return props.imgList.length;
+    });
+    let num = ref(Number(props.active));
     let width: number;
     let height: number;
     let startPos: Pos;
     let endPos: Pos;
     //isScrolling为1时，表示纵向滑动，0为横向滑动
     let scrolling: Number = 0;
-    let position: Positon;
+    let timer: any = null;
 
     const warpper = ref<HTMLElement>();
-
     nextTick(() => {
-      console.log(warpper.value);
       width = warpper.value?.clientWidth || 0;
       height = warpper.value?.clientHeight || 0;
+    });
+
+    // 是否自动轮播
+    watchEffect(() => {
+      if (props.auto) {
+        timer = setInterval(() => {
+          console.log(111);
+          change(true, { x: 0, y: 0 }, "right", true);
+        }, Number(props.interval));
+      } else {
+        clearInterval(timer);
+      }
     });
 
     const start = (event) => {
@@ -85,47 +122,64 @@ export default defineComponent({
       };
       //阻止触摸事件的默认行为，即阻止滚屏
       event.preventDefault();
-      change(false, endPos);
+      change(false, endPos, getPosition(endPos));
     };
 
     const end = (event) => {
       endPos.time = +new Date() - startPos.time;
-      change(true, endPos);
+      change(true, endPos, getPosition(endPos));
     };
 
-    const change = (isEnd: Boolean, endPos: Pos) => {
+    const change = (
+      isEnd: Boolean,
+      endPos: Pos,
+      position: Position,
+      isAuto?: Boolean
+    ) => {
       let distance = "";
       let transitionDuration = "";
-      // 判断方向
-      position =
-        scrolling === 0
-          ? endPos.x >= 0
-            ? "left"
-            : "right"
-          : endPos.y >= 0
-          ? "top"
-          : "bottom";
       if (
-        (position === "right" && num >= maxNum - 1) ||
-        (position === "left" && num <= 0)
-      )
+        !isAuto &&
+        ((position === "right" && num.value >= maxNum.value - 1) ||
+          (position === "left" && num.value <= 0))
+      ) {
         return;
+      }
+      if (isEnd) {
+        if (isAuto) {
+          if (position === "left") {
+            num.value =
+              num.value <= 0 ? (props.loop ? maxNum.value : 0) : num.value - 1;
+          } else if (position === "right") {
+            num.value =
+              num.value >= maxNum.value - 1
+                ? props.loop
+                  ? 0
+                  : maxNum.value - 1
+                : num.value + 1;
+          }
+        } else if (
+          Number(endPos.time) > 10 &&
+          (endPos.x > Number(props.threshold) ||
+            endPos.x < -Number(props.threshold))
+        ) {
+          if (position === "left") {
+            num.value = num.value <= 0 ? 0 : num.value - 1;
+          } else if (position === "right") {
+            num.value =
+              num.value >= maxNum.value - 1 ? maxNum.value - 1 : num.value + 1;
+          }
+        }
+      }
+
       if (isEnd) {
         if (scrolling === 0) {
-          if (Number(endPos.time) > 10) {
-            //判断是左移还是右移，当偏移量大于10时执行
-            if (position === "left" && endPos.x > 50) {
-              num--;
-            } else if (position === "right" && endPos.x < -50) {
-              num++;
-            }
-            distance = `-${num * width}px`;
-            transitionDuration = "300ms";
-          }
+          distance = `-${num.value * width}px`;
+          transitionDuration = "300ms";
         }
       } else {
         if (scrolling === 0) {
-          distance = `${endPos.x - num * width}px`;
+          distance = `${endPos.x - num.value * width}px`;
           transitionDuration = "0ms";
         }
       }
@@ -135,12 +189,22 @@ export default defineComponent({
       };
     };
 
+    const getPosition = (endPos: Pos): Position => {
+      if (scrolling === 0) {
+        return endPos.x >= 0 ? "left" : "right";
+      } else {
+        return endPos.y >= 0 ? "top" : "bottom";
+      }
+    };
+
     return {
       start,
       move,
       end,
       style,
       warpper,
+      num,
+      maxNum,
     };
   },
 });
