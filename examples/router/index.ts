@@ -86,6 +86,16 @@ const routes = [
     name: 'swiper',
     component: () => import('../components/swiper.vue')
   },
+  {
+    path: '/gallery',
+    name: 'gallery',
+    component: () => import('../components/gallery.vue')
+  },
+  {
+    path: '/badge',
+    name: 'badge',
+    component: () => import('../components/badge.vue')
+  },
 ]
 
 export default createRouter({

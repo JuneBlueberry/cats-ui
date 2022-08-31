@@ -1,5 +1,5 @@
 <template>
-  <div class="cats-icon">
+  <div class="cats-icon" @click="onClick">
     <svg class="cats-icon__svg" :style="style" aria-hidden="true">
       <use :xlink:href="iconName"></use>
     </svg>
@@ -19,7 +19,8 @@ const [name] = createNamespace("icon");
 export default defineComponent({
   name,
   props: iconProps,
-  setup(props, { slots }) {
+  emits: ["click"],
+  setup(props, { emit }) {
     const style = computed(() => {
       const _style: any = {};
       if (props.color) _style.color = props.color;
@@ -37,10 +38,15 @@ export default defineComponent({
       };
     });
 
+    const onClick = (event: MouseEvent) => {
+      emit("click", event);
+    };
+
     return {
       style,
       iconName,
       dotClass,
+      onClick,
     };
   },
 });

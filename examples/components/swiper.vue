@@ -5,7 +5,11 @@
       <p class="demo-desc">轮播图</p>
     </div>
     <div class="demo-group">
-      <cats-swiper :img-list="imgList"></cats-swiper>
+      <cats-swiper
+        :img-list="imgList"
+        @next="next"
+        @previous="previous"
+      ></cats-swiper>
     </div>
     <div class="demo-group">
       <cats-swiper :img-list="imgList" auto loop show-shadow></cats-swiper>
@@ -25,6 +29,14 @@ export default {
     return {
       imgList,
     };
+  },
+  methods: {
+    next(index, img) {
+      console.log(index, img);
+    },
+    previous(index, img) {
+      console.log(index, img);
+    },
   },
 };
 </script>

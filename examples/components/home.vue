@@ -43,7 +43,9 @@ export default {
       {
         group: "展示组件",
         children: [
+          { title: "Badge", value: "徽章" },
           { title: "Swiper", value: "轮播图" },
+          { title: "Gallery", value: "画廊" },
           { title: "Loading", value: "加载" },
           { title: "Panel", value: "面板" },
           { title: "Progress", value: "进度条" },

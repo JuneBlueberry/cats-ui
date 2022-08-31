@@ -1,5 +1,5 @@
 <template>
-  <div class="cats-swiper">
+  <div class="cats-swiper" :style="swiperStyle">
     <div
       class="cats-swiper__wrapper"
       ref="warpper"
@@ -16,14 +16,9 @@
           :src="img"
         />
       </template>
-      <template>
-        <div class="cats-swiper__item">111</div>
-        <div class="cats-swiper__item">222</div>
-        <div class="cats-swiper__item">333</div>
-        <div class="cats-swiper__item">444</div>
-      </template>
     </div>
     <div
+      v-if="showSubscript"
       :class="[
         'cats-swiper__indicator',
         showShadow ? 'cats-swiper__indicator--shadow' : '',
@@ -43,14 +38,7 @@
 
 <script lang="ts">
 import "./style/index.scss";
-import {
-  defineComponent,
-  computed,
-  ref,
-  nextTick,
-  watchEffect,
-  onMounted,
-} from "vue";
+import { defineComponent, computed, ref, nextTick, watchEffect } from "vue";
 import { createNamespace } from "../utils";
 import { swiperProps } from "./types";
 
@@ -67,7 +55,13 @@ type Position = "left" | "right" | "top" | "bottom";
 export default defineComponent({
   name,
   props: swiperProps,
-  setup(props) {
+  emits: ["previous", "next", "start", "end"],
+  setup(props, { emit }) {
+    const swiperStyle = computed(() => {
+      const _style: any = {};
+      if (props.height) _style.height = `${Number(props.height)}px`;
+      return _style;
+    });
     const style = ref({
       transitionDuration: "0ms",
       transform: "",
@@ -88,13 +82,19 @@ export default defineComponent({
     nextTick(() => {
       width = warpper.value?.clientWidth || 0;
       height = warpper.value?.clientHeight || 0;
+
+      // 是否有初始值
+      watchEffect(() => {
+        style.value.transform = `translate3d(-${
+          num.value * width
+        }px, 0px, 0px)`;
+      });
     });
 
     // 是否自动轮播
     watchEffect(() => {
       if (props.auto) {
         timer = setInterval(() => {
-          console.log(111);
           change(true, { x: 0, y: 0 }, "right", true);
         }, Number(props.interval));
       } else {
@@ -109,6 +109,7 @@ export default defineComponent({
         y: touch.pageY,
         time: +new Date(),
       };
+      emit("start", event);
     };
 
     const move = (event) => {
@@ -128,6 +129,7 @@ export default defineComponent({
     const end = (event) => {
       endPos.time = +new Date() - startPos.time;
       change(true, endPos, getPosition(endPos));
+      emit("end", event);
     };
 
     const change = (
@@ -177,6 +179,11 @@ export default defineComponent({
           distance = `-${num.value * width}px`;
           transitionDuration = "300ms";
         }
+        if (position === "right" || position === "bottom") {
+          emit("next", num.value, props.imgList[num.value]);
+        } else {
+          emit("previous", num.value, props.imgList[num.value]);
+        }
       } else {
         if (scrolling === 0) {
           distance = `${endPos.x - num.value * width}px`;
@@ -198,13 +205,14 @@ export default defineComponent({
     };
 
     return {
-      start,
-      move,
-      end,
       style,
+      swiperStyle,
       warpper,
       num,
       maxNum,
+      start,
+      move,
+      end,
     };
   },
 });

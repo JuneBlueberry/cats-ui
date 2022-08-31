@@ -9,9 +9,11 @@
       <slot name="title">
         <div class="cats-cell__content--title">{{ title }}</div>
       </slot>
-      <slot name="label">
-        <div class="cats-cell__content--label" v-if="label">{{ label }}</div>
-      </slot>
+      <div>
+        <slot name="label">
+          <div class="cats-cell__content--label" v-if="label">{{ label }}</div>
+        </slot>
+      </div>
     </div>
     <div class="cats-cell__right">
       <slot>
