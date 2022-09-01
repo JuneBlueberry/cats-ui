@@ -96,6 +96,16 @@ const routes = [
     name: 'badge',
     component: () => import('../components/badge.vue')
   },
+  {
+    path: '/preview',
+    name: 'preview',
+    component: () => import('../components/preview.vue')
+  },
+  {
+    path: '/tag',
+    name: 'tag',
+    component: () => import('../components/tag.vue')
+  },
 ]
 
 export default createRouter({

@@ -48,7 +48,9 @@ export default {
           { title: "Gallery", value: "画廊" },
           { title: "Loading", value: "加载" },
           { title: "Panel", value: "面板" },
+          { title: "Preview", value: "表单预览" },
           { title: "Progress", value: "进度条" },
+          { title: "Tag", value: "标签" },
         ],
       },
       {
