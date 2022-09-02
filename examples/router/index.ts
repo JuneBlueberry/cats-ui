@@ -106,6 +106,11 @@ const routes = [
     name: 'tag',
     component: () => import('../components/tag.vue')
   },
+  {
+    path: '/checkbox',
+    name: 'checkbox',
+    component: () => import('../components/checkbox.vue')
+  },
 ]
 
 export default createRouter({

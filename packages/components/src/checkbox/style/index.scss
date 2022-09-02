@@ -1,0 +1,68 @@
+@import "../../styles/animation/index.scss";
+
+.cats-checkbox-group {
+  margin-top: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+  }
+
+  .cats-checkbox {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+
+    &--opposite {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:last-child)::after {
+      content: " ";
+      position: absolute;
+      left: 56px;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.1);
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      z-index: 2;
+    }
+  }
+}
+
+.cats-checkbox {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.9);
+
+  &__icon {
+    padding-right: 16px;
+    font-size: 0;
+  }
+
+  &__label {
+    flex: 1;
+    min-width: 0;
+  }
+}

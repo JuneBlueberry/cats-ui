@@ -41,6 +41,10 @@ export default {
         ],
       },
       {
+        group: "表单组件",
+        children: [{ title: "Checkbox", value: "复选框" }],
+      },
+      {
         group: "展示组件",
         children: [
           { title: "Badge", value: "徽章" },

@@ -2,6 +2,7 @@ import CatsActionSheet from './src/action-sheet'
 import CatsBadge from './src/badge'
 import CatsButton from './src/button'
 import { Cell as CatsCell, CellGroup as CatsCellGroup } from './src/cell'
+import { Checkbox as CatsCheckbox, CheckboxGroup as CatsCheckboxGroup } from './src/checkbox'
 import CatsDialog from './src/dialog'
 import CatsIcon from './src/icon'
 import CatsNavbar from './src/navbar'
@@ -28,6 +29,8 @@ export {
   CatsCol,
   CatsCell,
   CatsCellGroup,
+  CatsCheckbox,
+  CatsCheckboxGroup,
   CatsDialog,
   CatsGallery,
   CatsIcon,
