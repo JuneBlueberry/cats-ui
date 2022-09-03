@@ -42,7 +42,10 @@ export default {
       },
       {
         group: "表单组件",
-        children: [{ title: "Checkbox", value: "复选框" }],
+        children: [
+          { title: "Checkbox", value: "复选框" },
+          { title: "Radio", value: "单选框" },
+        ],
       },
       {
         group: "展示组件",

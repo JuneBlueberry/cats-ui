@@ -1,6 +1,6 @@
 @import "../../styles/animation/index.scss";
 
-.cats-checkbox {
+.cats-radio {
   position: relative;
   display: flex;
   -webkit-box-align: center;
@@ -9,7 +9,6 @@
   color: rgba(0, 0, 0, 0.9);
 
   &__icon {
-    padding-right: 16px;
     font-size: 0;
   }
 
@@ -17,9 +16,15 @@
     flex: 1;
     min-width: 0;
   }
+
+  &--disabled {
+    .cats-radio__label {
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
-.cats-checkbox-group {
+.cats-radio-group {
   margin-top: 8px;
   background-color: #fff;
   overflow: hidden;
@@ -41,7 +46,7 @@
     z-index: 2;
   }
 
-  .cats-checkbox {
+  .cats-radio {
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -49,7 +54,7 @@
     &:not(:last-child)::after {
       content: " ";
       position: absolute;
-      left: 56px;
+      left: 0;
       bottom: 0;
       right: 0;
       height: 1px;
@@ -59,18 +64,6 @@
       -webkit-transform: scaleY(0.5);
       transform: scaleY(0.5);
       z-index: 2;
-    }
-
-    &--opposite {
-      flex-direction: row-reverse;
-
-      .cats-checkbox__icon {
-        padding-right: 0;
-      }
-
-      &:not(:last-child)::after {
-        left: 0;
-      }
     }
   }
 }
