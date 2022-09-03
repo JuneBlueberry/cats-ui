@@ -83,12 +83,12 @@ import { CatsButton } from 'cats-ui'
 
 ::: warning Button Props
 
-| 参数     | 说明                                                                  | 类型    | 默认值  |
-| -------- | --------------------------------------------------------------------- | ------- | ------- |
-| type     | 形状，可选：**primary** **emphasize** **info** **warning** **danger** | string  | primary |
-| shape    | 类型，可选：**primary** **secondary** **block**                       | string  | primary |
-| disabled | 是否禁用按钮点击                                                      | boolean | false   |
-| mini     | 是否为 mini 按钮                                                      | boolean | false   |
+| 参数     | 说明                                                                  | 类型    | 默认值  | 最低版本  |
+| -------- | --------------------------------------------------------------------- | ------- | ------- |------- |
+| type     | 形状，可选：**primary** **emphasize** **info** **warning** **danger** | `string`  | primary | 1.0.0 |
+| shape    | 类型，可选：**primary** **secondary** **block**                       | `string`  | primary | 1.0.0 |
+| disabled | 是否禁用按钮点击                                                      | `boolean` | false   | 1.0.0 |
+| mini     | 是否为 mini 按钮                                                      | `boolean` | false   | 1.0.0 |
 
 :::
 
@@ -96,8 +96,8 @@ import { CatsButton } from 'cats-ui'
 
 ::: warning Button Event
 
-| 名称  | 说明                                | 回调              |
-| ----- | ----------------------------------- | ----------------- |
-| click | 按钮点击回调，disabled 状态不会触发 | event: MouseEvent |
+| 名称  | 说明                                | 回调              | 最低版本  |
+| ----- | ----------------------------------- | ----------------- |------- |
+| click | 按钮点击回调，disabled 状态不会触发 | event: MouseEvent | 1.0.0 |
 
 :::

@@ -8,12 +8,11 @@ export default defineUserConfig({
   title: 'Cats-UI',
   description: '基于vue3的移动端UI组件库',
   base: '/',
+  // theme: recoTheme({
+  //   catalogTitle: '自定义目录标题'
+  // }),
   theme: defaultTheme({
     navbar: [
-      // {
-      //   text: '指南',
-      //   link: '',
-      // },
       {
         text: '组件',
         link: '/components/introduce',
@@ -67,12 +66,12 @@ export default defineUserConfig({
                   link: '/components/button',
                 },
                 {
-                  text: 'Flex 弹性布局',
-                  link: '/components/flex',
-                },
-                {
                   text: 'Cell 列表',
                   link: '/components/cell',
+                },
+                {
+                  text: 'Flex 弹性布局',
+                  link: '/components/flex',
                 },
                 {
                   text: 'Icon 图标',
@@ -81,22 +80,28 @@ export default defineUserConfig({
               ]
             },
             {
-              text: '数据展示',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                {
-                  text: 'Loading 加载',
-                  link: '/components/loading',
-                },
-              ]
-            },
-            {
               text: '表单组件',
               collapsable: false,
               sidebarDepth: 0,
               children: [
-
+                {
+                  text: 'Checkbox 复选框'
+                },
+              ]
+            },
+            {
+              text: '数据展示',
+              collapsable: false,
+              sidebarDepth: 0,
+              children: [
+                { text: "Badge 徽章" },
+                { text: "Swiper 轮播图" },
+                { text: "Gallery 画廊" },
+                { text: "Loading 加载", link: '/components/loading' },
+                { text: "Panel 面板" },
+                { text: "Preview 表单预览" },
+                { text: "Progress 进度条" },
+                { text: "Tag 标签" },
               ]
             },
             {
@@ -107,7 +112,8 @@ export default defineUserConfig({
                 {
                   text: 'Navbar 头部导航',
                   link: '/components/navbar'
-                }
+                },
+                { text: "Tabs 标签页" },
               ]
             },
             {
@@ -131,7 +137,8 @@ export default defineUserConfig({
                 },
                 {
                   text: 'Toast 提示框',
-                }
+                },
+                { text: "TopTips 顶部提示条" },
               ]
             }
           ]
