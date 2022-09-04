@@ -1,8 +1,16 @@
 <template>
   <label class="cats-checkbox" :class="styleClass" @click="onClick">
     <div class="cats-checkbox__icon">
-      <cats-icon v-if="checked" :color="color" :name="activeName"></cats-icon>
-      <cats-icon v-else color="#0000004d" :name="noActiveName"></cats-icon>
+      <cats-icon
+        v-if="checked"
+        :color="activeIconColor"
+        :name="activeName"
+      ></cats-icon>
+      <cats-icon
+        v-else
+        :color="noactiveIconColor"
+        :name="noActiveName"
+      ></cats-icon>
     </div>
     <div class="cats-checkbox__label">
       <slot></slot>
@@ -32,8 +40,17 @@ export default defineComponent({
 
     const styleClass = computed(() => {
       return {
+        ["cats-checkbox--disabled"]: props.disabled,
         ["cats-checkbox--opposite"]: props.opposite,
       };
+    });
+
+    const activeIconColor = computed(() => {
+      return props.disabled ? "rgba(0, 0, 0, 0.2)" : props.color;
+    });
+
+    const noactiveIconColor = computed(() => {
+      return props.disabled ? "rgba(0, 0, 0, 0.2)" : "rgba(0, 0, 0, 0.3)";
     });
 
     const activeName = computed(() => {
@@ -52,6 +69,7 @@ export default defineComponent({
     });
 
     const onClick = (event: MouseEvent) => {
+      if (props.disabled) return;
       const _checked = !checked.value;
       if (parent && props.name) {
         const { modelValue, max } = parent.props;
@@ -76,6 +94,8 @@ export default defineComponent({
 
     return {
       styleClass,
+      activeIconColor,
+      noactiveIconColor,
       checked,
       activeName,
       noActiveName,

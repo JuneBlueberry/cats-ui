@@ -12,7 +12,7 @@
         主页
         <template v-slot:right>操作</template>
       </cats-navbar>
-      <cats-navbar class="margin-t" show-loading>主页</cats-navbar>
+      <cats-navbar class="margin-t" loading>主页</cats-navbar>
     </div>
   </div>
 </template>

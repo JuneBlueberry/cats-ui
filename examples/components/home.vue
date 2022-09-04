@@ -45,6 +45,7 @@ export default {
         children: [
           { title: "Checkbox", value: "复选框" },
           { title: "Radio", value: "单选框" },
+          { title: "Switch", value: "开关" },
         ],
       },
       {

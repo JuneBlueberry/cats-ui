@@ -32,6 +32,17 @@
       <cats-checkbox name="c">JavaScript</cats-checkbox>
     </cats-checkbox-group>
     <div class="demo-content demo-content-padding margin-t">
+      <div class="demo-content-title">禁止选择</div>
+    </div>
+    <cats-checkbox-group v-model="checkeds6">
+      <cats-checkbox name="a" disabled>HTML</cats-checkbox>
+      <cats-checkbox name="b" disabled>CSS</cats-checkbox>
+      <cats-checkbox name="c">JavaScript</cats-checkbox>
+    </cats-checkbox-group>
+    <div class="demo-content demo-content-padding margin-t">
+      <div class="demo-content-title">最大选择数</div>
+    </div>
+    <div class="demo-content demo-content-padding margin-t">
       <div class="demo-content-title">方形</div>
     </div>
     <cats-checkbox-group v-model="checkeds2">
@@ -73,6 +84,7 @@ export default {
       checkeds3: ["a", "b", "c", "d"],
       checkeds4: [],
       checkeds5: ["a", "b"],
+      checkeds6: ["a"],
     };
   },
   methods: {

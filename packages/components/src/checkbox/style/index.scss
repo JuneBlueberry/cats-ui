@@ -17,6 +17,14 @@
     flex: 1;
     min-width: 0;
   }
+
+  &--disabled {
+    cursor: not-allowed;
+
+    .cats-checkbox__label {
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .cats-checkbox-group {

@@ -116,6 +116,11 @@ const routes = [
     name: 'radio',
     component: () => import('../components/radio.vue')
   },
+  {
+    path: '/switch',
+    name: 'switch',
+    component: () => import('../components/switch.vue')
+  },
 ]
 
 export default createRouter({

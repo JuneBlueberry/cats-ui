@@ -65,10 +65,10 @@ import { CatsNavbar } from 'cats-ui'
 
 ::: tip 显示loading
 
-通过 **show-loading** 来展示loading样式
+通过 **loading** 来展示loading样式
 
 ```vue
-<cats-navbar show-loading>主页</cats-navbar>
+<cats-navbar loading>主页</cats-navbar>
 ```
 
 :::
@@ -83,7 +83,7 @@ import { CatsNavbar } from 'cats-ui'
 | color    | 字体颜色 | string  | #323233 |
 | showLeft | 是否展示左边的图标 | boolean | false   |
 | showRight     | 是否展示右边的图标 | boolean | false   |
-| showLoading     | 是否显示loading | boolean | false   |
+| loading     | 是否显示loading | boolean | false   |
 | loadingSize     | loading的大小 | string/number | 16px   |
 
 :::

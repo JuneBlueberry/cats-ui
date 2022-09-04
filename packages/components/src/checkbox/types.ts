@@ -1,4 +1,4 @@
-import { ExtractPropTypes, PropType } from 'vue'
+import { ExtractPropTypes } from 'vue'
 import { createArrayProp, createBooleanProp, createNumericProp, createStringProp } from '../utils'
 
 export const checkboxGroupProps = {
@@ -9,6 +9,7 @@ export const checkboxGroupProps = {
 export const checkboxProps = {
   modelValue: createBooleanProp(false),
   name: [Number, String],
+  disabled: createBooleanProp(false),
   square: createBooleanProp(false),
   opposite: createBooleanProp(false),
   color: createStringProp('#07c160')
