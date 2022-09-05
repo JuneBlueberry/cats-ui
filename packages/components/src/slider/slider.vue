@@ -50,18 +50,26 @@ export default defineComponent({
     nextTick(() => {
       width = warpper.value?.clientWidth || 0;
       height = warpper.value?.clientHeight || 0;
-      percentage.value = endnode = (width * Number(percentage.value)) / 100;
+      endnode = (width * Number(percentage.value)) / 100;
       scale = width / (Number(props.max) - Number(props.min));
     });
 
     watch(
-      () => props.modelValue,
-      (value) => {
-        if (value > props.max) value = 100;
-        percentage.value = Number(value);
+      [
+        () => Number(props.modelValue),
+        () => Number(props.max),
+        () => Number(props.min),
+      ],
+      ([value, max, min]) => {
+        value = value > max ? max : value;
+        value = value < min ? min : value;
+        percentage.value = ((value - min) / (max - min)) * 100;
         if (width) {
           endnode = (width * Number(percentage.value)) / 100;
         }
+      },
+      {
+        immediate: true,
       }
     );
 
@@ -76,12 +84,6 @@ export default defineComponent({
 
     const innerStyle = computed(() => {
       const _style: any = {};
-      // if (props.modelValue) {
-      //   let _percentage = Number(props.modelValue);
-      //   if (_percentage > 100) _percentage = 100;
-      //   else if (_percentage < 0) _percentage = 0;
-      //   _style.width = `${_percentage}%`;
-      // }
       if (props.color) _style.backgroundColor = props.color;
       if (props.size) {
         _style.height = `${Number(props.size)}px`;
@@ -123,7 +125,10 @@ export default defineComponent({
       endnode = _endnode > width ? width : _endnode < 0 ? 0 : _endnode;
       emit(
         "update:modelValue",
-        Math.round((Number(props.max) * percentage.value) / 100)
+        Math.round(
+          ((Number(props.max) - Number(props.min)) * percentage.value) / 100 +
+            Number(props.min)
+        )
       );
       emit("end", event);
     };
