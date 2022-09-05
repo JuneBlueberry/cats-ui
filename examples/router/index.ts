@@ -121,6 +121,11 @@ const routes = [
     name: 'switch',
     component: () => import('../components/switch.vue')
   },
+  {
+    path: '/slider',
+    name: 'slider',
+    component: () => import('../components/slider.vue')
+  },
 ]
 
 export default createRouter({

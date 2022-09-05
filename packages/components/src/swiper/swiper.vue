@@ -102,7 +102,7 @@ export default defineComponent({
       }
     });
 
-    const start = (event) => {
+    const start = (event: TouchEvent) => {
       const touch = event.targetTouches[0];
       startPos = {
         x: touch.pageX,
@@ -126,7 +126,7 @@ export default defineComponent({
       change(false, endPos, getPosition(endPos));
     };
 
-    const end = (event) => {
+    const end = (event: TouchEvent) => {
       endPos.time = +new Date() - startPos.time;
       change(true, endPos, getPosition(endPos));
       emit("end", event);

@@ -14,6 +14,7 @@ import CatsPreview from './src/preview'
 import CatsProgress from './src/progress'
 import { Radio as CatsRadio, RadioGroup as CatsRadioGroup } from './src/radio'
 import { Row as CatsRow, Col as CatsCol } from './src/flex'
+import CatsSlider from './src/slider'
 import CatsSwiper from './src/swiper'
 import CatsSwitch from './src/switch'
 import { Tabs as CatsTabs } from './src/tabs'
@@ -46,6 +47,7 @@ export {
   CatsRadio,
   CatsRadioGroup,
   CatsRow,
+  CatsSlider,
   CatsSwiper,
   CatsSwitch,
   CatsTabs,
