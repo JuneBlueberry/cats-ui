@@ -126,6 +126,11 @@ const routes = [
     name: 'slider',
     component: () => import('../components/slider.vue')
   },
+  {
+    path: '/rate',
+    name: 'rate',
+    component: () => import('../components/rate.vue')
+  },
 ]
 
 export default createRouter({
