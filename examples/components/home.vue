@@ -74,10 +74,11 @@ export default {
         group: "反馈组件",
         children: [
           { title: "ActionSheet", value: "弹出式菜单" },
+          { title: "Dialog", value: "对话框" },
           { title: "Overlay", value: "遮罩层" },
           { title: "Popup", value: "弹出层" },
+          { title: "ShareSheet", value: "分享菜单" },
           { title: "Toast", value: "提示框" },
-          { title: "Dialog", value: "对话框" },
           { title: "TopTips", value: "顶部提示条" },
         ],
       },

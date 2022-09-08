@@ -15,6 +15,7 @@ import CatsProgress from './src/progress'
 import { Radio as CatsRadio, RadioGroup as CatsRadioGroup } from './src/radio'
 import CatsRate from './src/rate'
 import { Row as CatsRow, Col as CatsCol } from './src/flex'
+import CatsShareSheet from './src/share-sheet'
 import CatsSlider from './src/slider'
 import CatsSwiper from './src/swiper'
 import CatsSwitch from './src/switch'
@@ -49,6 +50,7 @@ export {
   CatsRadioGroup,
   CatsRate,
   CatsRow,
+  CatsShareSheet,
   CatsSlider,
   CatsSwiper,
   CatsSwitch,

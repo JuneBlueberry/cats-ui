@@ -1,15 +1,15 @@
 <template>
-  <div class="cats-rate">
+  <div class="cats-rate" :class="styleClass">
     <template v-for="item in Number(max)" :key="item">
       <cats-icon
         v-if="item > modelValue"
-        name="star"
+        :name="activeIcon"
         :color="inactiveColor"
         @click="onClick(item)"
       ></cats-icon>
       <cats-icon
         v-else
-        name="star-fill"
+        :name="inactiveIcon"
         :color="activeColor"
         @click="onClick(item)"
       ></cats-icon>
@@ -34,13 +34,25 @@ export default defineComponent({
     CatsIcon,
   },
   setup(props, { emit }) {
+    const styleClass = () => {
+      return {
+        ["cats-rate--disabled"]: props.disabled,
+      };
+    };
+
+    const activeColor = computed(() => {
+      return props.disabled ? "rgba(0,0,0,0.2)" : props.activeColor;
+    });
+
     const onClick = (item) => {
-      console.log(item);
+      if (props.disabled || props.readonly) return;
       emit("click", item);
       emit("update:modelValue", item);
     };
 
     return {
+      styleClass,
+      activeColor,
       onClick,
     };
   },

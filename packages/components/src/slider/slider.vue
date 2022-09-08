@@ -140,7 +140,6 @@ export default defineComponent({
         percentage.value =
           _percentage > 100 ? 100 : _percentage < 0 ? 0 : _percentage;
       }
-      console.log(percentage.value, _endnode);
     };
 
     const checkMeetMove = () => {

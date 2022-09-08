@@ -131,6 +131,11 @@ const routes = [
     name: 'rate',
     component: () => import('../components/rate.vue')
   },
+  {
+    path: '/sharesheet',
+    name: 'share-sheet',
+    component: () => import('../components/share-sheet.vue')
+  },
 ]
 
 export default createRouter({
