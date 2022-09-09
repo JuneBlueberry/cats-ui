@@ -13,18 +13,20 @@
           <div class="cats-sharesheet__header-wrapper--title">CatsUI</div>
         </div>
       </div>
-      <div class="cats-sharesheet__main">
-        <div class="cats-sharesheet__main-item">
-          <div class="cats-sharesheet__main-item--icon"></div>
-          <div class="cats-sharesheet__main-item--name">QQ</div>
-        </div>
-        <div class="cats-sharesheet__main-item">
-          <div class="cats-sharesheet__main-item--icon"></div>
-          <div class="cats-sharesheet__main-item--name">QQ</div>
-        </div>
-        <div class="cats-sharesheet__main-item">
-          <div class="cats-sharesheet__main-item--icon"></div>
-          <div class="cats-sharesheet__main-item--name">QQ</div>
+      <div
+        class="cats-sharesheet__main"
+        v-for="(line, index) in menus"
+        :key="index"
+      >
+        <div
+          class="cats-sharesheet__main-item"
+          v-for="(menu, index2) in line"
+          :key="index2"
+        >
+          <div class="cats-sharesheet__main-item--icon">
+            <cats-icon :name="menu.icon" size="36"></cats-icon>
+          </div>
+          <div class="cats-sharesheet__main-item--name">{{ menu.name }}</div>
         </div>
       </div>
       <div class="cats-sharesheet__cancel" v-if="showCancel" @click="onCancel">
@@ -41,9 +43,9 @@ import "./style/index.scss";
 import { defineComponent, computed, ref } from "vue";
 import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
-import CatsLoading from "../loading";
+import CatsIcon from "../icon";
 import { shareSheetProps } from "./types";
-import { Actions } from "../action-sheet/types";
+import { Actions, ActionsArray } from "../share-sheet/types";
 
 const [name] = createNamespace("share-sheet");
 
@@ -53,10 +55,11 @@ export default defineComponent({
   emits: ["click", "click-overlay", "close", "open", "cancel", "select"],
   components: {
     CatsOverlay,
-    CatsLoading,
+    CatsIcon,
   },
   setup(props, { emit }) {
     let opened: Boolean;
+    let single: Boolean;
 
     const style = computed(() => {
       const animationDuration = Number(props.duration);
@@ -72,9 +75,28 @@ export default defineComponent({
     });
 
     const menus = computed(() => {
-      const _menus: any = [];
-
-      return _menus;
+      let _menus: Actions[][] = [];
+      const result: Actions[][] = [];
+      if (props.actions.length == 0) return [];
+      if (!Array.isArray(props.actions[0])) {
+        single = true;
+        _menus.push(props.actions as Actions[]);
+      } else {
+        single = false;
+        _menus = props.actions as Actions[][];
+      }
+      _menus.forEach((element) => {
+        const _result: Actions[] = [];
+        element.forEach((item, index) => {
+          _result.push({
+            ...item,
+            key: item.key || index,
+            icon: item.type ? `color-${item.type}` : item.icon,
+          });
+        });
+        result.push(_result);
+      });
+      return result;
     });
 
     const show = computed(() => {

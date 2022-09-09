@@ -3,11 +3,13 @@ import { extend } from '../utils/shared'
 import { ExtractPropTypes, PropType } from 'vue'
 import { createBooleanProp, createStringProp, createArrayProp } from '../utils'
 
+type iconType = 'QQ' | 'wechat' | 'enterprise-wechat' | 'QQ-space' | 'weibo' | 'friends'
+
 export type Actions = {
-  type?: '',
-  name?: String,
-  image: '',
   key?: String | Number,
+  type?: PropType<iconType>,
+  name?: String,
+  image?: String,
   icon?: String,
   color?: String,
   callback?: Function

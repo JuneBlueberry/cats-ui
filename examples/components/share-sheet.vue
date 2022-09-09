@@ -8,12 +8,20 @@
       <cats-button class="margin-t" shape="secondary" @click="show1 = true"
         >基础用法</cats-button
       >
+      <cats-button class="margin-t" shape="secondary" @click="show2 = true"
+        >多行显示</cats-button
+      >
     </div>
   </div>
   <cats-share-sheet
     :show="show1"
     :actions="actions1"
     @close="show1 = false"
+  ></cats-share-sheet>
+  <cats-share-sheet
+    :show="show2"
+    :actions="actions2"
+    @close="show2 = false"
   ></cats-share-sheet>
 </template>
 <script lang="ts">
@@ -26,14 +34,96 @@ export default {
   },
   data() {
     return {
-      actions1: [{ name: "菜单一" }, { name: "菜单二" }],
+      actions1: [
+        {
+          type: "QQ",
+          name: "QQ",
+        },
+        {
+          type: "wechat",
+          name: "微信",
+        },
+        {
+          type: "enterprise-wechat",
+          name: "企业微信",
+        },
+        {
+          type: "QQ-space",
+          name: "QQ空间",
+        },
+        {
+          type: "weibo",
+          name: "微博",
+        },
+        {
+          type: "friends",
+          name: "朋友圈",
+        },
+      ],
+      actions2: [
+        [
+          {
+            type: "QQ",
+            name: "QQ",
+          },
+          {
+            type: "wechat",
+            name: "微信",
+          },
+          {
+            type: "enterprise-wechat",
+            name: "企业微信",
+          },
+          {
+            type: "QQ-space",
+            name: "QQ空间",
+          },
+          {
+            type: "weibo",
+            name: "微博",
+          },
+          {
+            type: "friends",
+            name: "朋友圈",
+          },
+        ],
+        [
+          {
+            icon: "share",
+            name: "分享",
+          },
+
+          {
+            icon: "error",
+            name: "投诉",
+          },
+          {
+            icon: "link",
+            name: "链接",
+          },
+          {
+            icon: "reload",
+            name: "刷新",
+          },
+          {
+            icon: "search",
+            name: "搜索",
+          },
+          {
+            icon: "scan",
+            name: "二维码",
+          },
+        ],
+      ],
     };
   },
   setup() {
     const show1 = ref(false);
+    const show2 = ref(false);
 
     return {
       show1,
+      show2,
     };
   },
   methods: {
