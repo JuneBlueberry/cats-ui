@@ -14,14 +14,18 @@
     </div>
   </div>
   <cats-share-sheet
+    title="CatsUI"
     :show="show1"
     :actions="actions1"
     @close="show1 = false"
+    @click="onClick"
   ></cats-share-sheet>
   <cats-share-sheet
+    title="CatsUI"
     :show="show2"
     :actions="actions2"
     @close="show2 = false"
+    @click="onClick"
   ></cats-share-sheet>
 </template>
 <script lang="ts">
@@ -121,15 +125,17 @@ export default {
     const show1 = ref(false);
     const show2 = ref(false);
 
+    const onClick = (action, index, actions) => {
+      console.log(action, index, actions);
+      show1.value = false;
+      show2.value = false;
+    };
+
     return {
       show1,
       show2,
+      onClick,
     };
-  },
-  methods: {
-    onSelect(action, index, actions) {
-      console.log(action, index, actions);
-    },
   },
 };
 </script>

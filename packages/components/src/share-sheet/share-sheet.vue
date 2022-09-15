@@ -10,7 +10,7 @@
     <div class="cats-sharesheet" :style="style" v-show="show">
       <div class="cats-sharesheet__header">
         <div class="cats-sharesheet__header-wrapper">
-          <div class="cats-sharesheet__header-wrapper--title">CatsUI</div>
+          <div class="cats-sharesheet__header-wrapper--title">{{ title }}</div>
         </div>
       </div>
       <div
@@ -22,6 +22,7 @@
           class="cats-sharesheet__main-item"
           v-for="(menu, index2) in line"
           :key="index2"
+          @click="onClick(index, index2)"
         >
           <div class="cats-sharesheet__main-item--icon">
             <cats-icon :name="menu.icon" size="36"></cats-icon>
@@ -52,7 +53,7 @@ const [name] = createNamespace("share-sheet");
 export default defineComponent({
   name,
   props: shareSheetProps,
-  emits: ["click", "click-overlay", "close", "open", "cancel", "select"],
+  emits: ["click", "click-overlay", "close", "open", "cancel"],
   components: {
     CatsOverlay,
     CatsIcon,
@@ -124,11 +125,15 @@ export default defineComponent({
       close();
     };
     // 点击菜单
-    const onSelect = (menu) => {
-      // if (menu.loading || menu.disabled) return;
-      // menu.callback &&
-      //   menu.callback(props.actions[menu.index], menu.index, props.actions);
-      // emit("select", props.actions[menu.index], menu.index, props.actions);
+    const onClick = (index: number, index2: number) => {
+      if (props.actions.length == 0) return;
+      const menu: Actions = single
+        ? props.actions[index2]
+        : props.actions[index][index2];
+      const idx = single ? index2 : [index, index2];
+
+      menu.callback && menu.callback();
+      emit("click", menu, idx, props.actions);
     };
 
     return {
@@ -139,7 +144,7 @@ export default defineComponent({
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
       onCancel,
-      onSelect,
+      onClick,
       onClickOverlay,
     };
   },
