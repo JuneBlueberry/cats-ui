@@ -9,6 +9,7 @@ import CatsNavbar from './src/navbar'
 import CatsLoading from './src/loading'
 import CatsOverlay from './src/overlay'
 import CatsPanel from './src/panel'
+import CatsPicker from './src/picker'
 import CatsPopup from './src/popup'
 import CatsPreview from './src/preview'
 import CatsProgress from './src/progress'
@@ -43,6 +44,7 @@ export {
   CatsNavbar,
   CatsOverlay,
   CatsPanel,
+  CatsPicker,
   CatsPopup,
   CatsPreview,
   CatsProgress,

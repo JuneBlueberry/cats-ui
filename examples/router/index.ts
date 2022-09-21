@@ -136,6 +136,11 @@ const routes = [
     name: 'share-sheet',
     component: () => import('../components/share-sheet.vue')
   },
+  {
+    path: '/picker',
+    name: 'picker',
+    component: () => import('../components/picker.vue')
+  }
 ]
 
 export default createRouter({
