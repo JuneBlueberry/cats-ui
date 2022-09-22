@@ -1,0 +1,82 @@
+.cats-picker {
+  width: 100%;
+  background-color: #ffffff;
+
+  &__header {
+    position: relative;
+    display: flex;
+    height: 56px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+
+    &--btn {
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 400;
+
+      &--cancel {
+        color: #000000;
+      }
+
+      &--confirm {
+        color: #576b95;
+      }
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.1);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  &__body {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 3px 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__group {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    margin: 0 10px;
+  }
+
+  &__mask {
+    position: absolute;
+    height: 42px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #6666661a;
+    border-radius: 10px;
+  }
+
+  &__item {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
