@@ -5,6 +5,7 @@ import { Cell as CatsCell, CellGroup as CatsCellGroup } from './src/cell'
 import { Checkbox as CatsCheckbox, CheckboxGroup as CatsCheckboxGroup } from './src/checkbox'
 import CatsDialog from './src/dialog'
 import CatsIcon from './src/icon'
+import CatsInput from './src/input'
 import CatsNavbar from './src/navbar'
 import CatsLoading from './src/loading'
 import CatsOverlay from './src/overlay'
@@ -40,6 +41,7 @@ export {
   CatsDialog,
   CatsGallery,
   CatsIcon,
+  CatsInput,
   CatsLoading,
   CatsNavbar,
   CatsOverlay,

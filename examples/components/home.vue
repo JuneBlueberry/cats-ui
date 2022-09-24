@@ -44,6 +44,7 @@ export default {
         group: "表单组件",
         children: [
           { title: "Checkbox", value: "复选框" },
+          { title: "Input", value: "输入框" },
           { title: "Picker", value: "选择器" },
           { title: "Radio", value: "单选框" },
           { title: "Rate", value: "评分" },

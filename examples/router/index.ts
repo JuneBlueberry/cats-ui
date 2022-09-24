@@ -140,6 +140,11 @@ const routes = [
     path: '/picker',
     name: 'picker',
     component: () => import('../components/picker.vue')
+  },
+  {
+    path: '/input',
+    name: 'input',
+    component: () => import('../components/input.vue')
   }
 ]
 

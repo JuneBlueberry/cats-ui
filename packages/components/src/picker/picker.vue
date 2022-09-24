@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import "./style/index.scss";
-import { defineComponent, computed, ref } from "vue";
+import { defineComponent, computed, ref, nextTick, watch } from "vue";
 import { createNamespace } from "../utils";
 import { pickerProps } from "./types";
 
@@ -56,11 +56,37 @@ export default defineComponent({
     const count = 7;
     const middle = count % 2 == 0 ? count / 2 : (count + 1) / 2;
     const height = 42;
-    const init = ref(0);
-    let current = 0;
+
+    let current = ref(0);
     const style = ref({
       transform: "",
       transition: "",
+    });
+
+    const init = computed(() => {
+      const len =
+        props.actions.length % 2 == 0
+          ? props.actions.length / 2
+          : (props.actions.length + 1) / 2;
+      current.value = middle - len;
+      return len;
+    });
+
+    // 是否有初始值
+    watch(init, () => {
+      style.value = {
+        transform: `translate3d(0px, ${current.value * height}px, 0px)`,
+        transition: "all 0s ease 0s",
+      };
+    });
+
+    const limit = computed(() => {
+      return {
+        max: props.actions.length - init.value,
+        min: init.value - props.actions.length,
+        maxDistance: (props.actions.length - init.value) * height,
+        minDistance: (init.value - props.actions.length) * height,
+      };
     });
 
     const items = computed(() => {
@@ -68,8 +94,9 @@ export default defineComponent({
 
       return props.actions.map((x, index) => {
         const _style: any = {};
-        if (index <= count) {
-          _style.transform = `rotateX(${15 * (middle - index - 1)}deg)`;
+        const _index = index + 1 - init.value + current.value;
+        if (_index <= middle && _index >= -middle) {
+          _style.transform = `rotateX(${15 * _index}deg)`;
         }
         return {
           ...x,
@@ -111,15 +138,21 @@ export default defineComponent({
     const change = (isEnd: Boolean, endPos: Pos) => {
       let distance = endPos.y;
       if (isEnd) {
-        current += Math.round(endPos.y / 42);
-        distance = current * 42;
+        current.value += Math.round(endPos.y / 42);
+        if (current.value > limit.value.max) current.value = limit.value.max;
+        if (current.value < limit.value.min) current.value = limit.value.min;
+        distance = current.value * 42;
 
         style.value = {
           transform: `translate3d(0px, ${distance}px, 0px)`,
           transition: "all 0.2s ease 0.2s",
         };
       } else {
-        distance = current * 42 + endPos.y;
+        distance = current.value * height + endPos.y;
+        if (distance > limit.value.maxDistance + height)
+          distance = limit.value.maxDistance + height;
+        if (distance < limit.value.minDistance - height)
+          distance = limit.value.minDistance - height;
         style.value = {
           transform: `translate3d(0px, ${distance}px, 0px)`,
           transition: "all 0s ease 0s",
@@ -130,6 +163,7 @@ export default defineComponent({
     return {
       style,
       items,
+      current,
       start,
       move,
       end,
