@@ -10,15 +10,17 @@
   font-size: 17px;
   color: rgba(0, 0, 0, 0.9);
 
-  &__left {
-    padding-right: 16px;
-  }
+  &__left {}
 
   &__content {
     flex: 1;
+    display: flex;
+
+    &-name {
+      padding-right: 16px;
+    }
 
     &-input {
-      width: 100%;
       border: 0;
       outline: 0;
       font-size: 17px;
