@@ -8,32 +8,52 @@
       <div class="demo-content-title">基础</div>
     </div>
     <cats-cell-group>
+      <cats-input title="账号" placeholder="请输入账号"></cats-input>
       <cats-input
-        v-model="value1"
-        label="账号"
-        placeholder="请输入账号"
-      ></cats-input>
-      <cats-input
-        v-model="value2"
-        label="密码"
+        title="密码"
         type="password"
         placeholder="请输入密码"
+      ></cats-input>
+      <cats-input
+        title="标题文本"
+        label="副标题"
+        placeholder="请输入文本"
+      ></cats-input>
+    </cats-cell-group>
+    <div class="demo-content demo-content-padding margin-t">
+      <div class="demo-content-title">图标</div>
+    </div>
+    <cats-cell-group>
+      <cats-input
+        title="左图标"
+        placeholder="请输入"
+        leftIcon="image"
+      ></cats-input>
+      <cats-input
+        title="右图标"
+        placeholder="请输入"
+        rightIcon="image"
+      ></cats-input>
+      <cats-input title="清除图标" placeholder="请输入" clearable></cats-input>
+      <cats-input
+        title="只读"
+        placeholder="请输入"
+        v-model="value1"
+        readonly
+      ></cats-input>
+      <cats-input
+        title="禁止"
+        placeholder="请输入"
+        v-model="value2"
+        disabled
       ></cats-input>
     </cats-cell-group>
     <div class="demo-content demo-content-padding margin-t">
       <div class="demo-content-title">卡片</div>
     </div>
     <cats-cell-group card>
-      <cats-input
-        v-model="value3"
-        label="账号"
-        placeholder="请输入账号"
-      ></cats-input>
-      <cats-input
-        v-model="value4"
-        label="密码"
-        placeholder="请输入密码"
-      ></cats-input>
+      <cats-input title="账号" placeholder="请输入账号"></cats-input>
+      <cats-input title="密码" placeholder="请输入密码"></cats-input>
     </cats-cell-group>
   </div>
 </template>
@@ -46,8 +66,8 @@ export default {
     CatsInput,
   },
   setup() {
-    const value1 = ref("");
-    const value2 = ref("");
+    const value1 = ref("只读输入框");
+    const value2 = ref("禁止输入框");
     const value3 = ref("");
     const value4 = ref("");
 
