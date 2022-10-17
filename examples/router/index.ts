@@ -145,6 +145,11 @@ const routes = [
     path: '/input',
     name: 'input',
     component: () => import('../components/input.vue')
+  },
+  {
+    path: '/watermark',
+    name: 'watermark',
+    component: () => import('../components/watermark.vue')
   }
 ]
 

@@ -4,6 +4,7 @@ import CatsButton from './src/button'
 import { Cell as CatsCell, CellGroup as CatsCellGroup } from './src/cell'
 import { Checkbox as CatsCheckbox, CheckboxGroup as CatsCheckboxGroup } from './src/checkbox'
 import CatsDialog from './src/dialog'
+import CatsGallery from './src/gallery'
 import CatsIcon from './src/icon'
 import CatsInput from './src/input'
 import CatsNavbar from './src/navbar'
@@ -23,7 +24,7 @@ import CatsSwiper from './src/swiper'
 import CatsSwitch from './src/switch'
 import { Tabs as CatsTabs } from './src/tabs'
 import CatsTag from './src/tag'
-import CatsGallery from './src/gallery'
+import CatsWatermark from './src/watermark'
 
 import { Dialog } from './src/dialog/plugin-call'
 import { Toast } from './src/toast/plugin-call'
@@ -60,6 +61,7 @@ export {
   CatsSwitch,
   CatsTabs,
   CatsTag,
+  CatsWatermark,
   Dialog,
   Toast,
   TopTips

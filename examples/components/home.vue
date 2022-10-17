@@ -63,6 +63,7 @@ export default {
           { title: "Preview", value: "表单预览" },
           { title: "Progress", value: "进度条" },
           { title: "Tag", value: "标签" },
+          { title: "Watermark", value: "水印" },
         ],
       },
       {
