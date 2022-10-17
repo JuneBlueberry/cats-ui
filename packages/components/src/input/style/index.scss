@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     width: 80px;
+    align-self: flex-start;
 
     &--icon {
       margin-right: 4px;
@@ -38,19 +39,34 @@
     flex: 1;
     display: flex;
 
-    &-input {
+    &-main {
       flex: 1;
-      border: 0;
-      outline: 0;
-      font-size: 17px;
-      -webkit-appearance: none;
-      background-color: transparent;
-      height: 24px;
-      line-height: 24px;
 
-      &--disabled {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: #f2f2f2;
+      &--input,
+      &--textarea {
+        border: 0;
+        outline: 0;
+        font-size: 17px;
+        -webkit-appearance: none;
+        background-color: transparent;
+        height: 24px;
+        line-height: 24px;
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &--textarea {
+        width: 100%;
+        height: auto;
+      }
+
+      &--nums {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.3);
       }
     }
   }

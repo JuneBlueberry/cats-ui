@@ -10,11 +10,16 @@ export const inputProps = {
   leftIcon: createStringProp(''),
   rightIcon: createStringProp(''),
   type: createStringProp('text'),
+  name: String,
   placeholder: String,
   autocomplete: createStringProp<AutocompleteProp>('on'),
   clearable: createBooleanProp(false),
   readonly: createBooleanProp(false),
-  disabled: createBooleanProp(false)
+  disabled: createBooleanProp(false),
+  isTextarea: createBooleanProp(false),
+  rows: createNumericProp(3),
+  maxlength: Number,
+  isShowNums: createBooleanProp(true)
 }
 
 export type InputProps = ExtractPropTypes<typeof inputProps>

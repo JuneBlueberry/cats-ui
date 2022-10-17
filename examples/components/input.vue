@@ -19,6 +19,11 @@
         label="副标题"
         placeholder="请输入文本"
       ></cats-input>
+      <cats-input
+        title="文本域"
+        placeholder="请输入内容"
+        isTextarea
+      ></cats-input>
     </cats-cell-group>
     <div class="demo-content demo-content-padding margin-t">
       <div class="demo-content-title">图标</div>
