@@ -150,6 +150,11 @@ const routes = [
     path: '/watermark',
     name: 'watermark',
     component: () => import('../components/watermark.vue')
+  },
+  {
+    path: '/noticebar',
+    name: 'noticebar',
+    component: () => import('../components/noticebar.vue')
   }
 ]
 

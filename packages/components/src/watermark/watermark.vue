@@ -16,6 +16,3 @@ export default defineComponent({
   setup(props) {},
 });
 </script>
-
-<style>
-</style>

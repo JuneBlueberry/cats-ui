@@ -59,6 +59,7 @@ export default {
           { title: "Swiper", value: "轮播图" },
           { title: "Gallery", value: "画廊" },
           { title: "Loading", value: "加载" },
+          { title: "Noticebar", value: "通知栏" },
           { title: "Panel", value: "面板" },
           { title: "Preview", value: "表单预览" },
           { title: "Progress", value: "进度条" },

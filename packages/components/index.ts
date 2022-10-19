@@ -8,6 +8,7 @@ import CatsGallery from './src/gallery'
 import CatsIcon from './src/icon'
 import CatsInput from './src/input'
 import CatsNavbar from './src/navbar'
+import CatsNoticebar from './src/noticebar'
 import CatsLoading from './src/loading'
 import CatsOverlay from './src/overlay'
 import CatsPanel from './src/panel'
@@ -45,6 +46,7 @@ export {
   CatsInput,
   CatsLoading,
   CatsNavbar,
+  CatsNoticebar,
   CatsOverlay,
   CatsPanel,
   CatsPicker,
