@@ -87,6 +87,15 @@ export default defineUserConfig({
                 {
                   text: 'Checkbox 复选框'
                 },
+                { 
+                  text: "Input 输入框",
+                  link: '/components/input'
+                },
+                { text: 'Picker 选择器' },
+                { text: 'Radio 单选框' },
+                { text: 'Rate 评分' },
+                { text: 'Slider 滑块' },
+                { text: 'Switch 开关' }
               ]
             },
             {
@@ -94,14 +103,16 @@ export default defineUserConfig({
               collapsable: false,
               sidebarDepth: 0,
               children: [
-                { text: "Badge 徽章" },
-                { text: "Swiper 轮播图" },
-                { text: "Gallery 画廊" },
-                { text: "Loading 加载", link: '/components/loading' },
-                { text: "Panel 面板" },
-                { text: "Preview 表单预览" },
-                { text: "Progress 进度条" },
-                { text: "Tag 标签" },
+                { text: 'Badge 徽章' },
+                { text: 'Swiper 轮播图' },
+                { text: 'Gallery 画廊' },
+                { text: 'Loading 加载', link: '/components/loading' },
+                { text: 'Noticebar 通知栏' },
+                { text: 'Panel 面板' },
+                { text: 'Preview 表单预览' },
+                { text: 'Progress 进度条' },
+                { text: 'Tag 标签' },
+                { text: 'Watermark 水印' }
               ]
             },
             {
@@ -109,11 +120,11 @@ export default defineUserConfig({
               collapsable: false,
               sidebarDepth: 0,
               children: [
+                { text: "Tabs 标签页" },
                 {
                   text: 'Navbar 头部导航',
                   link: '/components/navbar'
-                },
-                { text: "Tabs 标签页" },
+                }
               ]
             },
             {
@@ -134,6 +145,9 @@ export default defineUserConfig({
                 {
                   text: 'Popup 弹出层',
                   link: '/components/popup'
+                },
+                {
+                  text: 'ShareSheet 分享菜单',
                 },
                 {
                   text: 'Toast 提示框',

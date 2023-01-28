@@ -29,6 +29,7 @@
 
       &--cycle {
         white-space: nowrap;
+        transition-timing-function: linear;
       }
     }
   }

@@ -6,8 +6,8 @@
     </div>
     <div class="demo-group">
       <cats-noticebar class="margin-t"></cats-noticebar>
-      <!-- <cats-noticebar class="margin-t"></cats-noticebar>
-      <cats-noticebar class="margin-t"></cats-noticebar> -->
+      <!-- <cats-noticebar class="margin-t" mode="multiline"></cats-noticebar>
+      <cats-noticebar class="margin-t" mode="omit"></cats-noticebar> -->
     </div>
   </div>
 </template>

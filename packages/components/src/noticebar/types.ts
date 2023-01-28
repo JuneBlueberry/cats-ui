@@ -1,5 +1,5 @@
 import { ExtractPropTypes } from 'vue'
-import { createStringProp } from '../utils'
+import { createNumericProp, createStringProp } from '../utils'
 
 export type modeProps = 'cycle' | 'multiline' | 'omit'
 
@@ -9,7 +9,8 @@ export const navbarProps = {
   color: createStringProp(''),
   leftIcon: String,
   rightIcon: String,
-  mode: createStringProp<modeProps>('cycle')
+  mode: createStringProp<modeProps>('cycle'),
+  speed: createNumericProp(100)
 }
 
 export type NavbarProps = ExtractPropTypes<typeof navbarProps>
