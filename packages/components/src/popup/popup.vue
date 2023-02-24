@@ -2,9 +2,9 @@
   <cats-overlay
     :show="show"
     :duration="duration"
-    :custom-class="overlayClass"
-    :custom-style="overlayStyle"
-    @click="clickOverlay"
+    :overlay-class="overlayClass"
+    :overlay-style="overlayStyle"
+    @click="onClickOverlay"
   ></cats-overlay>
   <transition :name="transitionName" appear>
     <div
@@ -24,13 +24,13 @@ import "./style/index.scss";
 import { defineComponent, computed, ref } from "vue";
 import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
-import { overlayPopup } from "./types";
+import { popupProps } from "./types";
 
 const [name] = createNamespace("popup");
 
 export default defineComponent({
   name,
-  props: overlayPopup,
+  props: popupProps,
   emits: ["click", "click-overlay", "close", "open"],
   components: {
     CatsOverlay,
@@ -68,6 +68,7 @@ export default defineComponent({
 
     const show = computed(() => {
       opened = props.show;
+      opened && open();
       return props.show;
     });
 
@@ -85,7 +86,7 @@ export default defineComponent({
       emit("click", event);
     };
     // 点击蒙层事件
-    const clickOverlay = (event: MouseEvent) => {
+    const onClickOverlay = (event: MouseEvent) => {
       emit("click-overlay", event);
       close();
     };
@@ -98,7 +99,7 @@ export default defineComponent({
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
       onClick,
-      clickOverlay,
+      onClickOverlay,
     };
   },
 });

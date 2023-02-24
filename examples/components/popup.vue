@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="demo-page">
     <div class="demo-header">
       <h1 class="demo-title">Popup</h1>
       <p class="demo-desc">弹出层</p>

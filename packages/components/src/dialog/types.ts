@@ -1,10 +1,8 @@
-import { ExtractPropTypes, PropType } from 'vue'
+import { overlayCommonProps, OverlayCommonProps } from '../utils/props'
+import { extend } from '../utils/shared'
 import { createObjectProp, createBooleanProp, createNumericProp, createStringProp } from '../utils'
 
-export type PositionProps = 'bottom' | 'top' | 'left' | 'right'
-
-export const dialogPopup = {
-  show: createBooleanProp(false),
+export const dialogProps = extend({}, {
   title: createStringProp('标题'),
   content: createStringProp('这是一条平平无奇的弹窗内容'),
   showTitle: createBooleanProp(true),
@@ -15,13 +13,9 @@ export const dialogPopup = {
   confrimColor: createStringProp(''),
   cancelColor: createStringProp(''),
   closeClickOverlay: createBooleanProp(true),
-  duration: createNumericProp(300),
-  overlayClass: createStringProp(''),
-  overlayStyle: createObjectProp(),
-}
+}, overlayCommonProps)
 
-export type DialogPopup = {
-  show?: Boolean
+export type DialogProps = {
   title?: String,
   content?: String,
   showTitle?: Boolean,
@@ -32,9 +26,6 @@ export type DialogPopup = {
   confrimColor?: String,
   cancelColor?: String,
   closeClickOverlay?: Boolean,
-  duration?: String | Number,
-  overlayClass?: String,
-  overlayStyle?: Object,
   onCancel?: Function,
   clickConfirm?: Function
-}
+} & OverlayCommonProps

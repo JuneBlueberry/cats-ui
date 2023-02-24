@@ -1,10 +1,12 @@
+@import "../../styles/themes/default.scss";
+
 .cats-navbar {
   display: flex;
   position: relative;
   width: 100%;
-  height: 46px;
-  background-color: #ffffff;
-  color: #323233;
+  height: $cats-navbar-height;
+  background-color: $cats-bgcolor--base-white;
+  color: $cats-navbar-color;
   align-items: center;
 
   &__left,
@@ -13,7 +15,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    padding: 0 10px;
+    padding: $cats-navbar-padding--icon;
     align-items: center;
     justify-content: center;
   }
@@ -31,8 +33,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: $cats-fontSize--base;
+    font-weight: $cats-fontWeight--base;
 
     &--loading {
       margin-right: 10px;

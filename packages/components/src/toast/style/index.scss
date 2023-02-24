@@ -1,0 +1,58 @@
+@import "../../styles/animation/index.scss";
+@import "../../styles/themes/default.scss";
+
+.cats-toast__overlay {
+  background-color: transparent;
+}
+
+.cats-toast {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: $cats-zindex--popup;
+  width: $cats-toast-width;
+  height: $cats-toast-width;
+  top: $cats-toast-top;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background-color: $cats-toast-bgColor;
+  border-radius: $cats-toast-borderRadius;
+  text-align: center;
+  color: $cats-toast-color;
+  box-sizing: border-box;
+  line-height: 1.4;
+  animation-duration: $cats-toast-animationDuration;
+
+  &--none {
+    width: auto;
+    height: auto;
+    min-width: 152px;
+    max-width: 80%;
+    padding: $cats-toast-padding--none;
+    border-radius: $cats-toast-borderRadius--none;
+  }
+
+  &__icon {
+    margin-bottom: $cats-toast-marginBottom--icon;
+
+    &--none {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: $cats-toast-fontSize--title;
+    padding: $cats-toast-padding--title;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    &--none {
+      font-size: $cats-toast-fontSize--title-none;
+      padding: $cats-toast-padding--title-none;
+    }
+  }
+}

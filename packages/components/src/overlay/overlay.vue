@@ -27,7 +27,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const style = computed(() => {
       const animationDuration = Number(props.duration);
-      const customStyle = props.customStyle;
+      const customStyle = props.overlayStyle;
       return Object.assign(customStyle, {
         animationDuration: `${animationDuration}ms`,
       });
@@ -43,7 +43,7 @@ export default defineComponent({
     };
 
     return {
-      styleClass: props.customClass,
+      styleClass: props.overlayClass,
       style,
       show,
       onClick,

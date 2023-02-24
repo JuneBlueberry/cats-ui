@@ -1,3 +1,5 @@
+@import "../../styles/themes/default.scss";
+
 .cats-icon {
   display: inline-block;
   position: relative;
@@ -8,7 +10,7 @@
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
-    font-size: 24px;
+    font-size: $cats-fontSize--icon-default;
   }
 
   &__badge {
@@ -25,7 +27,7 @@
     text-align: center;
     border: 1px solid #fff;
     border-radius: 16px;
-    background-color: #ee0a24;
+    background-color: $cats-icon-color--dot;
     transform: translate(50%, -50%);
   }
 
@@ -33,7 +35,7 @@
     width: 8px;
     min-width: 0;
     height: 8px;
-    background-color: #ee0a24;
+    background-color: $cats-icon-color--dot;
     border-radius: 100%;
   }
 }

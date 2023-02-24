@@ -1,0 +1,71 @@
+@import "../../styles/themes/default.scss";
+
+.cats-tag {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $cats-bgcolor--base-white;
+  box-sizing: border-box;
+
+  &__type {
+
+    &--primary {
+      background-color: $cats-color--primary;
+
+      &.cats-tag--plain {
+        color: $cats-color--primary;
+        border: 1px solid $cats-color--primary;
+      }
+    }
+
+    &--emphasize {
+      background-color: $cats-color--emphasize;
+
+      &.cats-tag--plain {
+        color: $cats-color--emphasize;
+        border: 1px solid $cats-color--emphasize;
+      }
+    }
+
+    &--info {
+      background-color: $cats-color--info;
+
+      &.cats-tag--plain {
+        color: $cats-color--info;
+        border: 1px solid $cats-color--info;
+      }
+    }
+
+    &--warning {
+      background-color: $cats-color--warning;
+
+      &.cats-tag--plain {
+        color: $cats-color--warning;
+        border: 1px solid $cats-color--warning;
+      }
+    }
+
+    &--danger {
+      background-color: $cats-color--danger;
+
+      &.cats-tag--plain {
+        color: $cats-color--danger;
+        border: 1px solid $cats-color--danger;
+      }
+    }
+  }
+
+  &--plain {
+    background-color: $cats-bgcolor--base-white;
+  }
+
+  &--round {
+    border-radius: 8px;
+  }
+
+  &--mark {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

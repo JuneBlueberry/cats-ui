@@ -1,14 +1,20 @@
 <template>
-  <div class="page">
+  <div class="demo-page">
     <div class="demo-header">
-      <h1 class="demo-title">Popup</h1>
-      <p class="demo-desc">弹出层</p>
+      <h1 class="demo-title">Dialog</h1>
+      <p class="demo-desc">对话框</p>
     </div>
     <div class="demo-group">
-      <cats-button @click="showDialog">插件调用</cats-button>
-      <cats-button class="margin-t" @click="show1 = true">基础样式</cats-button>
-      <cats-button class="margin-t" @click="show2 = true">设置样式</cats-button>
-      <cats-button class="margin-t" @click="show3 = true">确认弹窗</cats-button>
+      <cats-button shape="secondary" @click="showDialog">插件调用</cats-button>
+      <cats-button class="margin-t" shape="secondary" @click="show1 = true"
+        >基础样式</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="show2 = true"
+        >设置样式</cats-button
+      >
+      <cats-button class="margin-t" shape="secondary" @click="show3 = true"
+        >确认弹窗</cats-button
+      >
     </div>
   </div>
   <cats-dialog :show="show1" @close="show1 = false"></cats-dialog>
@@ -68,4 +74,7 @@ export default {
 };
 </script>
 <style scoped>
+.demo-page {
+  background-color: #ffffff;
+}
 </style>

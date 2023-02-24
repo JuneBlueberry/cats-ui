@@ -1,0 +1,44 @@
+.cats-badge {
+  display: inline-block;
+  position: relative;
+
+  &__wrapper {
+    position: absolute;
+    display: inline-block;
+    transform-origin: 100%;
+    min-width: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    background: #ee0a24;
+    color: #ffffff;
+    border-radius: 999px;
+  }
+
+  &--position {
+    &--right-top {
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &--left-top {
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &--right-bottom {
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, 50%);
+    }
+
+    &--left-bottom {
+      bottom: 0;
+      left: 0;
+      transform: translate(-50%, 50%);
+    }
+  }
+}

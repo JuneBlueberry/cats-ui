@@ -24,6 +24,10 @@ $cats-color--danger: #fa5151;
 
 
 /***************通用尺寸***************/
+$cats-fontSize--base: 16px;
+$cats-fontWeight--base: 500;
+
+$cats-fontSize--icon-default: 24px;
 
 
 /***************通用层级***************/
@@ -59,3 +63,123 @@ $cats-overlay-bgcolor--default: rgba(0, 0, 0, 0.6);
 
 /*************** popup 弹出层 ***************/
 $cats-popup-borderRadius: 12px;
+
+/*************** icon 图标 ***************/
+$cats-icon-color--dot: #ee0a24;
+
+/*************** loading 加载 ***************/
+$cats-loading-fontSize: 16px;
+$cats-loading-color: #606060;
+
+/*************** panel 面板 ***************/
+$cats-panel-padding: 16px;
+$cats-panel-color: rgba(0, 0, 0, 0.9);
+$cats-panel-fontSize: 15px;
+$cats-panel-fontWeight: 500;
+
+$cats-panel-border: 1px solid rgba(0, 0, 0, 0.1);
+$cats-panel-borderColor: rgba(0, 0, 0, 0.1);
+
+$cats-panel-paddingBottom--header: 13px;
+
+$cats-panel-width--main-image: 60px;
+
+$cats-panel-fontSize--main-title: 17px;
+$cats-panel-fontWeight--main-title: 400;
+$cats-panel-lineHeight--main-title: 1.4;
+$cats-panel-color--main-title: rgba(0, 0, 0, 0.9);
+
+$cats-panel-fontSize--main-label: 14px;
+$cats-panel-paddingTop--main-label: 4px;
+$cats-panel-lineHeight--main-label: 1.4;
+$cats-panel-color--main-label: rgba(0, 0, 0, 0.3);
+
+$cats-panel-fontSize--main-desc: 13px;
+$cats-panel-paddingBottom--main-desc: 4px;
+$cats-panel-lineHeight--main-desc: 1;
+$cats-panel-color--main-desc: rgba(0, 0, 0, 0.3);
+
+$cats-panel-padding--main-desc-info: 0 13px;
+$cats-panel-border--main-desc-info: 1px solid rgba(0, 0, 0, 0.3);
+
+/*************** progress 进度条 ***************/
+$cats-progress-backgroundColor: #ededed;
+$cats-progress-height: 3px;
+
+$cats-progress-backgroundColor--bar: #07c160;
+
+$cats-progress-borderRadius--round: 3px;
+
+/*************** navbar 头部导航 ***************/
+$cats-navbar-color: #323233;
+$cats-navbar-height: 46px;
+$cats-navbar-padding--icon: 0 10px;
+
+/*************** dialog 对话框 ***************/
+$cats-dialog-width: 320px;
+$cats-dialog-borderRadius: 12px;
+
+$cats-dialog-padding--header: 32px 24px 16px;
+$cats-dialog-fontWeight--header-title: 700;
+$cats-dialog-fontSize--header-title: 17px;
+$cats-dialog-lineHeight--header-title: 1.4;
+
+$cats-dialog-padding--body: 0 24px;
+$cats-dialog-marginBottom--body: 32px;
+$cats-dialog-fontSize--body-content: 17px;
+$cats-dialog-lineHeight--body-content: 1.4;
+$cats-dialog-color--body-content: rgba(0, 0, 0, 0.5);
+
+$cats-dialog-padding--footer-item: 16px 0;
+$cats-dialog-fontSize--footer-item: 17px;
+$cats-dialog-lineHeight--footer-item: 1.4;
+$cats-dialog-fontWeight--footer-item: 700;
+
+$cats-dialog-color--footer-confirm: #576b95;
+$cats-dialog-color--footer-cancel: rgba(0, 0, 0, 0.9);
+;
+
+/*************** toast 提示框 ***************/
+$cats-toast-width: 136px;
+$cats-toast-top: 40%;
+$cats-toast-bgColor: #4c4c4c;
+$cats-toast-color: rgba(255, 255, 255, 0.9);
+$cats-toast-borderRadius: 12px;
+$cats-toast-animationDuration: 300ms;
+
+$cats-toast-marginBottom--icon: 16px;
+
+$cats-toast-padding--none: 12px 0;
+$cats-toast-borderRadius--none: 8px;
+
+$cats-toast-fontSize--title: 17px;
+$cats-toast-padding--title: 0 12px;
+
+$cats-toast-fontSize--title-none: 14px;
+$cats-toast-padding--title-none: 0 20px;
+
+/*************** toptips 顶部提示条 ***************/
+$cats-toptips-color: #ffffff;
+$cats-toptips-fontSize: 14px;
+$cats-toptips-borderRadius: 8px;
+$cats-toptips-padding: 10px;
+$cats-toptips-fixed--top: 8px;
+$cats-toptips-fixed--left: 8px;
+$cats-toptips-fixed--right: 8px;
+$cats-toptips-animationDuration: 300ms;
+
+/*************** actionsheet 弹出式菜单 ***************/
+$cats-actionsheet-fontSize: 17px;
+$cats-actionsheet-borderRadius: 12px;
+
+$cats-actionsheet-padding--item: 16px;
+
+$cats-actionsheet-padding--title: 8px 16px;
+$cats-actionsheet-fontSize--title: 12px;
+$cats-actionsheet-lineHeight--title: 40px;
+$cats-actionsheet-color--title: rgba(0, 0, 0, 0.5);
+
+$cats-actionsheet-color--disabled: rgba(0, 0, 0, 0.2);
+
+$cats-actionsheet-paddingTop--cancel: 8px;
+$cats-actionsheet-backgroundColor--cancel: #f7f7f7;

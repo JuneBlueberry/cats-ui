@@ -1,0 +1,63 @@
+@import "../../styles/animation/index.scss";
+@import "../../styles/themes/default.scss";
+
+.cats-actionsheet {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: $cats-bgcolor--base-white;
+  z-index: $cats-zindex--popup;
+  text-align: center;
+  font-size: $cats-actionsheet-fontSize;
+  border-top-left-radius: $cats-actionsheet-borderRadius;
+  border-top-right-radius: $cats-actionsheet-borderRadius;
+
+  &__menus--item,
+  &__cancel--btn {
+    padding: $cats-actionsheet-padding--item;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__title {
+    padding: $cats-actionsheet-padding--title;
+    font-size: $cats-actionsheet-fontSize--title;
+    line-height: $cats-actionsheet-lineHeight--title;
+    color: $cats-actionsheet-color--title
+  }
+
+  &__menus {
+
+    &--disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &--item::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.1);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+
+
+  &__cancel {
+    padding-top: $cats-actionsheet-paddingTop--cancel;
+    background-color: $cats-actionsheet-backgroundColor--cancel;
+
+    &--btn {
+      background-color: $cats-bgcolor--base-white;
+    }
+  }
+}

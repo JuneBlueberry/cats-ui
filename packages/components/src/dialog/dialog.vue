@@ -2,9 +2,9 @@
   <cats-overlay
     :show="show"
     :duration="duration"
-    :custom-class="overlayClass"
-    :custom-style="overlayStyle"
-    @click="clickOverlay"
+    :overlay-class="overlayClass"
+    :overlay-style="overlayStyle"
+    @click="onClickOverlay"
   ></cats-overlay>
   <transition name="cats-scale" appear>
     <div class="cats-dialog" v-show="show" :style="style" @click="onClick">
@@ -17,7 +17,7 @@
       </div>
       <div class="cats-dialog__body">
         <slot>
-          <span class="cats-dialog__body--constent">{{ content }}</span>
+          <span class="cats-dialog__body--content">{{ content }}</span>
         </slot>
       </div>
       <div class="cats-dialog__footer">
@@ -28,7 +28,7 @@
                 cats-dialog__footer-btns--item cats-dialog__footer-btns--cancel
               "
               v-if="showCancel"
-              @click="clickCancel"
+              @click="onClickCancel"
             >
               {{ cancelText }}
             </div>
@@ -38,7 +38,7 @@
               "
               :style="confirmStyle"
               v-if="showConfirm"
-              @click="clickConfirm"
+              @click="onClickConfirm"
             >
               {{ confrimText }}
             </div>
@@ -54,13 +54,13 @@ import "./style/index.scss";
 import { defineComponent, computed, ref } from "vue";
 import { createNamespace } from "../utils/create";
 import CatsOverlay from "../overlay";
-import { dialogPopup } from "./types";
+import { dialogProps } from "./types";
 
 const [name] = createNamespace("popup");
 
 export default defineComponent({
   name,
-  props: dialogPopup,
+  props: dialogProps,
   emits: [
     "click",
     "click-overlay",
@@ -97,17 +97,17 @@ export default defineComponent({
     const updateShow = (value: boolean) => emit("updateShow", value);
 
     // 点击蒙层事件
-    const clickOverlay = (event: MouseEvent) => {
+    const onClickOverlay = (event: MouseEvent) => {
       emit("click-overlay", event);
       props.closeClickOverlay && close();
     };
     // 点击取消按钮
-    const clickCancel = (event: MouseEvent) => {
+    const onClickCancel = (event: MouseEvent) => {
       emit("cancel", event);
       close();
     };
     // 点击确定按钮
-    const clickConfirm = (event: MouseEvent) => {
+    const onClickConfirm = (event: MouseEvent) => {
       emit("confirm", event);
       close();
     };
@@ -127,9 +127,9 @@ export default defineComponent({
       show,
       overlayClass: props.overlayClass,
       overlayStyle: props.overlayStyle,
-      clickOverlay,
-      clickCancel,
-      clickConfirm,
+      onClickOverlay,
+      onClickCancel,
+      onClickConfirm,
     };
   },
 });

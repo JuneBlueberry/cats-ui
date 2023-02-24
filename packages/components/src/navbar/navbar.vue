@@ -8,7 +8,7 @@
     <div class="cats-navbar__middle">
       <cats-loading
         class="cats-navbar__middle--loading"
-        v-if="showLoading"
+        v-if="loading"
         :size="loadingSize"
       ></cats-loading>
       <slot>

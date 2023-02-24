@@ -12,7 +12,10 @@ export function usePopupState() {
     state.show = show;
   };
 
-  const open = () => toggle(true);
+  const open = (props: Object) => {
+    Object.assign(state, props)
+    toggle(true)
+  };
 
   const close = () => toggle(false);
 

@@ -1,0 +1,7 @@
+.cats-rate {
+  display: inline-block;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+}
