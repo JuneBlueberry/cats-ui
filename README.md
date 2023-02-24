@@ -75,46 +75,65 @@
 > 基础
 
 - [X] Button 按钮
-- [ ] Icon 图标
+- [X] Icon 图标
 - [X] Flex 弹性布局
 - [ ] Grid 九宫格布局
 
 > 表单
 
-- [ ] Input 输入
-- [ ] Textarea 文本域
-- [ ] Checkout 复选框
-- [ ] Radio 单选框
-- [ ] Switch 开关
+- [X] Input 输入
+- [X] Textarea 文本域
+- [X] Checkout 复选框
+- [X] Radio 单选框
+- [X] Switch 开关
 - [ ] Select 原生选择框
-- [ ] Slider 滑块
-- [ ] Uploader 上传
-- [ ] Picker 选择器
+- [X] Slider 滑块
+- [X] Uploader 上传
+- [X] Picker 选择器
+- [ ] NumberKeyboard 数字键盘
+- [ ] PasswordInput 密码输入框
+- [ ] DatetimePicker 日期选择器
+- [ ] Calendar 日历
 
 > 数据展示
 
-- [ ] Cell 列表
-- [ ] Badge 徽章
-- [ ] Footer 页脚
-- [ ] Gallery 画廊
+- [X] Cell 列表
+- [X] Badge 徽章
+- [X] Footer 页脚
+- [X] Gallery 画廊
 - [ ] Loading 加载
-- [ ] Loadmore 加载更多
-- [ ] Panel 面板
-- [ ] Preview 表单预览
-- [ ] Progress 进度条
+- [X] Loadmore 加载更多
+- [X] Panel 面板
+- [X] Preview 表单预览
+- [X] Progress 进度条
 - [ ] Steps 步骤条
+- [ ]Empty 空状态
+- [X]Swiper 轮播图
+- [X]Rate 评分
+- [ ]Popover 气泡弹出框
+- [X]WaterMark 水印
 
 > 导航搜索
 
 - [ ] Search 搜索
-- [ ] Navbar 头部导航
+- [X] Navbar 头部导航
+- [ ] Tab 标签页
 - [ ] Tabbar 底部导航
+- [ ] Sidebar 侧边栏
+- [ ] FixedNav 悬浮导航
 
 > 操作反馈
 
-- [ ] ActionSheet 弹出式菜单
-- [ ] Dialog 对话框
-- [ ] Overlay 遮罩层
-- [ ] Popup 弹出层
-- [ ] Toast 提示框
-- [ ] Toptips 顶部提示条
+- [X] ActionSheet 弹出式菜单
+- [X] ShareSheet 分享菜单
+- [X] Dialog 对话框
+- [X] Overlay 遮罩层
+- [X] Popup 弹出层
+- [ ] Picker 选择器
+- [X] Toast 提示框
+- [X] Toptips 顶部提示条
+
+> 业务组件
+
+- [ ] AddressPicder 地址选择器
+- [ ] AddressBook 通讯录
